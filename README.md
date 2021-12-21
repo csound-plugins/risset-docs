@@ -13,6 +13,6 @@ its index.
 
 The html documentation can be consulted here: XXX
 
-![](assets/risset-manual.jpg]
+![](assets/risset-manual.jpg)
 
 [risset]: https://github.com/csound-plugins/risset
