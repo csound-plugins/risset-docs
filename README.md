@@ -11,7 +11,7 @@ original documentation is defined and hosted by each plugin. *risset* gathers th
 pages for each opcode and produces a manual and index for all external plugins defined in 
 its index.
 
-The html documentation can be consulted here: XXX
+The html documentation can be consulted here: https://csound-plugins.github.io/risset-docs/
 
 ![](assets/risset-manual.jpg)
 
