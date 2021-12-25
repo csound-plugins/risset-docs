@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>vst3audio - Csound Plugins</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  <link href="../css/syntax-highlighting.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "vst3audio";
+    var mkdocs_page_input_path = "opcodes/vst3audio.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> Csound Plugins</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../index.html">Plugins</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Opcodes</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="index.html">Index</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="accum.html">accum</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="atstop.html">atstop</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="beadsynt.html">beadsynt</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="beosc.html">beosc</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="bisect.html">bisect</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="crackle.html">crackle</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="defer.html">defer</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="deref.html">deref</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="detectsilence.html">detectsilence</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="dict_del.html">dict_del</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="dict_dump.html">dict_dump</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="dict_exists.html">dict_exists</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="dict_free.html">dict_free</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="dict_get.html">dict_get</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="dict_geti.html">dict_geti</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="dict_iter.html">dict_iter</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="dict_loadstr.html">dict_loadstr</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="dict_new.html">dict_new</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="dict_print.html">dict_print</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="dict_query.html">dict_query</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="dict_set.html">dict_set</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="dict_size.html">dict_size</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="diode_ringmod.html">diode_ringmod</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="extendarray.html">extendarray</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="fileexists.html">file_exists</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="filereadmeta.html">filereadmeta</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="findFileInPath.html">findFileInPath</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="findarray.html">findarray</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="frac2int.html">frac2int</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="ftfill.html">ftfill</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="ftfind.html">ftfind</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="ftnew.html">ftnew</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="ftsetparams.html">ftsetparams</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="getEnvVar.html">getEnvVar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="getrowlin.html">getrowlin</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="initerror.html">initerror</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="interp1d.html">interp1d</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="jsfx.html">jsfx</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="jsfx_getslider.html">jsfx_setslider</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="jsfx_new.html">jsfx_new</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="jsfx_play.html">jsfx_play</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="jsfx_setslider.html">jsfx_setslider</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="lfnoise.html">lfnoise</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="linenv.html">linenv</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="loadnpy.html">loadnpy</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="memview.html">memview</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="panstereo.html">panstereo</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="pathAbsolute.html">pathAbsolute</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="pathIsAbsolute.html">pathIsAbsolute</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="pathJoin.html">pathJoin</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="pathNative.html">pathNative</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="pathSplit.html">pathSplit</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="pathSplitExt.html">pathSplitExt</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="pathSplitExtk.html">pathSplitExtk</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="pathSplitk.html">pathSplitk</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="perlin3.html">perlin3</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="poly.html">poly</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="poly0.html">poly0</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="polyseq.html">polyseq</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="pool_at.html">pool_at</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="pool_capacity.html">pool_capacity</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="pool_gen.html">pool_gen</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="pool_isfull.html">pool_isfull</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="pool_new.html">pool_new</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="pool_pop.html">pool_pop</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="pool_push.html">pool_push</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="pool_size.html">pool_size</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="pread.html">pread</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="pwrite.html">pwrite</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="ramptrig.html">ramptrig</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="ref.html">ref</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="refvalid.html">refvalid</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="schmitt.html">schmitt</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="scriptDir.html">scriptDir</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="sderef.html">sderef</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="setslice.html">setslice</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="sflistprograms.html">sflistprograms</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="sigmdrive.html">sigmdrive</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="sref.html">sref</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="standardchaos.html">standardchaos</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="strjoin.html">strjoin</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="strsplit.html">strsplit</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="sysPlatform.html">sysPlatform</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="tabrowlin.html">tabrowlin</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="throwerror.html">throwerror</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="tubeharmonics.html">tubeharmonics</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="uniqinstance.html">uniqinstance</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="vst3audio.html">vst3audio</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#abstract">Abstract</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#description">Description</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#syntax">Syntax</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#arguments">Arguments</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#output">Output</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#execution-time">Execution Time</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#see-also">See also</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#credits">Credits</a>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="vst3info.html">vst3info</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="vst3init.html">vst3init</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="vst3midi.html">vst3midi</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="vst3note.html">vst3note</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="vst3paramget.html">vst3paramget</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="vst3paramset.html">vst3paramset</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="vst3presetload.html">vst3presetload</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="vst3presetsave.html">vst3presetsave</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="xtracycles.html">xtracycles</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="zeroarray.html">zeroarray</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Csound Plugins</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Opcodes &raquo;</li>
+        
+      
+    
+    <li>vst3audio</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="vst3audio">vst3audio</h1>
+<h2 id="abstract">Abstract</h2>
+<p>Sends audio to, and/or receives audio from, a VST3 plugin.</p>
+<h2 id="description">Description</h2>
+<p><code>vst3audio</code> sends audio to, and/or receives audio from, a VST3 plugin.</p>
+<p>This opcode is used for both VST instruments and VST effects. For instruments, 
+inputs are allowed but not required, and may or may not actually be handled by 
+the plugin.</p>
+<p>Note that the mininum of the plugin inputs and the opcode inputs, and the 
+minimum of the plugin outputs and the opcode outputs, are used. It is assumed 
+that the "Main" audio and event busses in the plugin are the first input 
+busses and first output busses.</p>
+<p>The audio sent to the plugin must come from some other source in Csound, such
+as an input opcode or a Csound buss channel, and the audio received from the 
+plugin must be sent to some other sink in Csound, such as an opcode output or 
+a Csound buss channel.</p>
+<h2 id="syntax">Syntax</h2>
+<div class="codehilite"><pre><span></span><code><span class="p">[</span><span class="kt">a</span><span class="n">_audio_output_1</span><span class="p">,</span><span class="err">...</span><span class="p">]</span> <span class="n">vst3audio</span> <span class="kt">i</span><span class="n">_handle</span> <span class="p">[,</span> <span class="kt">a</span><span class="n">_audio_input_1</span><span class="p">,</span><span class="err">...</span><span class="p">]</span>
+</code></pre></div>
+
+<h2 id="arguments">Arguments</h2>
+<ul>
+<li><strong>i_handle</strong>: the handle that identifies the plugin, obtained from <a href="vst3init.html">vst3init</a>.</li>
+<li><strong>a_audio_input_n</strong>: one of zero or more, up to 32, audio input channels.</li>
+</ul>
+<h2 id="output">Output</h2>
+<ul>
+<li><strong>a_audio_output_n</strong>: one of zero or more, up to 32, auto output channels.</li>
+</ul>
+<h2 id="execution-time">Execution Time</h2>
+<ul>
+<li>Performance</li>
+</ul>
+<h2 id="examples">Examples</h2>
+<div class="codehilite"><pre><span></span><code><span class="o">&lt;</span><span class="n">CsoundSynthesizer</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">CsLicense</span><span class="o">&gt;</span>
+
+<span class="n">V</span> <span class="nb">S</span> <span class="n">T</span> <span class="mi">3</span>   <span class="n">O</span> <span class="n">P</span> <span class="n">C</span> <span class="n">O</span> <span class="n">D</span> <span class="n">E</span> <span class="nb">S</span>   <span class="n">T</span> <span class="n">E</span> <span class="nb">S</span> <span class="n">T</span>
+
+<span class="nl">Author</span><span class="p">:</span> <span class="n">Michael</span> <span class="n">Gogins</span>
+
+<span class="n">The</span> <span class="n">code</span> <span class="kt">i</span><span class="n">s</span> <span class="n">licensed</span> <span class="n">under</span> <span class="n">the</span> <span class="n">terms</span> <span class="n">of</span> <span class="n">the</span> <span class="n">GPLv3</span> <span class="n">license</span><span class="err">.</span>
+
+<span class="n">This</span> <span class="n">Csound</span> <span class="n">piece</span> <span class="n">demonstrates</span> <span class="n">how</span> <span class="n">to</span> <span class="n">use</span> <span class="n">the</span> <span class="kt">f</span><span class="n">ollowing</span> <span class="n">vst3</span> <span class="n">opcodes</span><span class="o">:</span>
+
+  <span class="mf">1.</span>  <span class="n">vst3init</span>
+  <span class="mf">2.</span>  <span class="n">vst3info</span>
+  <span class="mf">3.</span>  <span class="n">vst3note</span>
+  <span class="mf">4.</span>  <span class="n">vst3audio</span>
+
+<span class="n">These</span> <span class="kt">a</span><span class="n">re</span> <span class="kt">a</span><span class="n">ll</span> <span class="n">the</span> <span class="n">opcodes</span> <span class="kt">a</span><span class="n">ctually</span> <span class="n">needed</span> <span class="n">to</span> <span class="kt">f</span><span class="n">ully</span> <span class="n">use</span> <span class="n">VST3</span> <span class="kt">i</span><span class="n">nstruments</span> <span class="kt">a</span><span class="n">nd</span>
+<span class="n">effects</span> <span class="nb">in</span> <span class="n">Csound</span><span class="err">.</span> <span class="n">This</span> <span class="n">piece</span> <span class="kt">a</span><span class="n">lso</span> <span class="n">serves</span> <span class="kt">a</span><span class="n">s</span> <span class="n">basic</span> <span class="n">unit</span> <span class="n">tests</span> <span class="kt">f</span><span class="n">or</span> <span class="n">the</span> <span class="n">VST3</span>
+<span class="n">opcodes</span><span class="err">.</span>
+
+<span class="n">The</span> <span class="n">piece</span> <span class="n">consists</span> <span class="n">of</span> <span class="kt">a</span><span class="n">n</span> <span class="kt">a</span><span class="n">lgorithmically</span> <span class="n">generated</span> <span class="n">score</span><span class="p">,</span> <span class="kt">w</span><span class="n">hich</span> <span class="kt">i</span><span class="n">s</span> <span class="n">rendered</span>
+<span class="kt">w</span><span class="n">ith</span> <span class="n">several</span> <span class="n">of</span> <span class="n">the</span> <span class="kt">i</span><span class="n">nstruments</span> <span class="nb">in</span> <span class="n">the</span> <span class="n">VST3</span> <span class="kt">S</span><span class="n">DK</span><span class="c1">; effects are added using</span>
+<span class="n">several</span> <span class="n">other</span> <span class="n">plugins</span> <span class="nb">in</span> <span class="n">the</span> <span class="n">VST3</span> <span class="kt">S</span><span class="n">DK</span><span class="err">.</span> <span class="n">Parameters</span> <span class="kt">a</span><span class="n">nd</span> <span class="n">presets</span> <span class="kt">a</span><span class="n">lso</span> <span class="kt">a</span><span class="n">re</span> <span class="n">used</span><span class="err">.</span>
+
+<span class="o">&lt;/</span><span class="n">CsLicense</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">CsOptions</span><span class="o">&gt;</span>
+<span class="o">-</span><span class="n">m195</span>
+<span class="o">&lt;/</span><span class="n">CsOptions</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">CsInstruments</span><span class="o">&gt;</span>
+
+<span class="vg">sr</span>      <span class="o">=</span> <span class="mi">48000</span>
+<span class="vg">ksmps</span>   <span class="o">=</span> <span class="mi">100</span>
+<span class="vg">nchnls</span>  <span class="o">=</span> <span class="mi">2</span>
+<span class="vg">0dbfs</span>   <span class="o">=</span> <span class="mi">20</span>
+
+<span class="nb">connect</span> <span class="s">&quot;JX10_Output&quot;</span><span class="p">,</span> <span class="s">&quot;outleft&quot;</span><span class="p">,</span> <span class="s">&quot;Master_Output&quot;</span><span class="p">,</span> <span class="s">&quot;inleft&quot;</span>
+<span class="nb">connect</span> <span class="s">&quot;JX10_Output&quot;</span><span class="p">,</span> <span class="s">&quot;outright&quot;</span><span class="p">,</span> <span class="s">&quot;Master_Output&quot;</span><span class="p">,</span> <span class="s">&quot;inright&quot;</span>
+<span class="nb">connect</span> <span class="s">&quot;Piano_Output&quot;</span><span class="p">,</span> <span class="s">&quot;outleft&quot;</span><span class="p">,</span> <span class="s">&quot;Master_Output&quot;</span><span class="p">,</span> <span class="s">&quot;inleft&quot;</span>
+<span class="nb">connect</span> <span class="s">&quot;Piano_Output&quot;</span><span class="p">,</span> <span class="s">&quot;outright&quot;</span><span class="p">,</span> <span class="s">&quot;Master_Output&quot;</span><span class="p">,</span> <span class="s">&quot;inright&quot;</span>
+
+<span class="nb">alwayson</span> <span class="s">&quot;JX10_Output&quot;</span>
+<span class="nb">alwayson</span> <span class="s">&quot;Piano_Output&quot;</span>
+<span class="nb">alwayson</span> <span class="s">&quot;Master_Output&quot;</span>
+
+<span class="kt">gi</span><span class="n">_vst3_handle_jx10</span> <span class="n">vst3init</span> <span class="s">&quot;mda-vst3.vst3&quot;</span><span class="p">,</span> <span class="s">&quot;mda JX10&quot;</span><span class="p">,</span> <span class="mi">1</span>
+<span class="n">vst3info</span> <span class="kt">gi</span><span class="n">_vst3_handle_jx10</span>
+
+<span class="kt">gi</span><span class="n">_vst3_handle_piano</span> <span class="n">vst3init</span> <span class="s">&quot;mda-vst3.vst3&quot;</span><span class="p">,</span> <span class="s">&quot;mda Piano&quot;</span><span class="p">,</span> <span class="mi">1</span>
+<span class="n">vst3info</span> <span class="kt">gi</span><span class="n">_vst3_handle_piano</span>
+
+<span class="c1">// Array of instrument plugins indexed by instrument number, for sending</span>
+<span class="c1">// parameter changes.</span>
+
+<span class="kt">gi</span><span class="n">_plugins</span><span class="p">[]</span> <span class="nb">init</span> <span class="mi">5</span>
+<span class="kt">gi</span><span class="n">_plugins</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="nb">init</span> <span class="kt">gi</span><span class="n">_vst3_handle_piano</span>
+<span class="kt">gi</span><span class="n">_plugins</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="nb">init</span> <span class="kt">gi</span><span class="n">_vst3_handle_jx10</span>
+
+<span class="c1">// Score generating instrument.</span>
+
+<span class="kt">gi</span><span class="n">_iterations</span> <span class="nb">init</span> <span class="mi">500</span>
+<span class="kt">gi</span><span class="n">_duration</span> <span class="nb">init</span> <span class="mi">2</span>
+<span class="kt">gi</span><span class="n">_time_step</span> <span class="nb">init</span> <span class="mf">.125</span>
+<span class="kt">gi</span><span class="n">_loudness</span> <span class="nb">init</span> <span class="mi">70</span>
+<span class="kd">instr</span> <span class="nf">Score_Generator</span>
+<span class="kt">i</span><span class="n">_time</span> <span class="o">=</span> <span class="vi">p2</span>
+<span class="kt">i</span><span class="n">_instrument</span> <span class="o">=</span> <span class="vi">p4</span>
+<span class="kt">i</span><span class="n">_c</span> <span class="o">=</span> <span class="vi">p5</span>
+<span class="kt">i</span><span class="n">_y</span> <span class="o">=</span> <span class="vi">p6</span>
+<span class="kt">i</span><span class="n">_bass</span> <span class="o">=</span> <span class="vi">p7</span>
+<span class="kt">i</span><span class="n">_range</span> <span class="o">=</span> <span class="vi">p8</span>
+<span class="kt">i</span><span class="n">_time_step</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">8</span>
+<span class="kt">i</span><span class="n">_iteration</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="kt">i</span><span class="n">_iteration</span> <span class="o">&lt;</span> <span class="kt">gi</span><span class="n">_iterations</span> <span class="k">do</span>
+    <span class="kt">i</span><span class="n">_iteration</span> <span class="o">=</span> <span class="kt">i</span><span class="n">_iteration</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="kt">i</span><span class="n">_time</span> <span class="o">=</span> <span class="vi">p2</span> <span class="o">+</span> <span class="p">(</span><span class="kt">i</span><span class="n">_iteration</span> <span class="o">*</span> <span class="kt">gi</span><span class="n">_time_step</span><span class="p">)</span>
+    <span class="c1">// Normalized logistic equation:</span>
+    <span class="kt">i</span><span class="n">_y1</span> <span class="o">=</span> <span class="kt">i</span><span class="n">_c</span> <span class="o">*</span> <span class="kt">i</span><span class="n">_y</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="kt">i</span><span class="n">_y</span><span class="p">)</span> <span class="o">*</span> <span class="mi">4</span>
+    <span class="kt">i</span><span class="n">_y</span> <span class="o">=</span> <span class="kt">i</span><span class="n">_y1</span>
+    <span class="kt">i</span><span class="n">_pitch</span> <span class="o">=</span> <span class="nb">floor</span><span class="p">(</span><span class="kt">i</span><span class="n">_bass</span> <span class="o">+</span> <span class="p">(</span><span class="kt">i</span><span class="n">_y</span> <span class="o">*</span> <span class="kt">i</span><span class="n">_range</span><span class="p">))</span>
+    <span class="nb">event_i</span> <span class="s">&quot;i&quot;</span><span class="p">,</span> <span class="kt">i</span><span class="n">_instrument</span><span class="p">,</span> <span class="kt">i</span><span class="n">_time</span><span class="p">,</span> <span class="kt">gi</span><span class="n">_duration</span><span class="p">,</span> <span class="kt">i</span><span class="n">_pitch</span><span class="p">,</span> <span class="kt">gi</span><span class="n">_loudness</span>
+    <span class="nb">prints</span> <span class="s">&quot;   </span><span class="si">%f</span><span class="s"> =&gt; i </span><span class="si">%f</span><span class="s"> </span><span class="si">%f</span><span class="s"> </span><span class="si">%f</span><span class="s"> </span><span class="si">%f</span><span class="s"> </span><span class="si">%f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="kt">i</span><span class="n">_y</span><span class="p">,</span> <span class="kt">i</span><span class="n">_instrument</span><span class="p">,</span> <span class="kt">i</span><span class="n">_time</span><span class="p">,</span> <span class="kt">gi</span><span class="n">_duration</span><span class="p">,</span> <span class="kt">i</span><span class="n">_pitch</span><span class="p">,</span> <span class="kt">gi</span><span class="n">_loudness</span>
+<span class="k">od</span>
+<span class="nb">prints</span> <span class="s">&quot;</span><span class="si">%-24.24s</span><span class="s"> i </span><span class="si">%9.4f</span><span class="s"> t </span><span class="si">%9.4f</span><span class="s"> d </span><span class="si">%9.4f</span><span class="s"> k </span><span class="si">%9.4f</span><span class="s"> v </span><span class="si">%9.4f</span><span class="s"> p </span><span class="si">%9.4f</span><span class="s"> #</span><span class="si">%3d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="nb">nstrstr</span><span class="p">(</span><span class="vi">p1</span><span class="p">),</span> <span class="vi">p1</span><span class="p">,</span> <span class="vi">p2</span><span class="p">,</span> <span class="vi">p3</span><span class="p">,</span> <span class="vi">p4</span><span class="p">,</span> <span class="vi">p5</span><span class="p">,</span> <span class="vi">p7</span><span class="p">,</span> <span class="nb">active</span><span class="p">(</span><span class="vi">p1</span><span class="p">)</span>
+<span class="kd">endin</span>
+
+<span class="kd">instr</span> <span class="nf">Param_Change</span>
+<span class="kt">i</span><span class="n">_target_plugin</span> <span class="o">=</span> <span class="vi">p4</span>
+<span class="kt">i</span><span class="n">_vst3_plugin</span> <span class="nb">init</span> <span class="kt">gi</span><span class="n">_plugins</span><span class="p">[</span><span class="vi">p4</span><span class="p">]</span>
+<span class="kt">k</span><span class="n">_parameter_id</span> <span class="nb">init</span> <span class="vi">p5</span>
+<span class="kt">k</span><span class="n">_parameter_value</span> <span class="nb">init</span> <span class="vi">p6</span>
+<span class="n">vst3paramset</span> <span class="kt">i</span><span class="n">_vst3_plugin</span><span class="p">,</span> <span class="kt">k</span><span class="n">_parameter_id</span><span class="p">,</span> <span class="kt">k</span><span class="n">_parameter_value</span>
+<span class="nb">prints</span> <span class="s">&quot;</span><span class="si">%-24.24s</span><span class="s"> i </span><span class="si">%9.4f</span><span class="s"> t </span><span class="si">%9.4f</span><span class="s"> d </span><span class="si">%9.4f</span><span class="s"> target: </span><span class="si">%3d</span><span class="s">  id: </span><span class="si">%3d</span><span class="s">  value: </span><span class="si">%9.4f</span><span class="s"> #</span><span class="si">%3d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="nb">nstrstr</span><span class="p">(</span><span class="vi">p1</span><span class="p">),</span> <span class="vi">p1</span><span class="p">,</span> <span class="vi">p2</span><span class="p">,</span> <span class="vi">p3</span><span class="p">,</span> <span class="vi">p4</span><span class="p">,</span> <span class="vi">p5</span><span class="p">,</span> <span class="vi">p6</span><span class="p">,</span> <span class="nb">active</span><span class="p">(</span><span class="vi">p1</span><span class="p">)</span>
+<span class="kd">endin</span>
+
+<span class="kd">instr</span> <span class="nf">Piano</span>
+<span class="kt">i</span><span class="n">_note_id</span> <span class="n">vst3note</span> <span class="kt">gi</span><span class="n">_vst3_handle_piano</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="vi">p4</span><span class="p">,</span> <span class="vi">p5</span><span class="p">,</span> <span class="vi">p3</span>
+<span class="nb">prints</span> <span class="s">&quot;</span><span class="si">%-24.24s</span><span class="s"> i </span><span class="si">%9.4f</span><span class="s"> t </span><span class="si">%9.4f</span><span class="s"> d </span><span class="si">%9.4f</span><span class="s"> k </span><span class="si">%9.4f</span><span class="s"> v </span><span class="si">%9.4f</span><span class="s"> p </span><span class="si">%9.4f</span><span class="s"> #</span><span class="si">%3d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="nb">nstrstr</span><span class="p">(</span><span class="vi">p1</span><span class="p">),</span> <span class="vi">p1</span><span class="p">,</span> <span class="vi">p2</span><span class="p">,</span> <span class="vi">p3</span><span class="p">,</span> <span class="vi">p4</span><span class="p">,</span> <span class="vi">p5</span><span class="p">,</span> <span class="vi">p7</span><span class="p">,</span> <span class="nb">active</span><span class="p">(</span><span class="vi">p1</span><span class="p">)</span>
+<span class="kd">endin</span>
+
+<span class="kd">instr</span> <span class="nf">JX10</span>
+<span class="kt">i</span><span class="n">_note_id</span> <span class="n">vst3note</span> <span class="kt">gi</span><span class="n">_vst3_handle_jx10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="vi">p4</span><span class="p">,</span> <span class="vi">p5</span><span class="p">,</span> <span class="vi">p3</span>
+<span class="nb">prints</span> <span class="s">&quot;</span><span class="si">%-24.24s</span><span class="s"> i </span><span class="si">%9.4f</span><span class="s"> t </span><span class="si">%9.4f</span><span class="s"> d </span><span class="si">%9.4f</span><span class="s"> k </span><span class="si">%9.4f</span><span class="s"> v </span><span class="si">%9.4f</span><span class="s"> p </span><span class="si">%9.4f</span><span class="s"> #</span><span class="si">%3d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="nb">nstrstr</span><span class="p">(</span><span class="vi">p1</span><span class="p">),</span> <span class="vi">p1</span><span class="p">,</span> <span class="vi">p2</span><span class="p">,</span> <span class="vi">p3</span><span class="p">,</span> <span class="vi">p4</span><span class="p">,</span> <span class="vi">p5</span><span class="p">,</span> <span class="vi">p7</span><span class="p">,</span> <span class="nb">active</span><span class="p">(</span><span class="vi">p1</span><span class="p">)</span>
+<span class="kd">endin</span>
+
+<span class="kd">instr</span> <span class="nf">Piano_Output</span>
+<span class="kt">a</span><span class="n">_out_left</span><span class="p">,</span> <span class="kt">a</span><span class="n">_out_right</span> <span class="n">vst3audio</span> <span class="kt">gi</span><span class="n">_vst3_handle_piano</span>
+<span class="nb">outleta</span> <span class="s">&quot;outleft&quot;</span><span class="p">,</span> <span class="kt">a</span><span class="n">_out_left</span>
+<span class="nb">outleta</span> <span class="s">&quot;outright&quot;</span><span class="p">,</span> <span class="kt">a</span><span class="n">_out_right</span>
+<span class="nb">prints</span> <span class="s">&quot;</span><span class="si">%-24.24s</span><span class="s"> i </span><span class="si">%9.4f</span><span class="s"> t </span><span class="si">%9.4f</span><span class="s"> d </span><span class="si">%9.4f</span><span class="s"> k </span><span class="si">%9.4f</span><span class="s"> v </span><span class="si">%9.4f</span><span class="s"> p </span><span class="si">%9.4f</span><span class="s"> #</span><span class="si">%3d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="nb">nstrstr</span><span class="p">(</span><span class="vi">p1</span><span class="p">),</span> <span class="vi">p1</span><span class="p">,</span> <span class="vi">p2</span><span class="p">,</span> <span class="vi">p3</span><span class="p">,</span> <span class="vi">p4</span><span class="p">,</span> <span class="vi">p5</span><span class="p">,</span> <span class="vi">p7</span><span class="p">,</span> <span class="nb">active</span><span class="p">(</span><span class="vi">p1</span><span class="p">)</span>
+<span class="kd">endin</span>
+
+<span class="kd">instr</span> <span class="nf">JX10_Output</span>
+<span class="kt">a</span><span class="n">_out_left</span><span class="p">,</span> <span class="kt">a</span><span class="n">_out_right</span> <span class="n">vst3audio</span> <span class="kt">gi</span><span class="n">_vst3_handle_jx10</span>
+<span class="nb">outleta</span> <span class="s">&quot;outleft&quot;</span><span class="p">,</span> <span class="kt">a</span><span class="n">_out_left</span>
+<span class="nb">outleta</span> <span class="s">&quot;outright&quot;</span><span class="p">,</span> <span class="kt">a</span><span class="n">_out_right</span>
+<span class="nb">prints</span> <span class="s">&quot;</span><span class="si">%-24.24s</span><span class="s"> i </span><span class="si">%9.4f</span><span class="s"> t </span><span class="si">%9.4f</span><span class="s"> d </span><span class="si">%9.4f</span><span class="s"> k </span><span class="si">%9.4f</span><span class="s"> v </span><span class="si">%9.4f</span><span class="s"> p </span><span class="si">%9.4f</span><span class="s"> #</span><span class="si">%3d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="nb">nstrstr</span><span class="p">(</span><span class="vi">p1</span><span class="p">),</span> <span class="vi">p1</span><span class="p">,</span> <span class="vi">p2</span><span class="p">,</span> <span class="vi">p3</span><span class="p">,</span> <span class="vi">p4</span><span class="p">,</span> <span class="vi">p5</span><span class="p">,</span> <span class="vi">p7</span><span class="p">,</span> <span class="nb">active</span><span class="p">(</span><span class="vi">p1</span><span class="p">)</span>
+<span class="kd">endin</span>
+
+<span class="kd">instr</span> <span class="nf">Print_Info</span>
+<span class="kt">i</span><span class="n">_target_plugin</span> <span class="o">=</span> <span class="vi">p4</span>
+<span class="kt">i</span><span class="n">_vst3_plugin</span> <span class="nb">init</span> <span class="kt">gi</span><span class="n">_plugins</span><span class="p">[</span><span class="vi">p4</span><span class="p">]</span>
+<span class="n">vst3info</span> <span class="kt">i</span><span class="n">_vst3_plugin</span>
+<span class="nb">prints</span> <span class="s">&quot;</span><span class="si">%-24.24s</span><span class="s"> i </span><span class="si">%9.4f</span><span class="s"> t </span><span class="si">%9.4f</span><span class="s"> d </span><span class="si">%9.4f</span><span class="s"> k </span><span class="si">%9.4f</span><span class="s"> v </span><span class="si">%9.4f</span><span class="s"> p </span><span class="si">%9.4f</span><span class="s"> #</span><span class="si">%3d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="nb">nstrstr</span><span class="p">(</span><span class="vi">p1</span><span class="p">),</span> <span class="vi">p1</span><span class="p">,</span> <span class="vi">p2</span><span class="p">,</span> <span class="vi">p3</span><span class="p">,</span> <span class="vi">p4</span><span class="p">,</span> <span class="vi">p5</span><span class="p">,</span> <span class="vi">p7</span><span class="p">,</span> <span class="nb">active</span><span class="p">(</span><span class="vi">p1</span><span class="p">)</span>
+<span class="kd">endin</span>
+
+<span class="kd">instr</span> <span class="nf">Save_Preset</span>
+<span class="kt">i</span><span class="n">_target_plugin</span> <span class="o">=</span> <span class="vi">p4</span>
+<span class="kt">S</span><span class="n">_preset_name</span> <span class="nb">init</span> <span class="vi">p5</span>
+<span class="kt">i</span><span class="n">_vst3_plugin</span> <span class="nb">init</span> <span class="kt">gi</span><span class="n">_plugins</span><span class="p">[</span><span class="vi">p4</span><span class="p">]</span>
+<span class="n">vst3presetsave</span> <span class="kt">i</span><span class="n">_vst3_plugin</span><span class="p">,</span> <span class="kt">S</span><span class="n">_preset_name</span>
+<span class="nb">prints</span> <span class="s">&quot;</span><span class="si">%-24.24s</span><span class="s"> i </span><span class="si">%9.4f</span><span class="s"> t </span><span class="si">%9.4f</span><span class="s"> d </span><span class="si">%9.4f</span><span class="s"> target: </span><span class="si">%3d</span><span class="s">  preset: </span><span class="si">%s</span><span class="s"> #</span><span class="si">%3d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="nb">nstrstr</span><span class="p">(</span><span class="vi">p1</span><span class="p">),</span> <span class="vi">p1</span><span class="p">,</span> <span class="vi">p2</span><span class="p">,</span> <span class="vi">p3</span><span class="p">,</span> <span class="kt">i</span><span class="n">_target_plugin</span><span class="p">,</span> <span class="kt">S</span><span class="n">_preset_name</span><span class="p">,</span> <span class="nb">active</span><span class="p">(</span><span class="vi">p1</span><span class="p">)</span>
+<span class="kd">endin</span>
+
+<span class="kd">instr</span> <span class="nf">Load_Preset</span>
+<span class="kt">i</span><span class="n">_target_plugin</span> <span class="o">=</span> <span class="vi">p4</span>
+<span class="kt">S</span><span class="n">_preset_name</span> <span class="nb">init</span> <span class="vi">p5</span>
+<span class="kt">i</span><span class="n">_vst3_plugin</span> <span class="nb">init</span> <span class="kt">gi</span><span class="n">_plugins</span><span class="p">[</span><span class="vi">p4</span><span class="p">]</span>
+<span class="n">vst3presetload</span> <span class="kt">i</span><span class="n">_vst3_plugin</span><span class="p">,</span> <span class="kt">S</span><span class="n">_preset_name</span>
+<span class="nb">prints</span> <span class="s">&quot;</span><span class="si">%-24.24s</span><span class="s"> i </span><span class="si">%9.4f</span><span class="s"> t </span><span class="si">%9.4f</span><span class="s"> d </span><span class="si">%9.4f</span><span class="s"> target: </span><span class="si">%3d</span><span class="s">  preset: </span><span class="si">%s</span><span class="s"> #</span><span class="si">%3d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="nb">nstrstr</span><span class="p">(</span><span class="vi">p1</span><span class="p">),</span> <span class="vi">p1</span><span class="p">,</span> <span class="vi">p2</span><span class="p">,</span> <span class="vi">p3</span><span class="p">,</span> <span class="kt">i</span><span class="n">_target_plugin</span><span class="p">,</span> <span class="kt">S</span><span class="n">_preset_name</span><span class="p">,</span> <span class="nb">active</span><span class="p">(</span><span class="vi">p1</span><span class="p">)</span>
+<span class="kd">endin</span>
+
+<span class="kd">instr</span> <span class="nf">Program_Change</span>
+<span class="kt">i</span><span class="n">_target_plugin</span> <span class="o">=</span> <span class="vi">p4</span>
+<span class="kt">i</span><span class="n">_vst3_plugin</span> <span class="nb">init</span> <span class="kt">gi</span><span class="n">_plugins</span><span class="p">[</span><span class="vi">p4</span><span class="p">]</span>
+<span class="vi">p6</span> <span class="o">=</span> <span class="mi">1886548852</span>
+<span class="kt">k</span><span class="n">_parameter_id</span> <span class="nb">init</span> <span class="vi">p5</span>
+<span class="kt">k</span><span class="n">_parameter_value</span> <span class="nb">init</span> <span class="vi">p6</span>
+<span class="n">vst3paramset</span> <span class="kt">i</span><span class="n">_vst3_plugin</span><span class="p">,</span> <span class="kt">k</span><span class="n">_parameter_id</span><span class="p">,</span> <span class="kt">k</span><span class="n">_parameter_value</span>
+<span class="nb">prints</span> <span class="s">&quot;</span><span class="si">%-24.24s</span><span class="s"> i </span><span class="si">%9.4f</span><span class="s"> t </span><span class="si">%9.4f</span><span class="s"> d </span><span class="si">%9.4f</span><span class="s"> target: </span><span class="si">%3d</span><span class="s">  id: </span><span class="si">%3d</span><span class="s">  value: </span><span class="si">%9.4f</span><span class="s"> #</span><span class="si">%3d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="nb">nstrstr</span><span class="p">(</span><span class="vi">p1</span><span class="p">),</span> <span class="vi">p1</span><span class="p">,</span> <span class="vi">p2</span><span class="p">,</span> <span class="vi">p3</span><span class="p">,</span> <span class="vi">p4</span><span class="p">,</span> <span class="vi">p5</span><span class="p">,</span> <span class="vi">p6</span><span class="p">,</span> <span class="nb">active</span><span class="p">(</span><span class="vi">p1</span><span class="p">)</span>
+<span class="kd">endin</span>
+
+<span class="kd">instr</span> <span class="nf">Master_Output</span>
+<span class="kt">a</span><span class="n">_in_left</span> <span class="nb">inleta</span> <span class="s">&quot;inleft&quot;</span>
+<span class="kt">a</span><span class="n">_in_right</span> <span class="nb">inleta</span> <span class="s">&quot;inright&quot;</span>
+<span class="nb">outs</span> <span class="kt">a</span><span class="n">_in_left</span><span class="p">,</span> <span class="kt">a</span><span class="n">_in_right</span>
+<span class="nb">prints</span> <span class="s">&quot;</span><span class="si">%-24.24s</span><span class="s"> i </span><span class="si">%9.4f</span><span class="s"> t </span><span class="si">%9.4f</span><span class="s"> d </span><span class="si">%9.4f</span><span class="s"> k </span><span class="si">%9.4f</span><span class="s"> v </span><span class="si">%9.4f</span><span class="s"> p </span><span class="si">%9.4f</span><span class="s"> #</span><span class="si">%3d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="nb">nstrstr</span><span class="p">(</span><span class="vi">p1</span><span class="p">),</span> <span class="vi">p1</span><span class="p">,</span> <span class="vi">p2</span><span class="p">,</span> <span class="vi">p3</span><span class="p">,</span> <span class="vi">p4</span><span class="p">,</span> <span class="vi">p5</span><span class="p">,</span> <span class="vi">p7</span><span class="p">,</span> <span class="nb">active</span><span class="p">(</span><span class="vi">p1</span><span class="p">)</span>
+<span class="kd">endin</span>
+
+<span class="o">&lt;/</span><span class="n">CsInstruments</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">CsScore</span><span class="o">&gt;</span>
+<span class="n">f</span> <span class="mi">0</span> <span class="mi">72</span>
+<span class="nb">i</span> <span class="s">&quot;Score_Generator&quot;</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">3</span> <span class="mf">.989</span> <span class="mf">.5</span> <span class="mi">36</span> <span class="mi">60</span>
+<span class="nb">i</span> <span class="s">&quot;Score_Generator&quot;</span> <span class="mi">2</span> <span class="mi">1</span> <span class="mi">4</span> <span class="mf">.989</span> <span class="mf">.5</span> <span class="mi">78</span> <span class="mi">6</span>
+<span class="c1">; Stores original filter state...</span>
+<span class="nb">i</span> <span class="s">&quot;Save_Preset&quot;</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">4</span> <span class="s">&quot;jx10.preset&quot;</span>
+<span class="c1">; Changes filter state...</span>
+<span class="nb">i</span> <span class="s">&quot;Param_Change&quot;</span> <span class="mi">10</span> <span class="mi">1</span> <span class="mi">4</span> <span class="mi">6</span> <span class="mf">.1</span>
+<span class="nb">i</span> <span class="s">&quot;Print_Info&quot;</span> <span class="mf">10.5</span> <span class="mi">1</span> <span class="mi">4</span>
+<span class="c1">; Restores original filter state.</span>
+<span class="nb">i</span> <span class="s">&quot;Load_Preset&quot;</span> <span class="mi">12</span> <span class="mi">1</span> <span class="mi">4</span> <span class="s">&quot;jx10.preset&quot;</span>
+<span class="nb">i</span> <span class="s">&quot;Program_Change&quot;</span> <span class="mi">15</span> <span class="mi">1</span> <span class="mi">4</span> <span class="mi">0</span> <span class="mf">.5</span>
+<span class="nb">i</span> <span class="s">&quot;Print_Info&quot;</span> <span class="mf">12.5</span> <span class="mi">1</span> <span class="mi">4</span>
+<span class="o">&lt;/</span><span class="n">CsScore</span><span class="o">&gt;</span>
+
+<span class="o">&lt;/</span><span class="n">CsoundSynthesizer</span><span class="o">&gt;</span>
+</code></pre></div>
+
+<h2 id="see-also">See also</h2>
+<ul>
+<li><a href="vst3audio.html">vst3audio</a></li>
+<li><a href="vst3info.html">vst3info</a></li>
+<li><a href="vst3init.html">vst3init</a></li>
+<li><a href="vst3midi.html">vst3midi</a></li>
+<li><a href="vst3note.html">vst3note</a></li>
+<li><a href="vst3paramget.html">vst3paramget</a></li>
+<li><a href="vst3paramset.html">vst3paramset</a></li>
+<li><a href="vst3presetload.html">vst3presetload</a></li>
+<li><a href="vst3presetsave.html">vst3presetsave</a></li>
+<li><a href="vts3tempo.md">vts3tempo</a></li>
+</ul>
+<h2 id="credits">Credits</h2>
+<p>Michael Gogins, http://michaelgogins.tumblr.com, michael dot gogins at gmail dot com</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="vst3info.html" class="btn btn-neutral float-right" title="vst3info">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="uniqinstance.html" class="btn btn-neutral" title="uniqinstance"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="uniqinstance.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="vst3info.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
