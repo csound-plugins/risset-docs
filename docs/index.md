@@ -1,5 +1,14 @@
 # Plugins
 
+## beosc
+
+Band-enhanced oscillators implementing the sine+noise synthesis model
+
+  * [beadsynt](opcodes/beadsynt.md): Band-Enhanced Oscillator-Bank
+  * [beosc](opcodes/beosc.md): Band-Enhanced Oscillator
+  * [getrowlin](opcodes/getrowlin.md): opy a row from a 2D array or table, with interpolation between rows
+  * [tabrowlin](opcodes/tabrowlin.md): Copy a row from an f-table to another, interpolating between rows
+
 ## else
 
 Miscellaneous plugins
@@ -40,6 +49,45 @@ Miscellaneous plugins
   * [uniqinstance](opcodes/uniqinstance.md): Return an fractional instrument number which is not in use
   * [zeroarray](opcodes/zeroarray.md): Zero all elements in an array
 
+## jsfx
+
+jsfx support for csound
+
+  * [jsfx](opcodes/jsfx.md): Instantiates and runs a jsfx script
+  * [jsfx_getslider](opcodes/jsfx_getslider.md): Gets a slider value of a jsfx instance
+  * [jsfx_new](opcodes/jsfx_new.md): Instantiates a jsfx script
+  * [jsfx_play](opcodes/jsfx_play.md): Processes audio through a jsfx script
+  * [jsfx_setslider](opcodes/jsfx_setslider.md): Sets the slider values of a jsfx script
+  * [tubeharmonics](opcodes/tubeharmonics.md): A distortion with control for odd/even harmonics
+
+## klib
+
+A hashtable for csound
+
+  * [dict_del](opcodes/dict_del.md): Remove a key:value pair from a hashtable
+  * [dict_dump](opcodes/dict_dump.md): Dumps the contents of this dict as a string
+  * [dict_exists](opcodes/dict_exists.md): Returns 1 if the dict exists, 0 otherwise
+  * [dict_free](opcodes/dict_free.md): Free a hashtable
+  * [dict_get](opcodes/dict_get.md): Get a value from a hashtable
+  * [dict_geti](opcodes/dict_geti.md): Get a string value from a hashtable at init time
+  * [dict_iter](opcodes/dict_iter.md): Iterate over the key-value pairs of a dict
+  * [dict_loadstr](opcodes/dict_loadstr.md): Creates and fills a new dict from a string definition
+  * [dict_new](opcodes/dict_new.md): Create a hashtable
+  * [dict_print](opcodes/dict_print.md): Prints the contents of a dict
+  * [dict_query](opcodes/dict_query.md): Query different properties of a dict
+  * [dict_set](opcodes/dict_set.md): Set a value from a hashtable
+  * [dict_size](opcodes/dict_size.md): Returns the number of key:value pairs in a dict
+  * [pool_at](opcodes/pool_at.md): Returns the item of a pool at a given index
+  * [pool_capacity](opcodes/pool_capacity.md): Returns the capacity of a pool
+  * [pool_gen](opcodes/pool_gen.md): Create a pool and fill it with values
+  * [pool_isfull](opcodes/pool_isfull.md): Returns 1 if the pool is full
+  * [pool_new](opcodes/pool_new.md): Create an empty  pool
+  * [pool_pop](opcodes/pool_pop.md): Pop (get) an item from a pool
+  * [pool_push](opcodes/pool_push.md): Push an item into a pool
+  * [pool_size](opcodes/pool_size.md): Returns the size of a pool
+  * [sderef](opcodes/sderef.md): Retrieves a read-only string from the cache
+  * [sref](opcodes/sref.md): Insert a string into a global registry and return a reference to it
+
 ## pathtools
 
 Cross-platform path handling and string opcodes
@@ -58,3 +106,32 @@ Cross-platform path handling and string opcodes
   * [strjoin](opcodes/strjoin.md): Concatenate any number of strings
   * [strsplit](opcodes/strsplit.md): Split a string at a given separator
   * [sysPlatform](opcodes/sysPlatform.md): Get a string description of the current system platform
+
+## poly
+
+Multiple (parallel or sequential) instances of an opcode
+
+  * [defer](opcodes/defer.md): Run an opcode at the end of current event
+  * [poly](opcodes/poly.md): `poly` creates and controls multiple parallel version of an opcode
+  * [poly0](opcodes/poly0.md): `poly0` creates and controls multiple parallel version of an opcode with no outputs
+  * [polyseq](opcodes/polyseq.md): `polyseq` creates and controls multiple **sequential** version of an opcode
+
+## sndmeta
+
+opcodes using libsndfile
+
+  * [filereadmeta](opcodes/filereadmeta.md): Read metadata from a soundfile
+
+## vst3
+
+Host vst3 plugins in csound
+
+  * [vst3audio](opcodes/vst3audio.md): Sends audio to, and/or receives audio from, a VST3 plugin.
+  * [vst3info](opcodes/vst3info.md): Prints information about the plugin
+  * [vst3init](opcodes/vst3init.md): loads a VST3 plugin for use with the other vst3-opcodes
+  * [vst3midi](opcodes/vst3midi.md): Sends raw MIDI messages to a VST3 plugin.
+  * [vst3note](opcodes/vst3note.md): Sends a single note with a specified duration to a VST3 plugin
+  * [vst3paramget](opcodes/vst3paramget.md): Gets the current value of a single parameter from a VST3
+  * [vst3paramset](opcodes/vst3paramset.md): Sets the current value of a single parameter in a VST3 plugin.
+  * [vst3presetload](opcodes/vst3presetload.md): Loads a preset from a file
+  * [vst3presetsave](opcodes/vst3presetsave.md): Saves a plugin preset to a file.

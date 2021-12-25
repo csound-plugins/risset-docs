@@ -45,7 +45,7 @@ Sprograms[] sflistprograms Spath
 <CsOptions>
 
 --nosound
--m0
+; -m0
 
 </CsOptions>
 
@@ -53,7 +53,7 @@ Sprograms[] sflistprograms Spath
 
 
 instr 1
-  Sprograms[] sflistprograms "violin.sf2"
+  Sprograms[] sflistprograms "violin.sf3"
   printarray Sprograms
   turnoff
 endin
