@@ -116,6 +116,12 @@ Multiple (parallel or sequential) instances of an opcode
   * [poly0](opcodes/poly0.md): `poly0` creates and controls multiple parallel version of an opcode with no outputs
   * [polyseq](opcodes/polyseq.md): `polyseq` creates and controls multiple **sequential** version of an opcode
 
+## risset
+
+Cross-platform path handling and string opcodes
+
+  * [risset](opcodes/risset.md): Get information from risset's package manager
+
 ## sndmeta
 
 opcodes using libsndfile
