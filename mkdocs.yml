@@ -1,5 +1,11 @@
 site_name: Csound Plugins
-theme: readthedocs
+# theme: readthedocs
+theme: 
+    name: readthedocs
+    highlightjs: false
+    prev_next_buttons_location: none
+    navigation_depth: 1
+    
 extra_css:
     - css/syntax-highlighting.css
     
