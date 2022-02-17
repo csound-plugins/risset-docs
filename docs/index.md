@@ -9,6 +9,12 @@ Band-enhanced oscillators implementing the sine+noise synthesis model
   * [getrowlin](opcodes/getrowlin.md): opy a row from a 2D array or table, with interpolation between rows
   * [tabrowlin](opcodes/tabrowlin.md): Copy a row from an f-table to another, interpolating between rows
 
+## chua
+
+Implementation of a Chua oscillator
+
+  * [chuap](opcodes/chuap.md): Simulates Chua's oscillator
+
 ## else
 
 Miscellaneous plugins
@@ -48,6 +54,14 @@ Miscellaneous plugins
   * [throwerror](opcodes/throwerror.md): Throws an error message at performance or init
   * [uniqinstance](opcodes/uniqinstance.md): Return an fractional instrument number which is not in use
   * [zeroarray](opcodes/zeroarray.md): Zero all elements in an array
+  * [zerocrossing](opcodes/zerocrossing.md): Outputs a frequency based on the number of zero-crossings per second.
+
+## hdf5
+
+Read/Write signals and arrays to/from an hdf5 file
+
+  * [hdf5read](opcodes/hdf5read.md): Read signals and arrays from an hdf5 file.
+  * [hdf5write](opcodes/hdf5write.md): Write signals and arrays to an hdf5 file.
 
 ## jsfx
 
@@ -116,9 +130,15 @@ Multiple (parallel or sequential) instances of an opcode
   * [poly0](opcodes/poly0.md): `poly0` creates and controls multiple parallel version of an opcode with no outputs
   * [polyseq](opcodes/polyseq.md): `polyseq` creates and controls multiple **sequential** version of an opcode
 
+## python
+
+Opcodes to interact with an embedded python interpreter
+
+  * [pyrun](opcodes/pyrun.md): Run a Python statement or block of statements
+
 ## risset
 
-Cross-platform path handling and string opcodes
+Opcodes to access risset package metadata
 
   * [risset](opcodes/risset.md): Get information from risset's package manager
 
@@ -141,3 +161,4 @@ Host vst3 plugins in csound
   * [vst3paramset](opcodes/vst3paramset.md): Sets the current value of a single parameter in a VST3 plugin.
   * [vst3presetload](opcodes/vst3presetload.md): Loads a preset from a file
   * [vst3presetsave](opcodes/vst3presetsave.md): Saves a plugin preset to a file.
+  * [vst3tempo](opcodes/vst3tempo.md): Changes the tempo in a VST3 plugin.

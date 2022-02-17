@@ -9,22 +9,25 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Index - Csound Plugins</title>
+  <title>vst3-opcodes - Csound Plugins</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../css/theme.css" />
   <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
   <link href="../css/syntax-highlighting.css" rel="stylesheet" />
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Index";
+    var mkdocs_page_name = "vst3-opcodes";
     var mkdocs_page_input_path = "opcodes/README.md";
     var mkdocs_page_url = null;
   </script>
   
   <script src="../js/jquery-2.1.1.min.js" defer></script>
-  <script src="../js/modernizr-2.8.3.min.js" defer></script> 
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -50,7 +53,185 @@
                 </ul>
                 <p class="caption"><span class="caption-text">Opcodes</span></p>
                 <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href="index.html">Index</a>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="index.html">vst3-opcodes</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#httpsgithubcomgoginscsound-vst3-opcodes">https://github.com/gogins/csound-vst3-opcodes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#vst3-opcodes-test-linuxcsd">vst3-opcodes-test-linux.csd</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#vst3-opcodes-test-macoscsd">vst3-opcodes-test-macos.csd</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#vst3-opcodes-test-windowscsd">vst3-opcodes-test-windows.csd</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#vst3audio">vst3audio</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#description">Description</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#syntax">Syntax</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#initialization">Initialization</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#performance">Performance</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#examples_1">Examples</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#see-also">See Also</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#credits">Credits</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#vst3info">vst3info</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#description_1">Description</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#syntax_1">Syntax</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#initialization_1">Initialization</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#examples_2">Examples</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#see-also_1">See Also</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#credits_1">Credits</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#vst3init">vst3init</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#description_2">Description</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#syntax_2">Syntax</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#initialization_2">Initialization</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#examples_3">Examples</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#see-also_2">See Also</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#credits_2">Credits</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#vst3midi">vst3midi</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#description_3">Description</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#syntax_3">Syntax</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#initialization_3">Initialization</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#performance_1">Performance</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#examples_4">Examples</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#see-also_3">See Also</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#credits_3">Credits</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#vst3note">vst3note</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#description_4">Description</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#syntax_4">Syntax</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#initialization_4">Initialization</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#see-also_4">See Also</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#credits_4">Credits</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#vst3paramget">vst3paramget</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#description_5">Description</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#syntax_5">Syntax</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#initialization_5">Initialization</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#performance_2">Performance</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#examples_5">Examples</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#see-also_5">See Also</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#credits_5">Credits</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#vst3paramset">vst3paramset</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#description_6">Description</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#syntax_6">Syntax</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#initialization_6">Initialization</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#performance_3">Performance</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#examples_6">Examples</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#see-also_6">See Also</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#credits_6">Credits</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#vst3presetload">vst3presetload</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#description_7">Description</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#syntax_7">Syntax</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#initialization_7">Initialization</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#examples_7">Examples</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#see-also_7">See Also</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#credits_7">Credits</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#vst3presetsave">vst3presetsave</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#description_8">Description</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#syntax_8">Syntax</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#initialization_8">Initialization</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#examples_8">Examples</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#see-also_8">See Also</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#credits_8">Credits</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#vst3tempo">vst3tempo</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#description_9">Description</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#syntax_9">Syntax</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#initialization_9">Initialization</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#performance_4">Performance</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#see-also_9">See Also</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#credits_9">Credits</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="accum.html">accum</a>
                     </li>
@@ -61,6 +242,8 @@
                     <li class="toctree-l1"><a class="reference internal" href="beosc.html">beosc</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="bisect.html">bisect</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="chuap.html">chuap</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="crackle.html">crackle</a>
                     </li>
@@ -121,6 +304,10 @@
                     <li class="toctree-l1"><a class="reference internal" href="getEnvVar.html">getEnvVar</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="getrowlin.html">getrowlin</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="hdf5read.html">hdf5read</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="hdf5write.html">hdf5read</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="initerror.html">initerror</a>
                     </li>
@@ -190,6 +377,8 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="pwrite.html">pwrite</a>
                     </li>
+                    <li class="toctree-l1"><a class="reference internal" href="pyrun.html">pyrun</a>
+                    </li>
                     <li class="toctree-l1"><a class="reference internal" href="ramptrig.html">ramptrig</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="ref.html">ref</a>
@@ -246,9 +435,13 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="vst3presetsave.html">vst3presetsave</a>
                     </li>
+                    <li class="toctree-l1"><a class="reference internal" href="vst3tempo.html">vst3tempo</a>
+                    </li>
                     <li class="toctree-l1"><a class="reference internal" href="xtracycles.html">xtracycles</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="zeroarray.html">zeroarray</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="zerocrossing.html">zerocrossing</a>
                     </li>
                 </ul>
       </div>
@@ -276,7 +469,7 @@
         
       
     
-    <li>Index</li>
+    <li>vst3-opcodes</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -288,11 +481,649 @@
           <div role="main">
             <div class="section">
               
-                <p>Put the manual pages of each opcode in this folder, in markdown format, with the format {opcodename}.md </p>
+                <h1 id="vst3-opcodes">vst3-opcodes</h1>
+<p><img src="VST_Compatible_Logo_Steinberg_with_TM_negative.png" width="100" height="100" /></p>
+<h2 id="httpsgithubcomgoginscsound-vst3-opcodes">https://github.com/gogins/csound-vst3-opcodes</h2>
+<p>These are a set of Csound opcodes that enable Csound to host VST3 
+plugins: both effect plugins and instrument plugins. The vst3-opcodes should 
+work on Linux, Windows, and the Mac OS, and on both 64-bit and 32-bit CPU 
+architectures. VST2 plugins are not supported (but the vst4cs opcodes do 
+support VST2 plugins).</p>
+<p>For users of Csound, the advantages of VST3 over VST2 are that not only 
+notes, but also MIDI messages and parameter changes are scheduled with 
+sample-frame accuracy. In addition, the organization of inputs, outputs, 
+and parameters is more flexible.</p>
+<p>Currently, opening a plugin's editor window from Csound, which is a feature of 
+the vst4cs opcodes, is not supported.</p>
+<p>These opcodes are licensed under the terms of the GPLv3 license,
+which is compatible with both the Steinberg VST3 SDK GPLv3 license
+and Csound's LGPLv2 license (which allows re-licensing Csound as 
+"any later version of the GPL license").</p>
+<p>The opcodes consist of:</p>
+<ol>
+<li><a href="#vst3audio">vst3audio</a></li>
+<li><a href="#vst3info">vst3info</a></li>
+<li><a href="#vst3init">vst3init</a></li>
+<li><a href="#vst3midi">vst3midi</a></li>
+<li><a href="#vst3note">vst3note</a></li>
+<li><a href="#vst3paramget">vst3paramget</a></li>
+<li><a href="#vst3paramset">vst3paramset</a></li>
+<li><a href="#vst3presetsave">vst3presetsave</a></li>
+<li><a href="#vstpresetload">vstpresetload</a></li>
+<li><a href="#vts3tempo">vst3tempo</a></li>
+</ol>
+<p>The typical lifecycle of a VST3 plugin in Csound is:</p>
+<ol>
+<li>Load the plugin with <a href="#vst3init">vst3init</a>.</li>
+<li>Load a preset with <a href="#vst3presetload">vst3presetload</a>, 
+     or (supposedly, but doesn't seem to work) select a loaded program with 
+     <a href="#vst3paramset">vst3paramset</a>.</li>
+<li>Send notes to the plugin with <a href="#vst3note">vst3note</a>.</li>
+<li>Send parameter changes to the plugin with <a href="#vst3paramset">vst3paramset</a>.</li>
+<li>Send raw MIDI messages to the plugin with <a href="#vst3midi">vst3midi</a>.</li>
+<li>In a global, always-on instrument, send audio to 
+     and receive audio from the plugin with <a href="#vst3audio">vst3audio</a>.</li>
+</ol>
+<p>Any number of VST3 plugins may be loaded. Any number of audio channels, VST3 
+parameters, or notes may be used. </p>
+<p>Supposedly, to change to a different program (i.e., factory-defined preset), 
+examine the <code>vst3info</code> printout for a plugin and change the program using 
+<code>vstparamset</code>, with the parameter ID equal to the program list ID. The 
+parameter value is normalized, but will be mapped to the appropriate program 
+number in the program list as follows.</p>
+<p><em>Normalize</em></p>
+<p>double normalized = program / (double) programs;</p>
+<p><em>Denormalize</em></p>
+<p>int program = min (programs, normalized * (programs + 1));</p>
+<p>This however does not seem to work with the VST3 SDK example programs, and 
+they also do not work properly in the Reaper host.</p>
+<p>At this time the best practice for changing the preset of a VST3 plugin in 
+Csound is as follows:</p>
+<ol>
+<li>Open the plugin in its standalone mode (if it has one) or in a VST3 host 
+     such as Reaper.</li>
+<li>Edit the parameters interactively until you achieve a sound you want to 
+     use. Export the current state of the parameters as a preset file.</li>
+<li>In Csound, use vst3presetload to load your custom preset file.</li>
+<li>Alternatively, simply uset vst3paramset to send all the parameter changes 
+     that you need to define your preset before you play any notes, or define 
+     a Csound instrument that will send such parameters for you from your 
+     score.</li>
+</ol>
+<h2 id="examples">Examples</h2>
+<h3 id="vst3-opcodes-test-linuxcsd">vst3-opcodes-test-linux.csd</h3>
+<h3 id="vst3-opcodes-test-macoscsd">vst3-opcodes-test-macos.csd</h3>
+<h3 id="vst3-opcodes-test-windowscsd">vst3-opcodes-test-windows.csd</h3>
+<p>These pieces serve as both tests and examples. They assume that you have 
+unzipped the csound-vst3 ZIP archive for your system into a new empty directory 
+on your computer, and that you will run the example for your system from the 
+<code>csound-vst3/vst3-opcodes</code> subdirectory.</p>
+<p>```
+<CsoundSynthesizer>
+<CsLicense></p>
+<p>V S T 3   O P C O D E S   T E S T</p>
+<p>Author: Michael Gogins</p>
+<p>The code is licensed under the terms of the GPLv3 license.</p>
+<p>This Csound piece demonstrates how to use the following vst3 opcodes:</p>
+<ol>
+<li>vst3init</li>
+<li>vst3info</li>
+<li>vst3note</li>
+<li>vst3audio</li>
+<li>vst3paramset</li>
+<li>vst3paramget</li>
+<li>vst3presetsave</li>
+<li>vst3presetload</li>
+</ol>
+<p>These are all the opcodes actually needed to fully use VST3 instruments and 
+effects in Csound. This piece also serves as basic unit tests for the VST3 
+opcodes.</p>
+<p>The piece consists of an algorithmically generated score, which is rendered 
+with several of the instruments in the VST3 SDK; effects are added using 
+several other plugins in the VST3 SDK. Parameters and presets also are used.</p>
+<p>Assuming you are on Linux, have installed Csound, ahd have unzipped the 
+csound-vst3-linux.zip file into a new empty directory, then things are set up
+to run this piece from the <code>csound-vst3/vst3-opcodes</code> subdirectory.</p>
+<p></CsLicense>
+<CsOptions>
+-m195 --opcode-lib="../../build-linux/lib/Debug/libvst3_plugins.so" -z1
+</CsOptions>
+<CsInstruments></p>
+<p>sr      = 48000
+ksmps   = 100
+nchnls  = 2
+0dbfs   = 20</p>
+<p>connect "JX10_Output", "outleft", "Delay", "inleft"
+connect "JX10_Output", "outright", "Delay", "inright"
+connect "Piano_Output", "outleft", "Delay", "inleft"
+connect "Piano_Output", "outright", "Delay", "inright"
+connect "Delay", "outleft", "Reverb", "inleft"
+connect "Delay", "outright", "Reverb", "inright"
+connect "Reverb", "outleft", "Master_Output", "inleft"
+connect "Reverb", "outright", "Master_Output", "inright"</p>
+<p>alwayson "JX10_Output"
+alwayson "Piano_Output"
+alwayson "Delay"
+alwayson "Reverb"
+alwayson "Master_Output"</p>
+<p>gi_vst3_handle_jx10 vst3init "../../build-linux/VST3/Debug/mda-vst3.vst3", "mda JX10", 1
+vst3info gi_vst3_handle_jx10</p>
+<p>gi_vst3_handle_piano vst3init "../../build-linux/VST3/Debug/mda-vst3.vst3", "mda Piano", 1
+vst3info gi_vst3_handle_piano</p>
+<p>gi_vst3_handle_delay vst3init "../../build-linux/VST3/Debug/mda-vst3.vst3", "mda Delay", 1
+vst3info gi_vst3_handle_delay</p>
+<p>gi_vst3_handle_ambience vst3init "../../build-linux/VST3/Debug/mda-vst3.vst3", "mda Ambience", 1
+vst3info gi_vst3_handle_ambience</p>
+<p>// Array of instrument plugins indexed by instrument number, for sending 
+// parameter changes.</p>
+<p>gi_plugins[] init 5
+gi_plugins[3] init gi_vst3_handle_piano
+gi_plugins[4] init gi_vst3_handle_jx10</p>
+<p>// Score generating instrument.</p>
+<p>gi_iterations init 50
+gi_duration init 1.8
+gi_time_step init .6666667
+gi_loudness init 70
+instr Score_Generator
+i_time = p2
+i_instrument = p4
+i_c = p5
+i_y = p6
+i_bass = p7
+i_range = p8
+i_time_step = 1 / 8
+i_iteration = 0
+while i_iteration &lt; gi_iterations do
+    i_iteration = i_iteration + 1
+    i_time = p2 + (i_iteration * gi_time_step)
+    // Normalized logistic equation:
+    i_y1 = i_c * i_y * (1 - i_y) * 4
+    i_y = i_y1
+    i_pitch = floor(i_bass + (i_y * i_range)) 
+    event_i "i", i_instrument, i_time, gi_duration, i_pitch, gi_loudness
+    prints "   %f =&gt; i %f %f %f %f %f\n", i_y, i_instrument, i_time, gi_duration, i_pitch, gi_loudness
+od
+prints "%-24.24s i %9.4f t %9.4f d %9.4f k %9.4f v %9.4f p %9.4f #%3d\n", nstrstr(p1), p1, p2, p3, p4, p5, p7, active(p1)
+endin</p>
+<p>instr Param_Change
+i_target_plugin = p4
+i_vst3_plugin init gi_plugins[p4]
+k_parameter_id init p5
+k_parameter_value init p6
+vst3paramset i_vst3_plugin, k_parameter_id, k_parameter_value
+prints "%-24.24s i %9.4f t %9.4f d %9.4f target: %3d  id: %3d  value: %9.4f #%3d\n", nstrstr(p1), p1, p2, p3, p4, p5, p6, active(p1)
+endin</p>
+<p>instr Piano
+i_note_id vst3note gi_vst3_handle_piano, 0, p4, p5, p3
+prints "%-24.24s i %9.4f t %9.4f d %9.4f k %9.4f v %9.4f p %9.4f #%3d\n", nstrstr(p1), p1, p2, p3, p4, p5, p7, active(p1)
+endin</p>
+<p>instr JX10
+i_note_id vst3note gi_vst3_handle_jx10, 0, p4, p5, p3
+prints "%-24.24s i %9.4f t %9.4f d %9.4f k %9.4f v %9.4f p %9.4f #%3d\n", nstrstr(p1), p1, p2, p3, p4, p5, p7, active(p1)
+endin</p>
+<p>instr Piano_Output
+a_out_left, a_out_right vst3audio gi_vst3_handle_piano 
+outleta "outleft", a_out_left
+outleta "outright", a_out_right
+prints "%-24.24s i %9.4f t %9.4f d %9.4f k %9.4f v %9.4f p %9.4f #%3d\n", nstrstr(p1), p1, p2, p3, p4, p5, p7, active(p1)
+endin</p>
+<p>instr JX10_Output
+a_out_left, a_out_right vst3audio gi_vst3_handle_jx10 
+outleta "outleft", a_out_left
+outleta "outright", a_out_right
+prints "%-24.24s i %9.4f t %9.4f d %9.4f k %9.4f v %9.4f p %9.4f #%3d\n", nstrstr(p1), p1, p2, p3, p4, p5, p7, active(p1)
+endin</p>
+<p>instr Print_Info
+i_target_plugin = p4
+i_vst3_plugin init gi_plugins[p4]
+vst3info i_vst3_plugin
+prints "%-24.24s i %9.4f t %9.4f d %9.4f k %9.4f v %9.4f p %9.4f #%3d\n", nstrstr(p1), p1, p2, p3, p4, p5, p7, active(p1)
+endin</p>
+<p>instr Save_Preset
+i_target_plugin = p4
+S_preset_name init p5
+i_vst3_plugin init gi_plugins[p4]
+vst3presetsave i_vst3_plugin, S_preset_name
+prints "%-24.24s i %9.4f t %9.4f d %9.4f target: %3d  preset: %s #%3d\n", nstrstr(p1), p1, p2, p3, i_target_plugin, S_preset_name, active(p1)
+endin</p>
+<p>instr Program_Change
+i_target_plugin = p4
+i_vst3_plugin init gi_plugins[p4]
+; May only be relevant to the MDA example plugins.
+k_parameter_id init 1886548852 
+k_parameter_value init p5
+vst3paramset i_vst3_plugin, k_parameter_id, k_parameter_value
+prints "Don't expect this one to work yet!\n"
+prints "%-24.24s i %9.4f t %9.4f d %9.4f target: %3d  id: %3d  value: %9.4f #%3d\n", nstrstr(p1), p1, p2, p3, i_target_plugin, k_parameter_id, k_parameter_value, active(p1)
+endin</p>
+<p>instr Load_Preset
+i_target_plugin = p4
+S_preset_name init p5
+i_vst3_plugin init gi_plugins[p4]
+vst3presetload i_vst3_plugin, S_preset_name
+prints "%-24.24s i %9.4f t %9.4f d %9.4f target: %3d  preset: %s #%3d\n", nstrstr(p1), p1, p2, p3, i_target_plugin, S_preset_name, active(p1)
+endin</p>
+<p>instr Delay
+a_in_left inleta "inleft"
+a_in_right inleta "inright"
+a_out_left, a_out_right vst3audio gi_vst3_handle_delay, a_in_left, a_in_right
+outleta "outleft", a_out_left
+outleta "outright", a_out_right
+prints "%-24.24s i %9.4f t %9.4f d %9.4f k %9.4f v %9.4f p %9.4f #%3d\n", nstrstr(p1), p1, p2, p3, p4, p5, p7, active(p1)
+endin</p>
+<p>instr Reverb
+a_in_left inleta "inleft"
+a_in_right inleta "inright"
+k_old_size vst3paramget gi_vst3_handle_ambience, 0
+vst3paramset gi_vst3_handle_ambience, 0, .95
+vst3paramset gi_vst3_handle_ambience, 3, .9
+vst3presetsave gi_vst3_handle_ambience, "ambience.preset"
+a_out_left, a_out_right vst3audio gi_vst3_handle_ambience, a_in_left, a_in_right
+outleta "outleft", a_out_left
+outleta "outright", a_out_right
+prints "%-24.24s i %9.4f t %9.4f d %9.4f k %9.4f v %9.4f p %9.4f #%3d\n", nstrstr(p1), p1, p2, p3, p4, p5, p7, active(p1)
+endin</p>
+<p>instr Master_Output
+a_in_left inleta "inleft"
+a_in_right inleta "inright"
+outs a_in_left, a_in_right
+prints "%-24.24s i %9.4f t %9.4f d %9.4f k %9.4f v %9.4f p %9.4f #%3d\n", nstrstr(p1), p1, p2, p3, p4, p5, p7, active(p1)
+endin</p>
+<p></CsInstruments>
+<CsScore>
+f 0 40
+i "Score_Generator" 1 1 3 .989 .5 36 60
+i "Score_Generator" 1 1 4 .989 .5 78 6
+; Stores original parameter state...
+i "Print_Info" 1.1 1 4
+i "Save_Preset" 1.2 1 4 "jx10.vstpreset"
+i "Print_Info" 1.3 1 4
+; Changes filter state...
+i "Param_Change" 10 1 4 1 .15
+i "Param_Change" 10 1 4 7 .15
+i "Param_Change" 10 1 4 12 .1
+i "Print_Info" 10.5 1 4
+; Restores original parameter state.
+i "Load_Preset" 25 1 4 "jx10.vstpreset"
+i "Print_Info" 25.5 1 4
+;i "Program_Change" 25 1 4 12
+;i "Print_Info" 30.0 1 3
+;i "Program_Change" 30.1 1 3 4
+;i "Print_Info" 30.2 1 3</p>
+<p></CsScore>
+</CsoundSynthesizer>```</p>
+<h2 id="vst3audio">vst3audio</h2>
+<p>vst3-opcodes -- VST plugin hosting in Csound.</p>
+<h3 id="description">Description</h3>
+<p><strong>vst3audio</strong> sends audio to, and/or receives audio from, a VST3 plugin.</p>
+<h3 id="syntax">Syntax</h3>
+<p>[a_audio_output_1,...] <strong>vst3audio</strong> i_handle [, a_audio_input_1,...]</p>
+<h3 id="initialization">Initialization</h3>
+<p><em>i_handle</em> -- the handle that identifies the plugin, obtained from 
+<a href="#vst3init">vst3init</a>.</p>
+<h3 id="performance">Performance</h3>
+<p><em>a_audio_input_n</em> -- one of zero or more, up to 32, audio input channels.</p>
+<p><em>a_audio_output_n</em> -- one of zero or more, up to 32, auto output channels.</p>
+<p>This opcode is used for both VST instruments and VST effects. For instruments, 
+inputs are allowed but not required, and may or may not actually be handled by 
+the plugin.</p>
+<p>Note that the mininum of the plugin inputs and the opcode inputs, and the 
+minimum of the plugin outputs and the opcode outputs, are used. It is assumed 
+that the "Main" audio and event busses in the plugin are the first input 
+busses and first output busses.</p>
+<p>The audio sent to the plugin must come from some other source in Csound, such
+as an input opcode or a Csound buss channel, and the audio received from the 
+plugin must be sent to some other sink in Csound, such as an opcode output or 
+a Csound buss channel.</p>
+<h3 id="examples_1">Examples</h3>
+<p>See <a href="#example">vst3-opcodes.csd</a>.</p>
+<h3 id="see-also">See Also</h3>
+<p><a href="#vst3audio">vst3audio</a>, 
+<a href="#vst3info">vst3info</a>, 
+<a href="#vst3init">vst3init</a>,
+<a href="#vst3midi">vst3midi</a>, 
+<a href="#vst3note">vst3note</a>,
+<a href="#vst3paramget">vst3paramget</a>, 
+<a href="#vst3paramset">vst3paramset</a>,
+<a href="#vst3presetload">vst3presetload</a>, 
+<a href="#vst3presetsave">vst3presetsave</a>, 
+<a href="#vts3tempo">vts3tempo</a></p>
+<h3 id="credits">Credits</h3>
+<p>Michael Gogins<br>
+http://michaelgogins.tumblr.com<br>
+michael dot gogins at gmail dot com<br></p>
+<h2 id="vst3info">vst3info</h2>
+<p>vst3-opcodes -- VST plugin hosting in Csound.</p>
+<h3 id="description_1">Description</h3>
+<p><strong>vst3info</strong> prints information about the plugin module, input and output 
+busses, parameters, presets, and program lists. Not all plugins provide 
+all types of information.</p>
+<h3 id="syntax_1">Syntax</h3>
+<p><strong>vst3info</strong> i_handle</p>
+<h3 id="initialization_1">Initialization</h3>
+<p><em>i_handle</em> -- the handle that identifies the plugin, obtained from 
+<a href="#vst3init">vst3init</a>.</p>
+<h3 id="examples_2">Examples</h3>
+<p>See <a href="#example">vst3-opcodes.csd</a>.</p>
+<h3 id="see-also_1">See Also</h3>
+<p><a href="#vst3audio">vst3audio</a>, 
+<a href="#vst3info">vst3info</a>, 
+<a href="#vst3init">vst3init</a>, 
+<a href="#vst3midi">vst3midi</a>, 
+<a href="#vst3note">vst3note</a>, 
+<a href="#vst3paramget">vst3paramget</a>, 
+<a href="#vst3paramset">vst3paramset</a>, 
+<a href="#vst3presetload">vst3presetload</a>, 
+<a href="#vst3presetsave">vst3presetsave</a>, 
+<a href="#vts3tempo">vts3tempo</a></p>
+<h3 id="credits_1">Credits</h3>
+<p>Author:</p>
+<p>Michael Gogins<br>
+http://michaelgogins.tumblr.com<br>
+michael dot gogins at gmail dot com<br></p>
+<h2 id="vst3init">vst3init</h2>
+<p>vst3-opcodes -- VST3 plugin hosting in Csound.</p>
+<h3 id="description_2">Description</h3>
+<p><strong>vst3init</strong> loads a VST3 plugin into memory for use with the 
+other vst3-opcodes. Both VST3 effects and instruments (synthesizers) can be 
+used. </p>
+<p>Note that for VST3, there may be multiple plugins defined in one loadable 
+module.</p>
+<h3 id="syntax_2">Syntax</h3>
+<p>i_handle <strong>vst3init</strong> S_module_pathname, S_plugin_name [,i_verbose]</p>
+<h3 id="initialization_2">Initialization</h3>
+<p><em>i_handle</em> -- the handle that identifies the plugin, to be passed to the other 
+vst3opcodes that use the plugin.</p>
+<p><em>S_module_pathname</em> -- the pathname of a ".vst3" directory that contains a 
+plugin module and its resources. Remember to use '/' instead of '\' as the 
+path separator.</p>
+<p><em>S_plugin_name</em> -- the name of a plugin within the module. If you do not know 
+the name of the plugin, run with *i_verbose" set to true to find the name.</p>
+<p><em>i_verbose</em> -- print a list of all the plugins defined in the module, as well 
+as other information.</p>
+<h3 id="examples_3">Examples</h3>
+<p>See <a href="#example">vst3-opcodes.csd</a>.</p>
+<h3 id="see-also_2">See Also</h3>
+<p><a href="#vst3audio">vst3audio</a>, 
+<a href="#vst3info">vst3info</a>, 
+<a href="#vst3init">vst3init</a>,
+<a href="#vst3midi">vst3midi</a>, 
+<a href="#vst3note">vst3note</a>,
+<a href="#vst3paramget">vst3paramget</a>, 
+<a href="#vst3paramset">vst3paramset</a>,
+<a href="#vst3presetload">vst3presetload</a>, 
+<a href="#vst3presetsave">vst3presetsave</a>, 
+<a href="#vts3tempo">vts3tempo</a></p>
+<h3 id="credits_2">Credits</h3>
+<p>Author:</p>
+<p>Michael Gogins<br>
+http://michaelgogins.tumblr.com<br>
+michael dot gogins at gmail dot com<br></p>
+<h2 id="vst3midi">vst3midi</h2>
+<p>vst3-opcodes -- VST plugin hosting in Csound.</p>
+<h3 id="description_3">Description</h3>
+<p><strong>vst3midi</strong> sends raw MIDI messages to a VST3 plugin. Essentially, 
+there are all MIDI messages that can be sent as 2 or 3 bytes. System 
+exclusive messages are not handled.</p>
+<h3 id="syntax_3">Syntax</h3>
+<p><strong>vst3midi</strong> i_handle, k_status, k_channel, k_data_1, k_data_2</p>
+<h3 id="initialization_3">Initialization</h3>
+<p><em>i_handle</em> -- the handle that identifies the plugin, obtained from 
+<a href="#vst3init">vst3init</a>.</p>
+<h3 id="performance_1">Performance</h3>
+<p><em>k_status</em> -- The status code of the MIDI channel message.</p>
+<p><em>k_channel</em> -- The zero-based MIDI channel of the message.</p>
+<p><em>k_data_1</em> -- The first data byte of the message.</p>
+<p><em>k_data_2</em> -- The second data byte of the message.</p>
+<p>Please note, the ranges and semantics of these numbers are defined by the 
+MIDI 1.0 Standard. The messages are scheduled immediately. If any of these 
+parameters changes during performance, a new MIDI channel message is 
+immediately sent. The channel parameter is simply added to the status 
+parameter; thus, if the status code already specifies the channel number, 
+then the <em>k_channel</em> parameter should be set to zero.</p>
+<h3 id="examples_4">Examples</h3>
+<p>See <a href="#example">vst3-opcodes.csd</a>.</p>
+<h3 id="see-also_3">See Also</h3>
+<p><a href="#vst3audio">vst3audio</a>, 
+<a href="#vst3info">vst3info</a>, 
+<a href="#vst3init">vst3init</a>,
+<a href="#vst3midi">vst3midi</a>, 
+<a href="#vst3note">vst3note</a>,
+<a href="#vst3paramget">vst3paramget</a>, 
+<a href="#vst3paramset">vst3paramset</a>,
+<a href="#vst3presetload">vst3presetload</a>, 
+<a href="#vst3presetsave">vst3presetsave</a>, 
+<a href="#vts3tempo">vts3tempo</a></p>
+<h3 id="credits_3">Credits</h3>
+<p>Author:</p>
+<p>Michael Gogins<br>
+http://michaelgogins.tumblr.com<br>
+michael dot gogins at gmail dot com<br></p>
+<h2 id="vst3note">vst3note</h2>
+<p>vst3-opcodes -- VST plugin hosting in Csound.</p>
+<h3 id="description_4">Description</h3>
+<p><strong>vst3note</strong> sends a single note with a specified duration to a VST3 
+plugin. The note is translated to a MIDI Note On channel message with a 
+matching MIDI Note Off channel message. </p>
+<p>The VST3 protocol supports fractional pitches, which are sent as cents of 
+detuning from the integer MIDI key number. In this way, any pitch can be sent 
+to a plugin, which may or may not be equipped to render it.</p>
+<h3 id="syntax_4">Syntax</h3>
+<p>i_note_id <strong>vst3note</strong> i_handle, i_midi_channel, i_midi_key, i_midi_velocity, i_duration</p>
+<h3 id="initialization_4">Initialization</h3>
+<p><em>i_note_id</em> -- An identifier, unique for this instance of this plugin, of this 
+note, possibly useful for per-note control.</p>
+<p><em>i_handle</em> -- the handle that identifies the plugin, obtained from 
+<a href="#vst3init">vst3init</a>.</p>
+<p><em>i_midi_channel</em> -- The zero-based MIDI channel in the interval [0, 15] of the 
+message.</p>
+<p><em>i_midi_key</em> -- The real-valued MIDI key number in the interval [0, 127] of 
+the note. It may have a fractional value that will be translated to a VST3 
+detuning parameter. Middle "C" is key number 60.</p>
+<p><em>i_midi_velocity</em> -- The MIDI velocity of the note in the interval [0, 127]. 
+Mezzo-forte is velocity number 80.</p>
+<p><em>i_duration</em> -- The real-valued duration of the note in beats (by default, 1 beat in 
+Csound is 1 second).</p>
+<p>Note: Be sure the instrument containing <strong>vst3note</strong> is not finished before the 
+duration of the note, otherwise you'll have a 'hung' note.</p>
+<h3 id="see-also_4">See Also</h3>
+<p><a href="#vst3audio">vst3audio</a>, 
+<a href="#vst3info">vst3info</a>, 
+<a href="#vst3init">vst3init</a>,
+<a href="#vst3midi">vst3midi</a>, 
+<a href="#vst3note">vst3note</a>,
+<a href="#vst3paramget">vst3paramget</a>, 
+<a href="#vst3paramset">vst3paramset</a>,
+<a href="#vst3presetload">vst3presetload</a>, 
+<a href="#vst3presetsave">vst3presetsave</a>, 
+<a href="#vts3tempo">vts3tempo</a></p>
+<h3 id="credits_4">Credits</h3>
+<p>Author:</p>
+<p>Michael Gogins<br>
+http://michaelgogins.tumblr.com<br>
+michael dot gogins at gmail dot com<br></p>
+<h2 id="vst3paramget">vst3paramget</h2>
+<p>vst3-opcodes -- VST plugin hosting in Csound.</p>
+<h3 id="description_5">Description</h3>
+<p><strong>vst3paramget</strong> gets the current value of a single parameter from a VST3 
+plugin.</p>
+<h3 id="syntax_5">Syntax</h3>
+<p>k_value <strong>vst3paramset</strong> i_handle, k_parameter</p>
+<h3 id="initialization_5">Initialization</h3>
+<p><em>i_handle</em> -- the handle that identifies the plugin, obtained from 
+<a href="#vst3init">vst3init</a>.</p>
+<h3 id="performance_2">Performance</h3>
+<p><em>k_parameter</em> -- the identification number of the parameter. This can be 
+obtained from the plugin's documentation, or by using <a href="#vst3info">vst3info</a>. 
+Note that this must be the id number of the parameter, not its index in the 
+list of parameters.</p>
+<p><em>k_value</em> -- the value of the parameter, a real number in the interval [0, 1].
+Most parameters have default values that can be printed by using 
+<a href="#vst3info">vst3info</a>. </p>
+<h3 id="examples_5">Examples</h3>
+<p>See <a href="#example">vst3-opcodes.csd</a>.</p>
+<h3 id="see-also_5">See Also</h3>
+<p><a href="#vst3audio">vst3audio</a>, 
+<a href="#vst3info">vst3info</a>, 
+<a href="#vst3init">vst3init</a>,
+<a href="#vst3midi">vst3midi</a>, 
+<a href="#vst3note">vst3note</a>,
+<a href="#vst3paramget">vst3paramget</a>, 
+<a href="#vst3paramset">vst3paramset</a>,
+<a href="#vst3presetload">vst3presetload</a>, 
+<a href="#vst3presetsave">vst3presetsave</a>, 
+<a href="#vts3tempo">vts3tempo</a></p>
+<h3 id="credits_5">Credits</h3>
+<p>Author:</p>
+<p>Michael Gogins<br>
+http://michaelgogins.tumblr.com<br>
+michael dot gogins at gmail dot com<br></p>
+<h2 id="vst3paramset">vst3paramset</h2>
+<p>vst3-opcodes -- VST plugin hosting in Csound.</p>
+<h3 id="description_6">Description</h3>
+<p><strong>vst3paramset</strong> sets the current value of a single parameter in a VST3 
+plugin. This is also used for selecting a preset from a factory list of 
+presets, or a list of presets that is loaded by the plugin itself.</p>
+<h3 id="syntax_6">Syntax</h3>
+<p><strong>vst3paramset</strong> i_handle, k_parameter, k_value</p>
+<h3 id="initialization_6">Initialization</h3>
+<p><em>i_handle</em> -- the handle that identifies the plugin, obtained from 
+<a href="#vst3init">vst3init</a>.</p>
+<h3 id="performance_3">Performance</h3>
+<p><em>k_parameter</em> -- the identification number of the parameter. This can be 
+obtained from the plugin's documentation, or by using <a href="#vst3info">vst3info</a>.
+Note that this must be the id number of the parameter, not its index in the 
+list of parameters.</p>
+<p><em>k_value</em> -- the value of the parameter, a real number in the interval [0, 1].
+Most parameters have default values that can be printed by using 
+<a href="#vst3info">vst3info</a>. </p>
+<p>If either of these arguments changes during performance, the plugin is 
+immediately updated with a new parameter value.</p>
+<h3 id="examples_6">Examples</h3>
+<p>See <a href="#example">vst3-opcodes.csd</a>.</p>
+<h3 id="see-also_6">See Also</h3>
+<p><a href="#vst3audio">vst3audio</a>, 
+<a href="#vst3info">vst3info</a>, 
+<a href="#vst3init">vst3init</a>,
+<a href="#vst3midi">vst3midi</a>, 
+<a href="#vst3note">vst3note</a>,
+<a href="#vst3paramget">vst3paramget</a>, 
+<a href="#vst3paramset">vst3paramset</a>,
+<a href="#vst3presetload">vst3presetload</a>, 
+<a href="#vst3presetsave">vst3presetsave</a>, 
+<a href="#vts3tempo">vts3tempo</a></p>
+<h3 id="credits_6">Credits</h3>
+<p>Author:</p>
+<p>Michael Gogins<br>
+http://michaelgogins.tumblr.com<br>
+michael dot gogins at gmail dot com<br></p>
+<h2 id="vst3presetload">vst3presetload</h2>
+<p>vst3-opcodes -- VST plugin hosting in Csound.</p>
+<h3 id="description_7">Description</h3>
+<p><strong>vst3presetload</strong> loads a preset from a file. A preset consists 
+of a component (instrument or effect) identifier, the value of each parameter in the preset, and 
+possibly other data such as a program list.</p>
+<h3 id="syntax_7">Syntax</h3>
+<p><strong>vst3presetload</strong> i_handle, S_preset_filepath</p>
+<h3 id="initialization_7">Initialization</h3>
+<p><em>i_handle</em> -- the handle that identifies the plugin, obtained from 
+<a href="#vst3init">vst3init</a>.</p>
+<p><em>S_preset_filepath</em> -- the full pathname of the preset file. Remember to 
+use '/' instead of '\' as the path separator.</p>
+<h3 id="examples_7">Examples</h3>
+<p>See <a href="#example">vst3-opcodes.csd</a>.</p>
+<h3 id="see-also_7">See Also</h3>
+<p><a href="#vst3audio">vst3audio</a>, 
+<a href="#vst3info">vst3info</a>, 
+<a href="#vst3init">vst3init</a>,
+<a href="#vst3midi">vst3midi</a>, 
+<a href="#vst3note">vst3note</a>,
+<a href="#vst3paramget">vst3paramget</a>, 
+<a href="#vst3paramset">vst3paramset</a>,
+<a href="#vst3presetload">vst3presetload</a>, 
+<a href="#vst3presetsave">vst3presetsave</a>, 
+<a href="#vts3tempo">vts3tempo</a></p>
+<h3 id="credits_7">Credits</h3>
+<p>Author:</p>
+<p>Michael Gogins<br>
+http://michaelgogins.tumblr.com<br>
+michael dot gogins at gmail dot com<br></p>
+<h2 id="vst3presetsave">vst3presetsave</h2>
+<p>vst3-opcodes -- VST plugin hosting in Csound.</p>
+<h3 id="description_8">Description</h3>
+<p><strong>vst3presetsave</strong> saves a plugin preset to a file. The preset file stores the 
+identifier of the instrument or effect, the identifiers, names, and values of 
+all the parameters in the program, and possibly other information such as a 
+program list.</p>
+<h3 id="syntax_8">Syntax</h3>
+<p><strong>vst3presetsave</strong> i_handle, S_preset_filepath</p>
+<h3 id="initialization_8">Initialization</h3>
+<p><em>i_handle</em> -- the handle that identifies the plugin, obtained from 
+<a href="#vst3init">vst3init</a>.</p>
+<p><em>S_preset_filepath</em> -- the full pathname of the preset file. Remember to 
+use '/' instead of '\' as the path separator.</p>
+<h3 id="examples_8">Examples</h3>
+<p>See <a href="#example">vst3-opcodes.csd</a>.</p>
+<h3 id="see-also_8">See Also</h3>
+<p><a href="#vst3audio">vst3audio</a>, 
+<a href="#vst3info">vst3info</a>, 
+<a href="#vst3init">vst3init</a>,
+<a href="#vst3midi">vst3midi</a>, 
+<a href="#vst3note">vst3note</a>,
+<a href="#vst3paramget">vst3paramget</a>, 
+<a href="#vst3paramset">vst3paramset</a>,
+<a href="#vst3presetload">vst3presetload</a>, 
+<a href="#vst3presetsave">vst3presetsave</a>, 
+<a href="#vts3tempo">vts3tempo</a></p>
+<h3 id="credits_8">Credits</h3>
+<p>Author:</p>
+<p>Michael Gogins<br>
+http://michaelgogins.tumblr.com<br>
+michael dot gogins at gmail dot com<br></p>
+<h3 id="vst3tempo">vst3tempo</h3>
+<p>vst3-opcodes -- VST plugin hosting in Csound.</p>
+<h3 id="description_9">Description</h3>
+<p><strong>vst3tempo</strong> changes the tempo in a VST3 plugin.</p>
+<h3 id="syntax_9">Syntax</h3>
+<p><strong>vst3note</strong> i_handle, k_beats_per_minute</p>
+<h3 id="initialization_9">Initialization</h3>
+<p><em>i_handle</em> -- the handle that identifies the plugin, obtained from 
+<a href="#vst3init">vst3init</a>.</p>
+<h3 id="performance_4">Performance</h3>
+<p><em>k_beats_per_minute</em> -- the musical tempo in beats per minute. </p>
+<p>By default, Csound's musical tempo is 1 beat per second, so that note onsets 
+and durations can be specified in seconds. But Csound's musical tempo can be 
+changed and, if it does change, the plugin's tempo should be changed to 
+match. Tempo changes can occur at k-rate.</p>
+<h3 id="see-also_9">See Also</h3>
+<p><a href="#vst3audio">vst3audio</a>, 
+<a href="#vst3info">vst3info</a>, 
+<a href="#vst3init">vst3init</a>,
+<a href="#vst3midi">vst3midi</a>, 
+<a href="#vst3note">vst3note</a>,
+<a href="#vst3paramget">vst3paramget</a>, 
+<a href="#vst3paramset">vst3paramset</a>,
+<a href="#vst3presetload">vst3presetload</a>, 
+<a href="#vst3presetsave">vst3presetsave</a>, 
+<a href="#vts3tempo">vts3tempo</a></p>
+<h3 id="credits_9">Credits</h3>
+<p>Author:</p>
+<p>Michael Gogins<br>
+http://michaelgogins.tumblr.com<br>
+michael dot gogins at gmail dot com<br></p>
               
             </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="accum.html" class="btn btn-neutral float-right" title="accum">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../index.html" class="btn btn-neutral" title="Plugins"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
