@@ -9,7 +9,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>vst3paramget - Csound Plugins</title>
+  <title>vst3tempo - Csound Plugins</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../css/theme.css" />
@@ -19,8 +19,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "vst3paramget";
-    var mkdocs_page_input_path = "opcodes/vst3paramget.md";
+    var mkdocs_page_name = "vst3tempo";
+    var mkdocs_page_input_path = "opcodes/vst3tempo.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -249,7 +249,15 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="vst3note.html">vst3note</a>
                     </li>
-                    <li class="toctree-l1 current"><a class="reference internal current" href="vst3paramget.html">vst3paramget</a>
+                    <li class="toctree-l1"><a class="reference internal" href="vst3paramget.html">vst3paramget</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="vst3paramset.html">vst3paramset</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="vst3presetload.html">vst3presetload</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="vst3presetsave.html">vst3presetsave</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="vst3tempo.html">vst3tempo</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#abstract">Abstract</a>
     </li>
@@ -258,10 +266,6 @@
     <li class="toctree-l2"><a class="reference internal" href="#syntax">Syntax</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#arguments">Arguments</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#performance">Performance</a>
-    </li>
-        </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#output">Output</a>
     </li>
@@ -274,14 +278,6 @@
     <li class="toctree-l2"><a class="reference internal" href="#credits">Credits</a>
     </li>
     </ul>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="vst3paramset.html">vst3paramset</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="vst3presetload.html">vst3presetload</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="vst3presetsave.html">vst3presetsave</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="vst3tempo.html">vst3tempo</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="xtracycles.html">xtracycles</a>
                     </li>
@@ -315,7 +311,7 @@
         
       
     
-    <li>vst3paramget</li>
+    <li>vst3tempo</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -327,75 +323,33 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="vst3paramget">vst3paramget</h1>
+                <h1 id="vst3tempo">vst3tempo</h1>
 <h2 id="abstract">Abstract</h2>
-<p>Gets the current value of a single parameter from a VST3 
-plugin.</p>
+<p>Changes the tempo in a VST3 plugin.</p>
 <h2 id="description">Description</h2>
-<p><strong>vst3paramget</strong> gets the current value of a single parameter from a VST3 
-plugin.</p>
+<p><strong>vst3tempo</strong> changes the tempo in a VST3 plugin.</p>
+<p>By default, Csound's musical tempo is 1 beat per second, so that note onsets 
+and durations can be specified in seconds. But Csound's musical tempo can be 
+changed and, if it does change, the plugin's tempo should be changed to 
+match. Tempo changes can occur at k-rate.</p>
 <h2 id="syntax">Syntax</h2>
-<div class="codehilite"><pre><span></span><code><span class="kt">k</span><span class="n">_value</span> <span class="n">vst3paramget</span> <span class="kt">i</span><span class="n">_handle</span><span class="p">,</span> <span class="kt">k</span><span class="n">_parameter</span>
+<div class="codehilite"><pre><span></span><code><span class="n">vst3tempo</span> <span class="kt">i</span><span class="n">_handle</span><span class="p">,</span> <span class="kt">k</span><span class="n">_beats_per_minute</span>
 </code></pre></div>
 
 <h2 id="arguments">Arguments</h2>
 <ul>
-<li><strong>i_handle</strong>: the handle that identifies the plugin, obtained from 
-<a href="vst3init.html">vst3init</a>.</li>
-</ul>
-<h3 id="performance">Performance</h3>
-<ul>
-<li><strong>k_parameter</strong>: the identification number of the parameter. This can be 
-obtained from the plugin's documentation, or by using <a href="vst3info.html">vst3info</a>. 
-Note that this must be the id number of the parameter, not its index in the 
-list of parameters.</li>
+<li><strong>i_handle</strong>: the handle that identifies the plugin, obtained from <a href="vst3init.html">vst3init</a>.</li>
+<li><strong>k_beats_per_minute</strong>: the musical tempo in beats per minute. </li>
 </ul>
 <h2 id="output">Output</h2>
-<ul>
-<li><strong>k_value</strong>: the value of the parameter, a real number in the interval [0, 1].
-Most parameters have default values that can be printed by using 
-<a href="vst3info.html">vst3info</a>. </li>
-</ul>
 <h2 id="execution-time">Execution Time</h2>
 <ul>
 <li>Performance</li>
 </ul>
 <h2 id="examples">Examples</h2>
 <div class="codehilite"><pre><span></span><code><span class="o">&lt;</span><span class="n">CsoundSynthesizer</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">CsLicense</span><span class="o">&gt;</span>
-
-<span class="n">V</span> <span class="nb">S</span> <span class="n">T</span> <span class="mi">3</span>   <span class="n">O</span> <span class="n">P</span> <span class="n">C</span> <span class="n">O</span> <span class="n">D</span> <span class="n">E</span> <span class="nb">S</span>   <span class="n">T</span> <span class="n">E</span> <span class="nb">S</span> <span class="n">T</span>
-
-<span class="nl">Author</span><span class="p">:</span> <span class="n">Michael</span> <span class="n">Gogins</span>
-
-<span class="n">The</span> <span class="n">code</span> <span class="kt">i</span><span class="n">s</span> <span class="n">licensed</span> <span class="n">under</span> <span class="n">the</span> <span class="n">terms</span> <span class="n">of</span> <span class="n">the</span> <span class="n">GPLv3</span> <span class="n">license</span><span class="err">.</span>
-
-<span class="n">This</span> <span class="n">Csound</span> <span class="n">piece</span> <span class="n">demonstrates</span> <span class="n">how</span> <span class="n">to</span> <span class="n">use</span> <span class="n">the</span> <span class="kt">f</span><span class="n">ollowing</span> <span class="n">vst3</span> <span class="n">opcodes</span><span class="o">:</span>
-
-  <span class="mf">1.</span>  <span class="n">vst3init</span>
-  <span class="mf">2.</span>  <span class="n">vst3info</span>
-  <span class="mf">3.</span>  <span class="n">vst3note</span>
-  <span class="mf">4.</span>  <span class="n">vst3audio</span>
-  <span class="mf">5.</span>  <span class="n">vst3paramset</span>
-  <span class="mf">6.</span>  <span class="n">vst3paramget</span>
-  <span class="mf">7.</span>  <span class="n">vst3presetsave</span>
-  <span class="mf">8.</span>  <span class="n">vst3presetload</span>
-
-<span class="n">These</span> <span class="kt">a</span><span class="n">re</span> <span class="kt">a</span><span class="n">ll</span> <span class="n">the</span> <span class="n">opcodes</span> <span class="kt">a</span><span class="n">ctually</span> <span class="n">needed</span> <span class="n">to</span> <span class="kt">f</span><span class="n">ully</span> <span class="n">use</span> <span class="n">VST3</span> <span class="kt">i</span><span class="n">nstruments</span> <span class="kt">a</span><span class="n">nd</span> 
-<span class="n">effects</span> <span class="nb">in</span> <span class="n">Csound</span><span class="err">.</span> <span class="n">This</span> <span class="n">piece</span> <span class="kt">a</span><span class="n">lso</span> <span class="n">serves</span> <span class="kt">a</span><span class="n">s</span> <span class="n">basic</span> <span class="n">unit</span> <span class="n">tests</span> <span class="kt">f</span><span class="n">or</span> <span class="n">the</span> <span class="n">VST3</span> 
-<span class="n">opcodes</span><span class="err">.</span>
-
-<span class="n">The</span> <span class="n">piece</span> <span class="n">consists</span> <span class="n">of</span> <span class="kt">a</span><span class="n">n</span> <span class="kt">a</span><span class="n">lgorithmically</span> <span class="n">generated</span> <span class="n">score</span><span class="p">,</span> <span class="kt">w</span><span class="n">hich</span> <span class="kt">i</span><span class="n">s</span> <span class="n">rendered</span> 
-<span class="kt">w</span><span class="n">ith</span> <span class="n">several</span> <span class="n">of</span> <span class="n">the</span> <span class="kt">i</span><span class="n">nstruments</span> <span class="nb">in</span> <span class="n">the</span> <span class="n">VST3</span> <span class="kt">S</span><span class="n">DK</span><span class="c1">; effects are added using </span>
-<span class="n">several</span> <span class="n">other</span> <span class="n">plugins</span> <span class="nb">in</span> <span class="n">the</span> <span class="n">VST3</span> <span class="kt">S</span><span class="n">DK</span><span class="err">.</span> <span class="n">Parameters</span> <span class="kt">a</span><span class="n">nd</span> <span class="n">presets</span> <span class="kt">a</span><span class="n">lso</span> <span class="kt">a</span><span class="n">re</span> <span class="n">used</span><span class="err">.</span>
-
-<span class="n">Assuming</span> <span class="n">you</span> <span class="kt">a</span><span class="n">re</span> <span class="n">on</span> <span class="n">Linux</span><span class="p">,</span> <span class="n">have</span> <span class="kt">i</span><span class="n">nstalled</span> <span class="n">Csound</span><span class="p">,</span> <span class="kt">a</span><span class="n">hd</span> <span class="n">have</span> <span class="n">unzipped</span> <span class="n">the</span> 
-<span class="n">csound</span><span class="o">-</span><span class="n">vst3</span><span class="o">-</span><span class="n">linux</span><span class="err">.</span><span class="n">zip</span> <span class="kt">f</span><span class="n">ile</span> <span class="kt">i</span><span class="n">nto</span> <span class="nb">a</span> <span class="n">new</span> <span class="n">empty</span> <span class="nb">directory</span><span class="p">,</span> <span class="k">then</span> <span class="n">things</span> <span class="kt">a</span><span class="n">re</span> <span class="n">set</span> <span class="n">up</span>
-<span class="n">to</span> <span class="n">run</span> <span class="n">this</span> <span class="n">piece</span> <span class="kt">f</span><span class="n">rom</span> <span class="n">the</span> <span class="err">`</span><span class="n">csound</span><span class="o">-</span><span class="n">vst3</span><span class="o">/</span><span class="n">vst3</span><span class="o">-</span><span class="n">opcodes</span><span class="err">`</span> <span class="n">subdirectory</span><span class="err">.</span>
-
-<span class="o">&lt;/</span><span class="n">CsLicense</span><span class="o">&gt;</span>
 <span class="o">&lt;</span><span class="n">CsOptions</span><span class="o">&gt;</span>
-<span class="o">-</span><span class="n">m195</span> <span class="o">--</span><span class="kd">opcode</span><span class="err">-</span><span class="nf">lib</span><span class="err">=&quot;../../bu</span><span class="kt">i</span><span class="err">ld-l</span><span class="kt">i</span><span class="err">nux/l</span><span class="kt">i</span><span class="err">b/Rele</span><span class="kt">a</span><span class="err">se/l</span><span class="kt">i</span><span class="err">bvs</span><span class="kt">t</span><span class="err">3_</span><span class="kt">p</span><span class="err">lug</span><span class="kt">i</span><span class="err">ns.s</span><span class="kt">o</span><span class="err">&quot;</span> <span class="err">-z1</span>
+<span class="o">-</span><span class="n">m195</span>
 <span class="o">&lt;/</span><span class="n">CsOptions</span><span class="o">&gt;</span>
 <span class="o">&lt;</span><span class="n">CsInstruments</span><span class="o">&gt;</span>
 
@@ -404,34 +358,22 @@ Most parameters have default values that can be printed by using
 <span class="vg">nchnls</span>  <span class="o">=</span> <span class="mi">2</span>
 <span class="vg">0dbfs</span>   <span class="o">=</span> <span class="mi">20</span>
 
-<span class="nb">connect</span> <span class="s">&quot;JX10_Output&quot;</span><span class="p">,</span> <span class="s">&quot;outleft&quot;</span><span class="p">,</span> <span class="s">&quot;Delay&quot;</span><span class="p">,</span> <span class="s">&quot;inleft&quot;</span>
-<span class="nb">connect</span> <span class="s">&quot;JX10_Output&quot;</span><span class="p">,</span> <span class="s">&quot;outright&quot;</span><span class="p">,</span> <span class="s">&quot;Delay&quot;</span><span class="p">,</span> <span class="s">&quot;inright&quot;</span>
-<span class="nb">connect</span> <span class="s">&quot;Piano_Output&quot;</span><span class="p">,</span> <span class="s">&quot;outleft&quot;</span><span class="p">,</span> <span class="s">&quot;Delay&quot;</span><span class="p">,</span> <span class="s">&quot;inleft&quot;</span>
-<span class="nb">connect</span> <span class="s">&quot;Piano_Output&quot;</span><span class="p">,</span> <span class="s">&quot;outright&quot;</span><span class="p">,</span> <span class="s">&quot;Delay&quot;</span><span class="p">,</span> <span class="s">&quot;inright&quot;</span>
-<span class="nb">connect</span> <span class="s">&quot;Delay&quot;</span><span class="p">,</span> <span class="s">&quot;outleft&quot;</span><span class="p">,</span> <span class="s">&quot;Reverb&quot;</span><span class="p">,</span> <span class="s">&quot;inleft&quot;</span>
-<span class="nb">connect</span> <span class="s">&quot;Delay&quot;</span><span class="p">,</span> <span class="s">&quot;outright&quot;</span><span class="p">,</span> <span class="s">&quot;Reverb&quot;</span><span class="p">,</span> <span class="s">&quot;inright&quot;</span>
-<span class="nb">connect</span> <span class="s">&quot;Reverb&quot;</span><span class="p">,</span> <span class="s">&quot;outleft&quot;</span><span class="p">,</span> <span class="s">&quot;Master_Output&quot;</span><span class="p">,</span> <span class="s">&quot;inleft&quot;</span>
-<span class="nb">connect</span> <span class="s">&quot;Reverb&quot;</span><span class="p">,</span> <span class="s">&quot;outright&quot;</span><span class="p">,</span> <span class="s">&quot;Master_Output&quot;</span><span class="p">,</span> <span class="s">&quot;inright&quot;</span>
+<span class="nb">connect</span> <span class="s">&quot;JX10_Output&quot;</span><span class="p">,</span> <span class="s">&quot;outleft&quot;</span><span class="p">,</span> <span class="s">&quot;Master_Output&quot;</span><span class="p">,</span> <span class="s">&quot;inleft&quot;</span>
+<span class="nb">connect</span> <span class="s">&quot;JX10_Output&quot;</span><span class="p">,</span> <span class="s">&quot;outright&quot;</span><span class="p">,</span> <span class="s">&quot;Master_Output&quot;</span><span class="p">,</span> <span class="s">&quot;inright&quot;</span>
+<span class="nb">connect</span> <span class="s">&quot;Piano_Output&quot;</span><span class="p">,</span> <span class="s">&quot;outleft&quot;</span><span class="p">,</span> <span class="s">&quot;Master_Output&quot;</span><span class="p">,</span> <span class="s">&quot;inleft&quot;</span>
+<span class="nb">connect</span> <span class="s">&quot;Piano_Output&quot;</span><span class="p">,</span> <span class="s">&quot;outright&quot;</span><span class="p">,</span> <span class="s">&quot;Master_Output&quot;</span><span class="p">,</span> <span class="s">&quot;inright&quot;</span>
 
 <span class="nb">alwayson</span> <span class="s">&quot;JX10_Output&quot;</span>
 <span class="nb">alwayson</span> <span class="s">&quot;Piano_Output&quot;</span>
-<span class="nb">alwayson</span> <span class="s">&quot;Delay&quot;</span>
-<span class="nb">alwayson</span> <span class="s">&quot;Reverb&quot;</span>
 <span class="nb">alwayson</span> <span class="s">&quot;Master_Output&quot;</span>
 
-<span class="kt">gi</span><span class="n">_vst3_handle_jx10</span> <span class="n">vst3init</span> <span class="s">&quot;../../build-linux/VST3/Release/mda-vst3.vst3&quot;</span><span class="p">,</span> <span class="s">&quot;mda JX10&quot;</span><span class="p">,</span> <span class="mi">1</span>
+<span class="kt">gi</span><span class="n">_vst3_handle_jx10</span> <span class="n">vst3init</span> <span class="s">&quot;mda-vst3.vst3&quot;</span><span class="p">,</span> <span class="s">&quot;mda JX10&quot;</span><span class="p">,</span> <span class="mi">1</span>
 <span class="n">vst3info</span> <span class="kt">gi</span><span class="n">_vst3_handle_jx10</span>
 
-<span class="kt">gi</span><span class="n">_vst3_handle_piano</span> <span class="n">vst3init</span> <span class="s">&quot;../../build-linux/VST3/Release/mda-vst3.vst3&quot;</span><span class="p">,</span> <span class="s">&quot;mda Piano&quot;</span><span class="p">,</span> <span class="mi">1</span>
+<span class="kt">gi</span><span class="n">_vst3_handle_piano</span> <span class="n">vst3init</span> <span class="s">&quot;mda-vst3.vst3&quot;</span><span class="p">,</span> <span class="s">&quot;mda Piano&quot;</span><span class="p">,</span> <span class="mi">1</span>
 <span class="n">vst3info</span> <span class="kt">gi</span><span class="n">_vst3_handle_piano</span>
 
-<span class="kt">gi</span><span class="n">_vst3_handle_delay</span> <span class="n">vst3init</span> <span class="s">&quot;../../build-linux/VST3/Release/mda-vst3.vst3&quot;</span><span class="p">,</span> <span class="s">&quot;mda Delay&quot;</span><span class="p">,</span> <span class="mi">1</span>
-<span class="n">vst3info</span> <span class="kt">gi</span><span class="n">_vst3_handle_delay</span>
-
-<span class="kt">gi</span><span class="n">_vst3_handle_ambience</span> <span class="n">vst3init</span> <span class="s">&quot;../../build-linux/VST3/Release/mda-vst3.vst3&quot;</span><span class="p">,</span> <span class="s">&quot;mda Ambience&quot;</span><span class="p">,</span> <span class="mi">1</span>
-<span class="n">vst3info</span> <span class="kt">gi</span><span class="n">_vst3_handle_ambience</span>
-
-<span class="c1">// Array of instrument plugins indexed by instrument number, for sending </span>
+<span class="c1">// Array of instrument plugins indexed by instrument number, for sending</span>
 <span class="c1">// parameter changes.</span>
 
 <span class="kt">gi</span><span class="n">_plugins</span><span class="p">[]</span> <span class="nb">init</span> <span class="mi">5</span>
@@ -440,9 +382,9 @@ Most parameters have default values that can be printed by using
 
 <span class="c1">// Score generating instrument.</span>
 
-<span class="kt">gi</span><span class="n">_iterations</span> <span class="nb">init</span> <span class="mi">50</span>
-<span class="kt">gi</span><span class="n">_duration</span> <span class="nb">init</span> <span class="mf">1.8</span>
-<span class="kt">gi</span><span class="n">_time_step</span> <span class="nb">init</span> <span class="mf">.6666667</span>
+<span class="kt">gi</span><span class="n">_iterations</span> <span class="nb">init</span> <span class="mi">500</span>
+<span class="kt">gi</span><span class="n">_duration</span> <span class="nb">init</span> <span class="mi">2</span>
+<span class="kt">gi</span><span class="n">_time_step</span> <span class="nb">init</span> <span class="mf">.125</span>
 <span class="kt">gi</span><span class="n">_loudness</span> <span class="nb">init</span> <span class="mi">70</span>
 <span class="kd">instr</span> <span class="nf">Score_Generator</span>
 <span class="kt">i</span><span class="n">_time</span> <span class="o">=</span> <span class="vi">p2</span>
@@ -459,7 +401,7 @@ Most parameters have default values that can be printed by using
     <span class="c1">// Normalized logistic equation:</span>
     <span class="kt">i</span><span class="n">_y1</span> <span class="o">=</span> <span class="kt">i</span><span class="n">_c</span> <span class="o">*</span> <span class="kt">i</span><span class="n">_y</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="kt">i</span><span class="n">_y</span><span class="p">)</span> <span class="o">*</span> <span class="mi">4</span>
     <span class="kt">i</span><span class="n">_y</span> <span class="o">=</span> <span class="kt">i</span><span class="n">_y1</span>
-    <span class="kt">i</span><span class="n">_pitch</span> <span class="o">=</span> <span class="nb">floor</span><span class="p">(</span><span class="kt">i</span><span class="n">_bass</span> <span class="o">+</span> <span class="p">(</span><span class="kt">i</span><span class="n">_y</span> <span class="o">*</span> <span class="kt">i</span><span class="n">_range</span><span class="p">))</span> 
+    <span class="kt">i</span><span class="n">_pitch</span> <span class="o">=</span> <span class="nb">floor</span><span class="p">(</span><span class="kt">i</span><span class="n">_bass</span> <span class="o">+</span> <span class="p">(</span><span class="kt">i</span><span class="n">_y</span> <span class="o">*</span> <span class="kt">i</span><span class="n">_range</span><span class="p">))</span>
     <span class="nb">event_i</span> <span class="s">&quot;i&quot;</span><span class="p">,</span> <span class="kt">i</span><span class="n">_instrument</span><span class="p">,</span> <span class="kt">i</span><span class="n">_time</span><span class="p">,</span> <span class="kt">gi</span><span class="n">_duration</span><span class="p">,</span> <span class="kt">i</span><span class="n">_pitch</span><span class="p">,</span> <span class="kt">gi</span><span class="n">_loudness</span>
     <span class="nb">prints</span> <span class="s">&quot;   </span><span class="si">%f</span><span class="s"> =&gt; i </span><span class="si">%f</span><span class="s"> </span><span class="si">%f</span><span class="s"> </span><span class="si">%f</span><span class="s"> </span><span class="si">%f</span><span class="s"> </span><span class="si">%f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="kt">i</span><span class="n">_y</span><span class="p">,</span> <span class="kt">i</span><span class="n">_instrument</span><span class="p">,</span> <span class="kt">i</span><span class="n">_time</span><span class="p">,</span> <span class="kt">gi</span><span class="n">_duration</span><span class="p">,</span> <span class="kt">i</span><span class="n">_pitch</span><span class="p">,</span> <span class="kt">gi</span><span class="n">_loudness</span>
 <span class="k">od</span>
@@ -486,14 +428,14 @@ Most parameters have default values that can be printed by using
 <span class="kd">endin</span>
 
 <span class="kd">instr</span> <span class="nf">Piano_Output</span>
-<span class="kt">a</span><span class="n">_out_left</span><span class="p">,</span> <span class="kt">a</span><span class="n">_out_right</span> <span class="n">vst3audio</span> <span class="kt">gi</span><span class="n">_vst3_handle_piano</span> 
+<span class="kt">a</span><span class="n">_out_left</span><span class="p">,</span> <span class="kt">a</span><span class="n">_out_right</span> <span class="n">vst3audio</span> <span class="kt">gi</span><span class="n">_vst3_handle_piano</span>
 <span class="nb">outleta</span> <span class="s">&quot;outleft&quot;</span><span class="p">,</span> <span class="kt">a</span><span class="n">_out_left</span>
 <span class="nb">outleta</span> <span class="s">&quot;outright&quot;</span><span class="p">,</span> <span class="kt">a</span><span class="n">_out_right</span>
 <span class="nb">prints</span> <span class="s">&quot;</span><span class="si">%-24.24s</span><span class="s"> i </span><span class="si">%9.4f</span><span class="s"> t </span><span class="si">%9.4f</span><span class="s"> d </span><span class="si">%9.4f</span><span class="s"> k </span><span class="si">%9.4f</span><span class="s"> v </span><span class="si">%9.4f</span><span class="s"> p </span><span class="si">%9.4f</span><span class="s"> #</span><span class="si">%3d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="nb">nstrstr</span><span class="p">(</span><span class="vi">p1</span><span class="p">),</span> <span class="vi">p1</span><span class="p">,</span> <span class="vi">p2</span><span class="p">,</span> <span class="vi">p3</span><span class="p">,</span> <span class="vi">p4</span><span class="p">,</span> <span class="vi">p5</span><span class="p">,</span> <span class="vi">p7</span><span class="p">,</span> <span class="nb">active</span><span class="p">(</span><span class="vi">p1</span><span class="p">)</span>
 <span class="kd">endin</span>
 
 <span class="kd">instr</span> <span class="nf">JX10_Output</span>
-<span class="kt">a</span><span class="n">_out_left</span><span class="p">,</span> <span class="kt">a</span><span class="n">_out_right</span> <span class="n">vst3audio</span> <span class="kt">gi</span><span class="n">_vst3_handle_jx10</span> 
+<span class="kt">a</span><span class="n">_out_left</span><span class="p">,</span> <span class="kt">a</span><span class="n">_out_right</span> <span class="n">vst3audio</span> <span class="kt">gi</span><span class="n">_vst3_handle_jx10</span>
 <span class="nb">outleta</span> <span class="s">&quot;outleft&quot;</span><span class="p">,</span> <span class="kt">a</span><span class="n">_out_left</span>
 <span class="nb">outleta</span> <span class="s">&quot;outright&quot;</span><span class="p">,</span> <span class="kt">a</span><span class="n">_out_right</span>
 <span class="nb">prints</span> <span class="s">&quot;</span><span class="si">%-24.24s</span><span class="s"> i </span><span class="si">%9.4f</span><span class="s"> t </span><span class="si">%9.4f</span><span class="s"> d </span><span class="si">%9.4f</span><span class="s"> k </span><span class="si">%9.4f</span><span class="s"> v </span><span class="si">%9.4f</span><span class="s"> p </span><span class="si">%9.4f</span><span class="s"> #</span><span class="si">%3d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="nb">nstrstr</span><span class="p">(</span><span class="vi">p1</span><span class="p">),</span> <span class="vi">p1</span><span class="p">,</span> <span class="vi">p2</span><span class="p">,</span> <span class="vi">p3</span><span class="p">,</span> <span class="vi">p4</span><span class="p">,</span> <span class="vi">p5</span><span class="p">,</span> <span class="vi">p7</span><span class="p">,</span> <span class="nb">active</span><span class="p">(</span><span class="vi">p1</span><span class="p">)</span>
@@ -514,17 +456,6 @@ Most parameters have default values that can be printed by using
 <span class="nb">prints</span> <span class="s">&quot;</span><span class="si">%-24.24s</span><span class="s"> i </span><span class="si">%9.4f</span><span class="s"> t </span><span class="si">%9.4f</span><span class="s"> d </span><span class="si">%9.4f</span><span class="s"> target: </span><span class="si">%3d</span><span class="s">  preset: </span><span class="si">%s</span><span class="s"> #</span><span class="si">%3d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="nb">nstrstr</span><span class="p">(</span><span class="vi">p1</span><span class="p">),</span> <span class="vi">p1</span><span class="p">,</span> <span class="vi">p2</span><span class="p">,</span> <span class="vi">p3</span><span class="p">,</span> <span class="kt">i</span><span class="n">_target_plugin</span><span class="p">,</span> <span class="kt">S</span><span class="n">_preset_name</span><span class="p">,</span> <span class="nb">active</span><span class="p">(</span><span class="vi">p1</span><span class="p">)</span>
 <span class="kd">endin</span>
 
-<span class="kd">instr</span> <span class="nf">Program_Change</span>
-<span class="kt">i</span><span class="n">_target_plugin</span> <span class="o">=</span> <span class="vi">p4</span>
-<span class="kt">i</span><span class="n">_vst3_plugin</span> <span class="nb">init</span> <span class="kt">gi</span><span class="n">_plugins</span><span class="p">[</span><span class="vi">p4</span><span class="p">]</span>
-<span class="c1">; May only be relevant to the MDA example plugins.</span>
-<span class="kt">k</span><span class="n">_parameter_id</span> <span class="nb">init</span> <span class="mi">1886548852</span> 
-<span class="kt">k</span><span class="n">_parameter_value</span> <span class="nb">init</span> <span class="vi">p5</span>
-<span class="n">vst3paramset</span> <span class="kt">i</span><span class="n">_vst3_plugin</span><span class="p">,</span> <span class="kt">k</span><span class="n">_parameter_id</span><span class="p">,</span> <span class="kt">k</span><span class="n">_parameter_value</span>
-<span class="nb">prints</span> <span class="s">&quot;Don&#39;t expect this one to work yet!</span><span class="se">\n</span><span class="s">&quot;</span>
-<span class="nb">prints</span> <span class="s">&quot;</span><span class="si">%-24.24s</span><span class="s"> i </span><span class="si">%9.4f</span><span class="s"> t </span><span class="si">%9.4f</span><span class="s"> d </span><span class="si">%9.4f</span><span class="s"> target: </span><span class="si">%3d</span><span class="s">  id: </span><span class="si">%3d</span><span class="s">  value: </span><span class="si">%9.4f</span><span class="s"> #</span><span class="si">%3d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="nb">nstrstr</span><span class="p">(</span><span class="vi">p1</span><span class="p">),</span> <span class="vi">p1</span><span class="p">,</span> <span class="vi">p2</span><span class="p">,</span> <span class="vi">p3</span><span class="p">,</span> <span class="kt">i</span><span class="n">_target_plugin</span><span class="p">,</span> <span class="kt">k</span><span class="n">_parameter_id</span><span class="p">,</span> <span class="kt">k</span><span class="n">_parameter_value</span><span class="p">,</span> <span class="nb">active</span><span class="p">(</span><span class="vi">p1</span><span class="p">)</span>
-<span class="kd">endin</span>
-
 <span class="kd">instr</span> <span class="nf">Load_Preset</span>
 <span class="kt">i</span><span class="n">_target_plugin</span> <span class="o">=</span> <span class="vi">p4</span>
 <span class="kt">S</span><span class="n">_preset_name</span> <span class="nb">init</span> <span class="vi">p5</span>
@@ -533,26 +464,14 @@ Most parameters have default values that can be printed by using
 <span class="nb">prints</span> <span class="s">&quot;</span><span class="si">%-24.24s</span><span class="s"> i </span><span class="si">%9.4f</span><span class="s"> t </span><span class="si">%9.4f</span><span class="s"> d </span><span class="si">%9.4f</span><span class="s"> target: </span><span class="si">%3d</span><span class="s">  preset: </span><span class="si">%s</span><span class="s"> #</span><span class="si">%3d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="nb">nstrstr</span><span class="p">(</span><span class="vi">p1</span><span class="p">),</span> <span class="vi">p1</span><span class="p">,</span> <span class="vi">p2</span><span class="p">,</span> <span class="vi">p3</span><span class="p">,</span> <span class="kt">i</span><span class="n">_target_plugin</span><span class="p">,</span> <span class="kt">S</span><span class="n">_preset_name</span><span class="p">,</span> <span class="nb">active</span><span class="p">(</span><span class="vi">p1</span><span class="p">)</span>
 <span class="kd">endin</span>
 
-<span class="kd">instr</span> <span class="nf">Delay</span>
-<span class="kt">a</span><span class="n">_in_left</span> <span class="nb">inleta</span> <span class="s">&quot;inleft&quot;</span>
-<span class="kt">a</span><span class="n">_in_right</span> <span class="nb">inleta</span> <span class="s">&quot;inright&quot;</span>
-<span class="kt">a</span><span class="n">_out_left</span><span class="p">,</span> <span class="kt">a</span><span class="n">_out_right</span> <span class="n">vst3audio</span> <span class="kt">gi</span><span class="n">_vst3_handle_delay</span><span class="p">,</span> <span class="kt">a</span><span class="n">_in_left</span><span class="p">,</span> <span class="kt">a</span><span class="n">_in_right</span>
-<span class="nb">outleta</span> <span class="s">&quot;outleft&quot;</span><span class="p">,</span> <span class="kt">a</span><span class="n">_out_left</span>
-<span class="nb">outleta</span> <span class="s">&quot;outright&quot;</span><span class="p">,</span> <span class="kt">a</span><span class="n">_out_right</span>
-<span class="nb">prints</span> <span class="s">&quot;</span><span class="si">%-24.24s</span><span class="s"> i </span><span class="si">%9.4f</span><span class="s"> t </span><span class="si">%9.4f</span><span class="s"> d </span><span class="si">%9.4f</span><span class="s"> k </span><span class="si">%9.4f</span><span class="s"> v </span><span class="si">%9.4f</span><span class="s"> p </span><span class="si">%9.4f</span><span class="s"> #</span><span class="si">%3d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="nb">nstrstr</span><span class="p">(</span><span class="vi">p1</span><span class="p">),</span> <span class="vi">p1</span><span class="p">,</span> <span class="vi">p2</span><span class="p">,</span> <span class="vi">p3</span><span class="p">,</span> <span class="vi">p4</span><span class="p">,</span> <span class="vi">p5</span><span class="p">,</span> <span class="vi">p7</span><span class="p">,</span> <span class="nb">active</span><span class="p">(</span><span class="vi">p1</span><span class="p">)</span>
-<span class="kd">endin</span>
-
-<span class="kd">instr</span> <span class="nf">Reverb</span>
-<span class="kt">a</span><span class="n">_in_left</span> <span class="nb">inleta</span> <span class="s">&quot;inleft&quot;</span>
-<span class="kt">a</span><span class="n">_in_right</span> <span class="nb">inleta</span> <span class="s">&quot;inright&quot;</span>
-<span class="kt">k</span><span class="n">_old_size</span> <span class="n">vst3paramget</span> <span class="kt">gi</span><span class="n">_vst3_handle_ambience</span><span class="p">,</span> <span class="mi">0</span>
-<span class="n">vst3paramset</span> <span class="kt">gi</span><span class="n">_vst3_handle_ambience</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">.95</span>
-<span class="n">vst3paramset</span> <span class="kt">gi</span><span class="n">_vst3_handle_ambience</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mf">.9</span>
-<span class="n">vst3presetsave</span> <span class="kt">gi</span><span class="n">_vst3_handle_ambience</span><span class="p">,</span> <span class="s">&quot;ambience.preset&quot;</span>
-<span class="kt">a</span><span class="n">_out_left</span><span class="p">,</span> <span class="kt">a</span><span class="n">_out_right</span> <span class="n">vst3audio</span> <span class="kt">gi</span><span class="n">_vst3_handle_ambience</span><span class="p">,</span> <span class="kt">a</span><span class="n">_in_left</span><span class="p">,</span> <span class="kt">a</span><span class="n">_in_right</span>
-<span class="nb">outleta</span> <span class="s">&quot;outleft&quot;</span><span class="p">,</span> <span class="kt">a</span><span class="n">_out_left</span>
-<span class="nb">outleta</span> <span class="s">&quot;outright&quot;</span><span class="p">,</span> <span class="kt">a</span><span class="n">_out_right</span>
-<span class="nb">prints</span> <span class="s">&quot;</span><span class="si">%-24.24s</span><span class="s"> i </span><span class="si">%9.4f</span><span class="s"> t </span><span class="si">%9.4f</span><span class="s"> d </span><span class="si">%9.4f</span><span class="s"> k </span><span class="si">%9.4f</span><span class="s"> v </span><span class="si">%9.4f</span><span class="s"> p </span><span class="si">%9.4f</span><span class="s"> #</span><span class="si">%3d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="nb">nstrstr</span><span class="p">(</span><span class="vi">p1</span><span class="p">),</span> <span class="vi">p1</span><span class="p">,</span> <span class="vi">p2</span><span class="p">,</span> <span class="vi">p3</span><span class="p">,</span> <span class="vi">p4</span><span class="p">,</span> <span class="vi">p5</span><span class="p">,</span> <span class="vi">p7</span><span class="p">,</span> <span class="nb">active</span><span class="p">(</span><span class="vi">p1</span><span class="p">)</span>
+<span class="kd">instr</span> <span class="nf">Program_Change</span>
+<span class="kt">i</span><span class="n">_target_plugin</span> <span class="o">=</span> <span class="vi">p4</span>
+<span class="kt">i</span><span class="n">_vst3_plugin</span> <span class="nb">init</span> <span class="kt">gi</span><span class="n">_plugins</span><span class="p">[</span><span class="vi">p4</span><span class="p">]</span>
+<span class="vi">p6</span> <span class="o">=</span> <span class="mi">1886548852</span>
+<span class="kt">k</span><span class="n">_parameter_id</span> <span class="nb">init</span> <span class="vi">p5</span>
+<span class="kt">k</span><span class="n">_parameter_value</span> <span class="nb">init</span> <span class="vi">p6</span>
+<span class="n">vst3paramset</span> <span class="kt">i</span><span class="n">_vst3_plugin</span><span class="p">,</span> <span class="kt">k</span><span class="n">_parameter_id</span><span class="p">,</span> <span class="kt">k</span><span class="n">_parameter_value</span>
+<span class="nb">prints</span> <span class="s">&quot;</span><span class="si">%-24.24s</span><span class="s"> i </span><span class="si">%9.4f</span><span class="s"> t </span><span class="si">%9.4f</span><span class="s"> d </span><span class="si">%9.4f</span><span class="s"> target: </span><span class="si">%3d</span><span class="s">  id: </span><span class="si">%3d</span><span class="s">  value: </span><span class="si">%9.4f</span><span class="s"> #</span><span class="si">%3d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="nb">nstrstr</span><span class="p">(</span><span class="vi">p1</span><span class="p">),</span> <span class="vi">p1</span><span class="p">,</span> <span class="vi">p2</span><span class="p">,</span> <span class="vi">p3</span><span class="p">,</span> <span class="vi">p4</span><span class="p">,</span> <span class="vi">p5</span><span class="p">,</span> <span class="vi">p6</span><span class="p">,</span> <span class="nb">active</span><span class="p">(</span><span class="vi">p1</span><span class="p">)</span>
 <span class="kd">endin</span>
 
 <span class="kd">instr</span> <span class="nf">Master_Output</span>
@@ -564,27 +483,20 @@ Most parameters have default values that can be printed by using
 
 <span class="o">&lt;/</span><span class="n">CsInstruments</span><span class="o">&gt;</span>
 <span class="o">&lt;</span><span class="n">CsScore</span><span class="o">&gt;</span>
-<span class="n">f</span> <span class="mi">0</span> <span class="mi">40</span>
+<span class="n">f</span> <span class="mi">0</span> <span class="mi">72</span>
 <span class="nb">i</span> <span class="s">&quot;Score_Generator&quot;</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">3</span> <span class="mf">.989</span> <span class="mf">.5</span> <span class="mi">36</span> <span class="mi">60</span>
-<span class="nb">i</span> <span class="s">&quot;Score_Generator&quot;</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">4</span> <span class="mf">.989</span> <span class="mf">.5</span> <span class="mi">78</span> <span class="mi">6</span>
-<span class="c1">; Stores original parameter state...</span>
-<span class="nb">i</span> <span class="s">&quot;Print_Info&quot;</span> <span class="mf">1.1</span> <span class="mi">1</span> <span class="mi">4</span>
-<span class="nb">i</span> <span class="s">&quot;Save_Preset&quot;</span> <span class="mf">1.2</span> <span class="mi">1</span> <span class="mi">4</span> <span class="s">&quot;jx10.vstpreset&quot;</span>
-<span class="nb">i</span> <span class="s">&quot;Print_Info&quot;</span> <span class="mf">1.3</span> <span class="mi">1</span> <span class="mi">4</span>
+<span class="nb">i</span> <span class="s">&quot;Score_Generator&quot;</span> <span class="mi">2</span> <span class="mi">1</span> <span class="mi">4</span> <span class="mf">.989</span> <span class="mf">.5</span> <span class="mi">78</span> <span class="mi">6</span>
+<span class="c1">; Stores original filter state...</span>
+<span class="nb">i</span> <span class="s">&quot;Save_Preset&quot;</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">4</span> <span class="s">&quot;jx10.preset&quot;</span>
 <span class="c1">; Changes filter state...</span>
-<span class="nb">i</span> <span class="s">&quot;Param_Change&quot;</span> <span class="mi">10</span> <span class="mi">1</span> <span class="mi">4</span> <span class="mi">1</span> <span class="mf">.15</span>
-<span class="nb">i</span> <span class="s">&quot;Param_Change&quot;</span> <span class="mi">10</span> <span class="mi">1</span> <span class="mi">4</span> <span class="mi">7</span> <span class="mf">.15</span>
-<span class="nb">i</span> <span class="s">&quot;Param_Change&quot;</span> <span class="mi">10</span> <span class="mi">1</span> <span class="mi">4</span> <span class="mi">12</span> <span class="mf">.1</span>
+<span class="nb">i</span> <span class="s">&quot;Param_Change&quot;</span> <span class="mi">10</span> <span class="mi">1</span> <span class="mi">4</span> <span class="mi">6</span> <span class="mf">.1</span>
 <span class="nb">i</span> <span class="s">&quot;Print_Info&quot;</span> <span class="mf">10.5</span> <span class="mi">1</span> <span class="mi">4</span>
-<span class="c1">; Restores original parameter state.</span>
-<span class="nb">i</span> <span class="s">&quot;Load_Preset&quot;</span> <span class="mi">25</span> <span class="mi">1</span> <span class="mi">4</span> <span class="s">&quot;jx10.vstpreset&quot;</span>
-<span class="nb">i</span> <span class="s">&quot;Print_Info&quot;</span> <span class="mf">25.5</span> <span class="mi">1</span> <span class="mi">4</span>
-<span class="c1">;i &quot;Program_Change&quot; 25 1 4 12</span>
-<span class="c1">;i &quot;Print_Info&quot; 30.0 1 3</span>
-<span class="c1">;i &quot;Program_Change&quot; 30.1 1 3 4</span>
-<span class="c1">;i &quot;Print_Info&quot; 30.2 1 3</span>
-
+<span class="c1">; Restores original filter state.</span>
+<span class="nb">i</span> <span class="s">&quot;Load_Preset&quot;</span> <span class="mi">12</span> <span class="mi">1</span> <span class="mi">4</span> <span class="s">&quot;jx10.preset&quot;</span>
+<span class="nb">i</span> <span class="s">&quot;Program_Change&quot;</span> <span class="mi">15</span> <span class="mi">1</span> <span class="mi">4</span> <span class="mi">0</span> <span class="mf">.5</span>
+<span class="nb">i</span> <span class="s">&quot;Print_Info&quot;</span> <span class="mf">12.5</span> <span class="mi">1</span> <span class="mi">4</span>
 <span class="o">&lt;/</span><span class="n">CsScore</span><span class="o">&gt;</span>
+
 <span class="o">&lt;/</span><span class="n">CsoundSynthesizer</span><span class="o">&gt;</span>
 </code></pre></div>
 
@@ -602,7 +514,7 @@ Most parameters have default values that can be printed by using
 <li><a href="vts3tempo.md">vts3tempo</a></li>
 </ul>
 <h2 id="credits">Credits</h2>
-<p>Michael Gogins, <a href="http://michaelgogins.tumblr.com">http://michaelgogins.tumblr.com</a>, michael.gogins@gmail.com</p>
+<p>Michael Gogins, http://michaelgogins.tumblr.com, michael dot gogins at gmail dot com</p>
               
             </div>
           </div>
@@ -610,10 +522,10 @@ Most parameters have default values that can be printed by using
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="vst3paramset.html" class="btn btn-neutral float-right" title="vst3paramset">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="xtracycles.html" class="btn btn-neutral float-right" title="xtracycles">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="vst3note.html" class="btn btn-neutral" title="vst3note"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="vst3presetsave.html" class="btn btn-neutral" title="vst3presetsave"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -639,10 +551,10 @@ Most parameters have default values that can be printed by using
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="vst3note.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="vst3presetsave.html" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="vst3paramset.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="xtracycles.html" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

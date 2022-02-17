@@ -14,6 +14,7 @@
 
   <link rel="stylesheet" href="../css/theme.css" />
   <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
   <link href="../css/syntax-highlighting.css" rel="stylesheet" />
   
   <script>
@@ -24,7 +25,9 @@
   </script>
   
   <script src="../js/jquery-2.1.1.min.js" defer></script>
-  <script src="../js/modernizr-2.8.3.min.js" defer></script> 
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -50,7 +53,7 @@
                 </ul>
                 <p class="caption"><span class="caption-text">Opcodes</span></p>
                 <ul class="current">
-                    <li class="toctree-l1"><a class="reference internal" href="index.html">Index</a>
+                    <li class="toctree-l1"><a class="reference internal" href="index.html">vst3-opcodes</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="accum.html">accum</a>
                     </li>
@@ -61,6 +64,8 @@
                     <li class="toctree-l1"><a class="reference internal" href="beosc.html">beosc</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="bisect.html">bisect</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="chuap.html">chuap</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="crackle.html">crackle</a>
                     </li>
@@ -121,6 +126,10 @@
                     <li class="toctree-l1"><a class="reference internal" href="getEnvVar.html">getEnvVar</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="getrowlin.html">getrowlin</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="hdf5read.html">hdf5read</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="hdf5write.html">hdf5read</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="initerror.html">initerror</a>
                     </li>
@@ -190,9 +199,31 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="pwrite.html">pwrite</a>
                     </li>
+                    <li class="toctree-l1"><a class="reference internal" href="pyrun.html">pyrun</a>
+                    </li>
                     <li class="toctree-l1"><a class="reference internal" href="ramptrig.html">ramptrig</a>
                     </li>
                     <li class="toctree-l1 current"><a class="reference internal current" href="ref.html">ref</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#abstract">Abstract</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#description">Description</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#syntax">Syntax</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#arguments">Arguments</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#output">Output</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#execution-time">Execution Time</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#see-also">See also</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#credits">Credits</a>
+    </li>
+    </ul>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="refvalid.html">refvalid</a>
                     </li>
@@ -246,9 +277,13 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="vst3presetsave.html">vst3presetsave</a>
                     </li>
+                    <li class="toctree-l1"><a class="reference internal" href="vst3tempo.html">vst3tempo</a>
+                    </li>
                     <li class="toctree-l1"><a class="reference internal" href="xtracycles.html">xtracycles</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="zeroarray.html">zeroarray</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="zerocrossing.html">zerocrossing</a>
                     </li>
                 </ul>
       </div>
@@ -587,6 +622,15 @@ one array will be visible in the other. </p>
             </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="refvalid.html" class="btn btn-neutral float-right" title="refvalid">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="ramptrig.html" class="btn btn-neutral" title="ramptrig"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

@@ -9,7 +9,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>pool_new - Csound Plugins</title>
+  <title>pyrun - Csound Plugins</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../css/theme.css" />
@@ -19,8 +19,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "pool_new";
-    var mkdocs_page_input_path = "opcodes/pool_new.md";
+    var mkdocs_page_name = "pyrun";
+    var mkdocs_page_input_path = "opcodes/pyrun.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -187,29 +187,7 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="pool_isfull.html">pool_isfull</a>
                     </li>
-                    <li class="toctree-l1 current"><a class="reference internal current" href="pool_new.html">pool_new</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#abstract">Abstract</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#description">Description</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#syntax">Syntax</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#arguments">Arguments</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#output">Output</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#execution-time">Execution Time</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#see-also">See also</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#credits">Credits</a>
-    </li>
-    </ul>
+                    <li class="toctree-l1"><a class="reference internal" href="pool_new.html">pool_new</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="pool_pop.html">pool_pop</a>
                     </li>
@@ -221,7 +199,27 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="pwrite.html">pwrite</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="pyrun.html">pyrun</a>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="pyrun.html">pyrun</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#abstract">Abstract</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#description">Description</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#syntax">Syntax</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#arguments">Arguments</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#output">Output</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#execution-time">Execution Time</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#see-also">See also</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#credits">Credits</a>
+    </li>
+    </ul>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="ramptrig.html">ramptrig</a>
                     </li>
@@ -313,7 +311,7 @@
         
       
     
-    <li>pool_new</li>
+    <li>pyrun</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -325,97 +323,78 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="pool_new">pool_new</h1>
+                <h1 id="pyrun">pyrun</h1>
 <h2 id="abstract">Abstract</h2>
-<p>Create an empty  pool</p>
+<p>Run a Python statement or block of statements</p>
 <h2 id="description">Description</h2>
-<p>A pool is actually a stack of numbers, based on an array.</p>
-<p>The pool_ opcodes implement a stack of numbers. This is useful when assigning
-ids to resources, like assigning fractional numbers to instrument instances to
-access them individually. <code>pool_new</code> creates an empty pool. To use the pool it
-must be first filled with values via <code>pool_push</code>. If a size is given, a pool of
-the given size is allocated and the size can't be modified. If no size is given,
-a pool of variable size is created.</p>
-<div class="admonition note">
-<p class="admonition-title">Variable size / fixed size</p>
-<p>A variable size pool produces allocations during performance, which might be
-a problem in certain situations / architectures or when running in <code>--realtime</code>
-mode. </p>
-</div>
+<p>Execute the specified Python statement at k-time (<em>pyrun</em> and <em>pylrun</em>) or i-time (<em>pyruni</em> and <em>pylruni</em>).</p>
+<p>The statement is executed in the global environment for pyrun and pyruni or the local environment for pylrun and pylruni.</p>
+<p>These opcodes perform no message passing. However, since the statement have access to the main namespace and the private namespace, it can interact with objects previously created in that environment.</p>
+<p>The "local" version of the pyrun opcodes are useful when the code ran by different instances of an instrument should not interact.</p>
+<p>The python opcodes target python 3.</p>
+<hr />
 <h2 id="syntax">Syntax</h2>
-<div class="codehilite"><pre><span></span><code>ipool pool_new isize=0
+<div class="codehilite"><pre><span></span><code><span class="nb">pyrun</span> <span class="err">Sstatement</span>
+<span class="nb">pyruni</span> <span class="err">Sstatement</span>
+<span class="nb">pylrun</span> <span class="err">Sstatement</span>
+<span class="nb">pylruni</span> <span class="err">Sstatement</span>
+<span class="nb">pyrunt</span> <span class="err">ktrigger,</span> <span class="err">Sstatement</span>
+<span class="nb">pylrunt</span> <span class="err">ktrigger,</span> <span class="err">Sstatement</span>
 </code></pre></div>
 
-<h3 id="arguments">Arguments</h3>
+<h2 id="arguments">Arguments</h2>
 <ul>
-<li><code>isize</code>: the size of the pool. If leaved out or set as 0, a pool of variable
-  size is created. Values can be pushed via <code>pool_push</code> and the pool will grow
-  to accomodate these.</li>
+<li><strong>Sstatement</strong>: the python statement to run</li>
 </ul>
-<h3 id="output">Output</h3>
-<ul>
-<li><code>ipool</code>: an index identifying this pool. This index is used when calling any
-  <code>pool</code> opcode</li>
-</ul>
-<h3 id="execution-time">Execution Time</h3>
+<h2 id="output">Output</h2>
+<h2 id="execution-time">Execution Time</h2>
 <ul>
 <li>Init</li>
+<li>Performance</li>
 </ul>
 <h2 id="examples">Examples</h2>
-<div class="codehilite"><pre><span></span><code><span class="o">&lt;</span><span class="n">CsoundSynthesizer</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">CsOptions</span><span class="o">&gt;</span>
-<span class="o">--</span><span class="n">nosound</span>
-<span class="o">-</span><span class="n">m0</span>
-<span class="o">&lt;/</span><span class="n">CsOptions</span><span class="o">&gt;</span>
+<div class="codehilite"><pre><span></span><code><span class="vg">sr</span> <span class="o">=</span> <span class="mi">44100</span>
+<span class="vg">ksmps</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="vg">nchnls</span> <span class="o">=</span> <span class="mi">1</span>
 
-<span class="o">&lt;</span><span class="n">CsInstruments</span><span class="o">&gt;</span>
-<span class="vg">sr</span>     <span class="o">=</span> <span class="mi">44100</span>
-<span class="vg">ksmps</span>  <span class="o">=</span> <span class="mi">64</span>
-<span class="vg">nchnls</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="vg">0dbfs</span>  <span class="o">=</span> <span class="mi">1</span>
+<span class="nb">pyinit</span>
 
-<span class="c1">; create an empty global pool of fixed capacity. </span>
-<span class="kt">gi</span><span class="n">pool</span> <span class="n">pool_new</span> <span class="mi">100</span>
+<span class="nb">pyruni</span> <span class="s">&quot;import random&quot;</span>
 
 <span class="kd">instr</span> <span class="nf">1</span>
-  <span class="n">pool_push</span> <span class="kt">gi</span><span class="n">pool</span><span class="p">,</span> <span class="mi">45</span>
-  <span class="n">pool_push</span> <span class="kt">gi</span><span class="n">pool</span><span class="p">,</span> <span class="mi">47</span>
+    <span class="c1">; This message is stored in the main namespace</span>
+    <span class="c1">; and is the same for every instance</span>
+    <span class="nb">pyruni</span> <span class="s">&quot;message = &#39;a global random number: </span><span class="si">%f</span><span class="s">&#39; % random.random()&quot;</span>
+    <span class="nb">pyrun</span>  <span class="s">&quot;print(message)&quot;</span>
 
-  <span class="kt">i</span><span class="n">size</span> <span class="n">pool_size</span> <span class="kt">gi</span><span class="n">pool</span>
-  <span class="nb">print</span> <span class="kt">i</span><span class="n">size</span>  
-
-  <span class="kt">i</span><span class="n">num1</span> <span class="n">pool_pop</span> <span class="kt">gi</span><span class="n">pool</span>
-  <span class="kt">i</span><span class="n">num2</span> <span class="n">pool_pop</span> <span class="kt">gi</span><span class="n">pool</span>
-
-  <span class="nb">print</span> <span class="kt">i</span><span class="n">num1</span>
-  <span class="nb">print</span> <span class="kt">i</span><span class="n">num2</span>
-
-  <span class="kt">i</span><span class="n">size</span> <span class="n">pool_size</span> <span class="kt">gi</span><span class="n">pool</span>
-  <span class="nb">print</span> <span class="kt">i</span><span class="n">size</span>  
-  <span class="nb">turnoff</span>
+    <span class="c1">; This message is stored in the private namespace</span>
+    <span class="c1">; and is different for different instances</span>
+    <span class="nb">pylruni</span> <span class="s">&quot;message = &#39;a private random number: </span><span class="si">%f</span><span class="s">&#39; % random.random()&quot;</span>
+    <span class="nb">pylrun</span>  <span class="s">&quot;print(message)&quot;</span>
 <span class="kd">endin</span>
 
-<span class="o">&lt;/</span><span class="n">CsInstruments</span><span class="o">&gt;</span>
+<span class="c1">; Running this score you should get intermixed pairs of messages from the two</span>
+<span class="c1">; instances of instrument 1.</span>
 
-<span class="o">&lt;</span><span class="n">CsScore</span><span class="o">&gt;</span>
-<span class="kt">i</span><span class="n">1</span> <span class="mi">0</span> <span class="mi">1</span>
-<span class="n">e</span> <span class="mi">5</span>
-<span class="c1">; f0 3600</span>
+<span class="c1">; The first message of each pair is stored into the main namespace and so the</span>
+<span class="c1">; second instance overwrites the message of the first instance. The result is</span>
+<span class="c1">; that first message will be the same for both instances.</span>
 
-<span class="o">&lt;/</span><span class="n">CsScore</span><span class="o">&gt;</span>
-<span class="o">&lt;/</span><span class="n">CsoundSynthesizer</span><span class="o">&gt;</span>
+<span class="c1">; The second message is different for the two instances, being stored in the</span>
+<span class="c1">; private namespace.</span>
+<span class="nb">schedule</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.1</span>
 </code></pre></div>
 
 <h2 id="see-also">See also</h2>
 <ul>
-<li><a href="pool_gen.html">pool_gen</a></li>
-<li><a href="pool_push.html">pool_push</a></li>
-<li><a href="pool_pop.html">pool_pop</a></li>
-<li><a href="pool_size.html">pool_size</a></li>
-<li><a href="pool_capacity.html">pool_capacity</a></li>
+<li><a href="https://csound.com/docs/manual/pyeval.html">pyeval</a></li>
+<li><a href="https://csound.com/docs/manual/pycall.html">pycall</a></li>
+<li><a href="https://csound.com/docs/manual/pyinit.html">pyinit</a></li>
 </ul>
 <h2 id="credits">Credits</h2>
-<p>Eduardo Moguillansky, 2019</p>
+<p>Copyright 2002 by Maurizio Umberto Puxeddu. All rights reserved. Portions
+copyright 2004 and 2005 by Michael Gogins. This document has been updated
+Sunday 25 July 2004 and 1 February 2005 by Michael Gogins.</p>
               
             </div>
           </div>
@@ -423,10 +402,10 @@ mode. </p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="pool_pop.html" class="btn btn-neutral float-right" title="pool_pop">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="ramptrig.html" class="btn btn-neutral float-right" title="ramptrig">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="pool_isfull.html" class="btn btn-neutral" title="pool_isfull"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="pwrite.html" class="btn btn-neutral" title="pwrite"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -452,10 +431,10 @@ mode. </p>
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="pool_isfull.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="pwrite.html" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="pool_pop.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="ramptrig.html" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
