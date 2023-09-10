@@ -175,6 +175,7 @@ schedule "example2", 0, 1
 
 ## See also
 
+* [pwriten](pwriten.md)
 * [pread](pread.md)
 * [pset](https://csound.com/docs/manual/pset.html)
 * [p](https://csound.com/docs/manual/p.html)

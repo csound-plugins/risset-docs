@@ -40,10 +40,14 @@ Miscellaneous plugins
   * [linenv](opcodes/linenv.md): A triggerable linear envelope with sustain segment
   * [loadnpy](opcodes/loadnpy.md): Load an array (of any number of dimensions) saved as a .npy file
   * [memview](opcodes/memview.md): Create a view into a table or another array
+  * [mtro](opcodes/mtro.md): an accurate version of metro
+  * [nametoinstrnum](opcodes/nametoinstrnum.md): Returns the number of a named instrument
   * [panstereo](opcodes/panstereo.md): Stereo signal balancer
   * [perlin3](opcodes/perlin3.md): gradient noise sound generator
   * [pread](opcodes/pread.md): Read pfield values from any active instrument instance
+  * [presetinterp](opcodes/presetinterp.md): Interpolates between presets placed in a 2D plane
   * [pwrite](opcodes/pwrite.md): Modify pfield values of an active instrument instance
+  * [pwriten](opcodes/pwriten.md): Modify pfield values of an active instrument instance created via nstance
   * [ramptrig](opcodes/ramptrig.md): A triggerable ramp between 0 and 1
   * [ref](opcodes/ref.md): Get a reference to a variable
   * [refvalid](opcodes/refvalid.md): Queries if a reference is valid
@@ -53,6 +57,8 @@ Miscellaneous plugins
   * [standardchaos](opcodes/standardchaos.md): Standard map chaotic generator
   * [throwerror](opcodes/throwerror.md): Throws an error message at performance or init
   * [uniqinstance](opcodes/uniqinstance.md): Return an fractional instrument number which is not in use
+  * [vowelsdb](opcodes/vowelsdb.md): A database of vowel sounds
+  * [weightedsum](opcodes/weightedsum.md): Weighted sum of multiple 1D arrays, or the rows of a 2D array
   * [zeroarray](opcodes/zeroarray.md): Zero all elements in an array
   * [zerocrossing](opcodes/zerocrossing.md): Outputs a frequency based on the number of zero-crossings per second.
 
