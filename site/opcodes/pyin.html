@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>pyin - Csound Plugins</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/syntax-highlighting.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "pyin";
+        var mkdocs_page_input_path = "opcodes/pyin.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../index.html" class="icon icon-home"> Csound Plugins
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">Plugins</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Opcodes</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="index.html">vst3-opcodes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="accum.html">accum</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="atstop.html">atstop</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="beadsynt.html">beadsynt</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="beosc.html">beosc</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="bisect.html">bisect</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="chuap.html">chuap</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="crackle.html">crackle</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="cuetrig.html">cuetrig</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="defer.html">defer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="deref.html">deref</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="detectsilence.html">detectsilence</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="dict_del.html">dict_del</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="dict_delk.html">dict_delk</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="dict_dump.html">dict_dump</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="dict_exists.html">dict_exists</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="dict_free.html">dict_free</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="dict_get.html">dict_get</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="dict_geti.html">dict_geti</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="dict_iter.html">dict_iter</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="dict_loadstr.html">dict_loadstr</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="dict_new.html">dict_new</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="dict_print.html">dict_print</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="dict_query.html">dict_query</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="dict_set.html">dict_set</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="dict_size.html">dict_size</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="dict_update.html">dict_update</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="diode_ringmod.html">diode_ringmod</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="extendarray.html">extendarray</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="fileexists.html">file_exists</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="filereadmeta.html">filereadmeta</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="findFileInPath.html">findFileInPath</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="findarray.html">findarray</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="fofcyclevoc.html">fofcyclevoc</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="frac2int.html">frac2int</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="ftfill.html">ftfill</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="ftfind.html">ftfind</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="ftnew.html">ftnew</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="ftsetparams.html">ftsetparams</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="gaintovel.html">gaintovel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="getEnvVar.html">getEnvVar</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="getrowlin.html">getrowlin</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="hdf5read.html">hdf5read</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="hdf5write.html">hdf5read</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="initerror.html">initerror</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="interp1d.html">interp1d</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="jsfx.html">jsfx</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="jsfx_getslider.html">jsfx_setslider</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="jsfx_new.html">jsfx_new</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="jsfx_play.html">jsfx_play</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="jsfx_setslider.html">jsfx_setslider</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="lfnoise.html">lfnoise</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="linenv.html">linenv</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="linexp.html">linexp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="loadnpy.html">loadnpy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="lorenz.html">Lorenz</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="memview.html">memview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="mtro.html">mtro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="nametoinstrnum.html">nametoinstrnum</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="panstereo.html">panstereo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="pathAbsolute.html">pathAbsolute</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="pathIsAbsolute.html">pathIsAbsolute</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="pathJoin.html">pathJoin</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="pathNative.html">pathNative</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="pathSplit.html">pathSplit</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="pathSplitExt.html">pathSplitExt</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="pathSplitExtk.html">pathSplitExtk</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="pathSplitk.html">pathSplitk</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="perlin3.html">perlin3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="picksource.html">picksource</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="poly.html">poly</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="poly0.html">poly0</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="polyseq.html">polyseq</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="pool_at.html">pool_at</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="pool_capacity.html">pool_capacity</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="pool_free.html">pool_free</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="pool_gen.html">pool_gen</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="pool_isfull.html">pool_isfull</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="pool_new.html">pool_new</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="pool_pop.html">pool_pop</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="pool_push.html">pool_push</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="pool_size.html">pool_size</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="pread.html">pread</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="presetinterp.html">presetinterp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="pvscrest.html">pvscrest</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="pvsentropy.html">pvsentropy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="pvsflatness.html">pvsflatness</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="pvsmagsum.html">pvsmagsum</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="pvsmagsumn.html">pvsmagsumn</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="pvsrolloff.html">pvsrolloff</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="pwrite.html">pwrite</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="pwriten.html">pwriten</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">pyin</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#abstract">Abstract</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#description">Description</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#syntax">Syntax</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#arguments">Arguments</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#output">Output</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#syntax_1">Syntax</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#arguments_1">Arguments</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#execution-time">Execution Time</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#see-also">See also</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#metadata">Metadata</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="pyinf0.html">pyinf0</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="pyrun.html">pyrun</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="ramptrig.html">ramptrig</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="ref.html">ref</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="refvalid.html">refvalid</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="risset.html">risset</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="savenpy.html">savenpy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="schmitt.html">schmitt</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="scriptDir.html">scriptDir</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="sderef.html">sderef</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="setslice.html">setslice</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="sflistprograms.html">sflistprograms</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="sigmdrive.html">sigmdrive</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="sref.html">sref</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="standardchaos.html">standardchaos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="strjoin.html">strjoin</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="strmul.html">strmul</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="strsplit.html">strsplit</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="sysPlatform.html">sysPlatform</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="tabrowlin.html">tabrowlin</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="thomas.html">Lorenz</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="throwerror.html">throwerror</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="transpose.html">transpose</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="tubeharmonics.html">tubeharmonics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="uniqinstance.html">uniqinstance</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="vowelsdb.html">vowelsdb</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="vst3audio.html">vst3audio</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="vst3info.html">vst3info</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="vst3init.html">vst3init</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="vst3midi.html">vst3midi</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="vst3note.html">vst3note</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="vst3paramget.html">vst3paramget</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="vst3paramset.html">vst3paramset</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="vst3presetload.html">vst3presetload</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="vst3presetsave.html">vst3presetsave</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="vst3tempo.html">vst3tempo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="weightedsum.html">weightedsum</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="xtracycles.html">xtracycles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="zeroarray.html">zeroarray</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="zerocrossing.html">zerocrossing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="zitarev.html">zitarev</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Csound Plugins</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html" class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Opcodes</li>
+      <li class="breadcrumb-item active">pyin</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="pyin">pyin</h1>
+<h2 id="abstract">Abstract</h2>
+<p>Fundamental tracking implementing the pYIN algorithm</p>
+<h2 id="description">Description</h2>
+<p>pYIN is a modificatin of the YIN algorithm for f0 estimation. In the first step 
+of pYIN, F0 candidates and their probabilities are computed using the YIN algorithm. 
+In the second step, Viterbi decoding is used to estimate the most likely F0 
+sequence and voicing flags. This streaming version uses only past observations 
+(no lookahead) and is thus somewhat less effective than offline pyin.  </p>
+<h2 id="syntax">Syntax</h2>
+<div class="codehilite"><pre><span></span><code><span class="kt">k</span><span class="n">freq</span><span class="p">,</span><span class="w"> </span><span class="kt">k</span><span class="n">confidence</span><span class="p">,</span><span class="w"> </span><span class="kt">k</span><span class="n">voiced</span><span class="w"> </span><span class="n">pyin</span><span class="w"> </span><span class="kt">a</span><span class="n">sig</span><span class="p">,</span><span class="w"> </span><span class="kt">S</span><span class="n">arg1</span><span class="p">,</span><span class="w"> </span><span class="kt">i</span><span class="n">value1</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="kt">S</span><span class="n">arg2</span><span class="p">,</span><span class="w"> </span><span class="kt">i</span><span class="n">value2</span><span class="p">,</span><span class="w"> </span><span class="err">...</span><span class="p">]</span>
+</code></pre></div>
+
+<h2 id="arguments">Arguments</h2>
+<ul>
+<li><strong>asig</strong>: audio signal</li>
+<li><strong>Sarg1</strong>: argument name, see below</li>
+<li><strong>ivalue1</strong>: argument value</li>
+</ul>
+<!-- multiline -->
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Range / Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>framesize</td>
+<td>1024-8192 (2048)</td>
+<td>Analysis frame size in samples</td>
+</tr>
+<tr>
+<td>hop</td>
+<td>64- (1/4 framesize)</td>
+<td>Hop size in samples</td>
+</tr>
+<tr>
+<td>fmin</td>
+<td>20 -</td>
+<td>Min. frequency</td>
+</tr>
+<tr>
+<td>fmax</td>
+<td>20 -</td>
+<td>Max. frequency</td>
+</tr>
+<tr>
+<td>bins</td>
+<td>2 - 50</td>
+<td>Subdivisions per semitone</td>
+</tr>
+<tr>
+<td>transition_weight</td>
+<td>0-1 (0.1)</td>
+<td>Prob. of switching voiced↔unvoiced</td>
+</tr>
+<tr>
+<td>minrms</td>
+<td>0-1</td>
+<td>Mark sound with rms below this as silent</td>
+</tr>
+<tr>
+<td>beta_a</td>
+<td>1 - 3</td>
+<td>param a for beta distr. prior over thresholds.</td>
+</tr>
+<tr>
+<td>beta_b</td>
+<td>1 - 20</td>
+<td>param b for beta distr. Lower=smoother track</td>
+</tr>
+<tr>
+<td>drift</td>
+<td>10- (100)</td>
+<td>Pitch variation between frames, in cents</td>
+</tr>
+<tr>
+<td>voiced_obs_floor</td>
+<td>0-1</td>
+<td>Floor for voiced observations</td>
+</tr>
+<tr>
+<td>octave_cost</td>
+<td>0-0.5 (0.)</td>
+<td>Cost of jumping an octave between frames. Use if the algorithm falsely predicts the 2nd overtone as the fundamental</td>
+</tr>
+<tr>
+<td>subharmonic_tresh</td>
+<td>4</td>
+<td>Used together with octave_cost, controls the threshold of a downward octave jump</td>
+</tr>
+</tbody>
+</table>
+<h2 id="output">Output</h2>
+<ul>
+<li><strong>kfreq</strong>: detected frequency. Only valid if confidence is &gt; ~0.4</li>
+<li><strong>kconfidence</strong>: detection confidence</li>
+<li><strong>kvoiced</strong>: is the sound voiced</li>
+</ul>
+<h2 id="syntax_1">Syntax</h2>
+<div class="codehilite"><pre><span></span><code><span class="kt">k</span><span class="n">freq</span><span class="p">,</span><span class="w"> </span><span class="kt">k</span><span class="n">confidence</span><span class="p">,</span><span class="w"> </span><span class="kt">k</span><span class="n">voiced</span><span class="w"> </span><span class="n">pyinf0</span><span class="w"> </span><span class="kt">a</span><span class="n">sig</span><span class="p">,</span><span class="w"> </span><span class="kt">i</span><span class="n">minfreq</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span><span class="w"> </span><span class="kt">i</span><span class="n">maxfreq</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span><span class="w"> </span><span class="kt">i</span><span class="n">bufsize</span><span class="o">=</span><span class="mi">2048</span><span class="p">,</span><span class="w"> </span><span class="kt">i</span><span class="n">overlap</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="kt">k</span><span class="n">transprob</span><span class="o">=</span><span class="mf">0.99</span><span class="p">,</span><span class="w"> </span><span class="kt">i</span><span class="n">bins</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="kt">k</span><span class="n">drift</span><span class="o">=</span><span class="mi">5</span>
+</code></pre></div>
+
+<h2 id="arguments_1">Arguments</h2>
+<ul>
+<li><strong>asig</strong>: audio signal</li>
+<li><strong>iminfreq</strong>: min. frequency for f0 (default=60)</li>
+<li><strong>imaxfreq</strong>: max. frequency for f0 (default=1000)</li>
+<li><strong>ibufsize</strong>: size of the analysis frame (default=2048)</li>
+<li><strong>ioverlap</strong>: overlapping frames. hopsize=bufsize/overlap (default=4)</li>
+<li><strong>ktransprob</strong>: hmm transition probability (default=0.99)</li>
+<li><strong>ibins</strong>: number of bins per semitone (default=4)</li>
+<li><strong>kdrift</strong>: pitch drift between frames, in semitones (default=5)</li>
+</ul>
+<h2 id="execution-time">Execution Time</h2>
+<ul>
+<li>Performance</li>
+</ul>
+<h2 id="examples">Examples</h2>
+<div class="codehilite"><pre><span></span><code><span class="o">&lt;</span><span class="n">CsoundSynthesizer</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">CsOptions</span><span class="o">&gt;</span>
+<span class="o">-</span><span class="n">odac</span>
+<span class="o">&lt;/</span><span class="n">CsOptions</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">CsInstruments</span><span class="o">&gt;</span>
+<span class="vg">sr</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mi">44100</span>
+<span class="vg">ksmps</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mi">64</span>
+<span class="vg">nchnls</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+<span class="vg">0dbfs</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+
+<span class="cm">/* example file for pyin</span>
+
+<span class="cm">Syntax:</span>
+
+<span class="cm">kfreq, kconfidence, kvoiced pyin asig, Sarg1, ivalue1, [Sarg2, ivalue2, ...]</span>
+
+<span class="cm">Args:</span>
+<span class="cm">    * asig: audio signal</span>
+<span class="cm">    * Sarg1: an argument name, see below</span>
+<span class="cm">    * ivalue1: the argument value</span>
+
+<span class="cm">Output:</span>
+<span class="cm">    * kfreq: detected frequency. Only valid if confidence is &gt; ~0.4</span>
+<span class="cm">    * kconfidence: detection confidence</span>
+<span class="cm">    * kvoiced: is the sound voiced</span>
+
+
+<span class="cm">Parameter          Range          Default</span>
+<span class="cm">-----------------  ------------  -----------------</span>
+<span class="cm">framesize          1024 - 8192    2048</span>
+<span class="cm">hop                64 -           1/4 of framesize</span>
+<span class="cm">fmin               20 -           60</span>
+<span class="cm">fmax               20 -           1000</span>
+<span class="cm">bins               2 - 50         10</span>
+<span class="cm">transition_weight  0. - 1.        0.1</span>
+<span class="cm">minrms             0. - 1.        0.</span>
+<span class="cm">beta_a             1 - 3          2</span>
+<span class="cm">beta_b             1 - 20         3</span>
+<span class="cm">drift              10 -           100</span>
+<span class="cm">voiced_obs_floor   0-1            0.</span>
+<span class="cm">octave_cost        0.             0. - 0.5</span>
+<span class="cm">subharmonic_tresh  4              1 - 8</span>
+
+<span class="cm">*/</span>
+
+
+<span class="kd">instr</span><span class="w"> </span><span class="nf">1</span>
+<span class="w">  </span><span class="kt">a</span><span class="n">sig1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">oscili</span><span class="p">:</span><span class="kt">a</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mi">500</span><span class="p">)</span>
+<span class="w">  </span><span class="c1">; asig2 = diskin2(&quot;../../else/examples/finnegan01.flac&quot;, 1, 0, 1)[0]</span>
+<span class="w">  </span><span class="kt">a</span><span class="n">sig2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">diskin2</span><span class="p">(</span><span class="s">&quot;../../else/examples/voiceover-fragment-48k.flac&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="w">  </span><span class="kt">a</span><span class="n">sig3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">buzz</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">  </span><span class="kt">a</span><span class="n">sig4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">pinker</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.1</span>
+<span class="w">  </span><span class="kt">S</span><span class="n">names</span><span class="p">[]</span><span class="w"> </span><span class="nb">fillarray</span><span class="w"> </span><span class="s">&quot;sine  &quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;speech&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;buzz  &quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;pink  &quot;</span>
+<span class="w">  </span><span class="kt">k</span><span class="n">source</span><span class="w"> </span><span class="nb">init</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="nb">metro</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="kt">k</span><span class="n">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">k</span><span class="n">source</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">4</span>
+<span class="w">  </span><span class="k">endif</span>
+<span class="w">  </span><span class="c1">; asig = picksource(ksource, asig1, asig2, asig3, asig4)</span>
+<span class="w">  </span><span class="kt">a</span><span class="n">sig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">a</span><span class="n">sig2</span>
+<span class="w">  </span><span class="c1">; ar compress2 aasig, acsig, kthresh, kloknee, khiknee, kratio, katt, krel, ilook</span>
+<span class="w">  </span><span class="kt">a</span><span class="n">sigpyin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">compress2</span><span class="p">:</span><span class="kt">a</span><span class="p">(</span><span class="kt">a</span><span class="n">sig</span><span class="p">,</span><span class="w"> </span><span class="kt">a</span><span class="n">sig</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">90</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mf">0.01</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">0.02</span><span class="p">)</span>
+<span class="w">  </span><span class="kt">a</span><span class="n">sigpyin</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="mi">3</span>
+<span class="w">  </span><span class="c1">; asigpyin = asig</span>
+<span class="w">  </span><span class="kt">k</span><span class="n">pitch</span><span class="p">,</span><span class="w"> </span><span class="kt">k</span><span class="n">conf</span><span class="p">,</span><span class="w"> </span><span class="kt">k</span><span class="n">voiced</span><span class="w"> </span><span class="n">pyin2</span><span class="w"> </span><span class="kt">a</span><span class="n">sigpyin</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;framesize&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2048</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;hop&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">256</span><span class="p">,</span><span class="w"> </span>\
+<span class="w">    </span><span class="s">&quot;fmin&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">70</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;fmax&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;transition_weight&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">0.01</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;beta_b&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">1.6</span><span class="p">,</span><span class="w"> </span>\
+<span class="w">    </span><span class="s">&quot;drift&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">150</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;voiced_obs_floor&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">0.1</span>
+<span class="w">  </span><span class="kt">k</span><span class="n">sound</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">schmitt</span><span class="p">(</span><span class="nb">dbamp</span><span class="p">(</span><span class="nb">rms</span><span class="p">(</span><span class="kt">a</span><span class="n">sig</span><span class="p">)),</span><span class="w">  </span><span class="o">-</span><span class="mi">45</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">60</span><span class="p">)</span><span class="c1">;</span>
+<span class="w">  </span><span class="kt">k</span><span class="n">env</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">schmitt</span><span class="p">:</span><span class="n">k</span><span class="p">(</span><span class="kt">k</span><span class="n">conf</span><span class="p">,</span><span class="w"> </span><span class="mf">0.3</span><span class="p">,</span><span class="w"> </span><span class="mf">0.2</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">schmitt</span><span class="p">:</span><span class="n">k</span><span class="p">(</span><span class="kt">k</span><span class="n">pitch</span><span class="p">,</span><span class="w"> </span><span class="mi">90</span><span class="p">,</span><span class="w"> </span><span class="mi">75</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kt">k</span><span class="n">sound</span><span class="c1">;</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="nb">metro</span><span class="p">(</span><span class="mi">24</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="kt">k</span><span class="n">env</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">printsk</span><span class="w"> </span><span class="s">&quot;pitch: </span><span class="si">%.1f</span><span class="s">, conf: </span><span class="si">%d</span><span class="s">, voiced: </span><span class="si">%d</span><span class="s">, sound: </span><span class="si">%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="kt">k</span><span class="n">pitch</span><span class="p">,</span><span class="w"> </span><span class="kt">k</span><span class="n">conf</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="kt">k</span><span class="n">voiced</span><span class="p">,</span><span class="w"> </span><span class="kt">k</span><span class="n">sound</span>
+<span class="w">  </span><span class="k">endif</span>
+<span class="w">  </span><span class="nb">outch</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="kt">a</span><span class="n">sigpyin</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.9</span>
+<span class="w">  </span><span class="nb">outch</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="nb">vco2</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="kt">k</span><span class="n">pitch</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">a</span><span class="p">(</span><span class="kt">k</span><span class="n">env</span><span class="p">)</span>
+<span class="kd">endin</span>
+
+<span class="o">&lt;/</span><span class="n">CsInstruments</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">CsScore</span><span class="o">&gt;</span>
+<span class="kt">i</span><span class="n">1</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">20</span>
+
+<span class="o">&lt;/</span><span class="n">CsScore</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">CsoundSynthesizer</span><span class="o">&gt;</span>
+</code></pre></div>
+
+<p><img alt="" src="assets/pyin-spectrogram.png" />
+<a href="assets/pyin-test.mp3">LISTEN</a></p>
+<h2 id="see-also">See also</h2>
+<ul>
+<li><a href="pyin.html">pyin</a></li>
+<li><a href="https://csound.com/docs/manual/ptrack.html">ptrack</a></li>
+<li><a href="https://csound.com/docs/manual/plltrack.html">plltrack</a></li>
+<li><a href="pvsmagsum.html">pvsmagsum</a></li>
+<li><a href="pvsflatness.html">pvsflatness</a></li>
+</ul>
+<h2 id="metadata">Metadata</h2>
+<ul>
+<li>Author: Eduardo Moguillansky</li>
+<li>Year: 2026</li>
+<li>Plugin: else</li>
+<li>Source: https://github.com/csound-plugins/csound-plugins/blob/master/src/else/src/else.c</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="pwriten.html" class="btn btn-neutral float-left" title="pwriten"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="pyinf0.html" class="btn btn-neutral float-right" title="pyinf0">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="pwriten.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="pyinf0.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
