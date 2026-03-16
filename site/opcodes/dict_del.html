@@ -8,7 +8,7 @@
     <title>dict_del - Csound Plugins</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
         <link href="../css/syntax-highlighting.css" rel="stylesheet" />
     
       <script>
@@ -18,12 +18,11 @@
         var mkdocs_page_url = null;
       </script>
     
-    <script src="../js/jquery-3.6.0.min.js" defer></script>
     <!--[if lt IE 9]>
       <script src="../js/html5shiv.min.js"></script>
     <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-      <script>hljs.initHighlightingOnLoad();</script> 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -63,13 +62,15 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="crackle.html">crackle</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="cuetrig.html">cuetrig</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="defer.html">defer</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="deref.html">deref</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="detectsilence.html">detectsilence</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="dict_del.html">dict_del</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">dict_del</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#abstract">Abstract</a>
     </li>
@@ -88,6 +89,8 @@
     <li class="toctree-l2"><a class="reference internal" href="#credits">Credits</a>
     </li>
     </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="dict_delk.html">dict_delk</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="dict_dump.html">dict_dump</a>
                   </li>
@@ -113,6 +116,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="dict_size.html">dict_size</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="dict_update.html">dict_update</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="diode_ringmod.html">diode_ringmod</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="extendarray.html">extendarray</a>
@@ -125,6 +130,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="findarray.html">findarray</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="fofcyclevoc.html">fofcyclevoc</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="frac2int.html">frac2int</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="ftfill.html">ftfill</a>
@@ -134,6 +141,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="ftnew.html">ftnew</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="ftsetparams.html">ftsetparams</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="gaintovel.html">gaintovel</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="getEnvVar.html">getEnvVar</a>
                   </li>
@@ -161,7 +170,11 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="linenv.html">linenv</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="linexp.html">linexp</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="loadnpy.html">loadnpy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="lorenz.html">Lorenz</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="memview.html">memview</a>
                   </li>
@@ -189,6 +202,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="perlin3.html">perlin3</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="picksource.html">picksource</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="poly.html">poly</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="poly0.html">poly0</a>
@@ -198,6 +213,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="pool_at.html">pool_at</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="pool_capacity.html">pool_capacity</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="pool_free.html">pool_free</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="pool_gen.html">pool_gen</a>
                   </li>
@@ -215,9 +232,25 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="presetinterp.html">presetinterp</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="pvscrest.html">pvscrest</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="pvsentropy.html">pvsentropy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="pvsflatness.html">pvsflatness</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="pvsmagsum.html">pvsmagsum</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="pvsmagsumn.html">pvsmagsumn</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="pvsrolloff.html">pvsrolloff</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="pwrite.html">pwrite</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="pwriten.html">pwriten</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="pyin.html">pyin</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="pyinf0.html">pyinf0</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="pyrun.html">pyrun</a>
                   </li>
@@ -228,6 +261,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="refvalid.html">refvalid</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="risset.html">risset</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="savenpy.html">savenpy</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="schmitt.html">schmitt</a>
                   </li>
@@ -247,13 +282,19 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="strjoin.html">strjoin</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="strmul.html">strmul</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="strsplit.html">strsplit</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="sysPlatform.html">sysPlatform</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="tabrowlin.html">tabrowlin</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="thomas.html">Lorenz</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="throwerror.html">throwerror</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="transpose.html">transpose</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="tubeharmonics.html">tubeharmonics</a>
                   </li>
@@ -289,6 +330,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="zerocrossing.html">zerocrossing</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="zitarev.html">zitarev</a>
+                  </li>
               </ul>
       </div>
     </div>
@@ -303,9 +346,9 @@
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html" class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
-          <li>Opcodes &raquo;</li>
-      <li>dict_del</li>
+    <li><a href="../index.html" class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Opcodes</li>
+      <li class="breadcrumb-item active">dict_del</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -395,7 +438,7 @@ Last update: 2021</p>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
         <a href="detectsilence.html" class="btn btn-neutral float-left" title="detectsilence"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="dict_dump.html" class="btn btn-neutral float-right" title="dict_dump">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="dict_delk.html" class="btn btn-neutral float-right" title="dict_delk">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -421,18 +464,19 @@ Last update: 2021</p>
       <span><a href="detectsilence.html" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="dict_dump.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="dict_delk.html" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
-    <script>var base_url = '..';</script>
-    <script src="../js/theme_extra.js" defer></script>
-    <script src="../js/theme.js" defer></script>
-      <script src="../search/main.js" defer></script>
-    <script defer>
-        window.onload = function () {
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);
-        };
+        });
     </script>
 
 </body>

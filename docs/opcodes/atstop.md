@@ -93,9 +93,9 @@ ksmps = 64
 0dbfs = 1
 nchnls = 2
 
-opcode myvco,a,ii
+opcode myvco, a, ii
   iamp, ifreq xin
-  a0 vco2, iamp, ifreq
+  a0 vco2 iamp, ifreq
   a0 += vco2(iamp, ifreq+2)
   a0 += vco2(iamp, ifreq / 2)
   xout a0
@@ -147,6 +147,7 @@ instr foo
   ifreq = p4
   a0 oscili 0.1, ifreq
   outs a0, a0
+  atstop 10, 0, 1
 endin
 
 ; test simple case with optional pargs
@@ -157,19 +158,19 @@ instr first
 endin
 
 instr second
-  printf "second!  p4 =%f \n", 1, p4
+  prints ">>> second!  p4 =%f \n", p4
   turnoff
 endin
 
 instr 200
-  printf "200! \n", 1
+  prints ">>>> 200!\n"
   turnoff
 endin
 
 ; test atstop with k args
 instr _printCounter
   icounter = p4
-  prints "counter: %d\n", icounter
+  prints ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> counter: %d\n", icounter
   turnoff
 endin
 
@@ -177,6 +178,17 @@ instr kargs
   kcounter init 0
   kcounter += 1
   atstop "_printCounter", 0, -1, kcounter
+endin
+
+instr strarg
+  atstop "printmsg", 0, 0, "mymessage"
+  turnoff
+endin
+
+instr printmsg
+  Smsg = p4
+  prints "message from printmsg: '%s'\n", Smsg
+  turnoff
 endin
 
 instr StopPerformance
@@ -190,11 +202,12 @@ endin
 
 ; i 2 0 0.25 48
 
-; i 10 0 1
+i 10 0 1
 ; i "StopPerformance" 10 1
 ; i "first" 1 0.5
-i "kargs" 0 1
-f 0 5
+; i "kargs" 0 1
+; i "strarg" 0 1
+f 0 10
 </CsScore>
 </CsoundSynthesizer>
 

@@ -122,8 +122,8 @@ instr ex2_generator
   kfreq      = p5
   kcutoff    = p6
   kresonance = p7
-  asaw vco2, kamp, kfreq
-  aout moogladder2, asaw, kcutoff, kresonance
+  asaw vco2 kamp, kfreq
+  aout moogladder2 asaw, kcutoff, kresonance
   aout *= linsegr(0, 0.1, 1, 0.1, 0)
   outs aout, aout  
 endin
@@ -157,10 +157,31 @@ instr example2
   turnoff
 endin
 
+instr 100
+  kfreq = p4
+  outch 1, oscili:a(0.1, kfreq)
+endin
+
+instr pwriteonce
+  ip1 = p4
+  iidx = p5
+  ivalue = p6
+  pwrite ip1, iidx, ivalue
+  turnoff
+endin
+
+instr example3
+  ; pwrite in the future
+  schedule 100.01, 2, 10, 2000
+  schedule "pwriteonce", 2.5, 0, 100.01, 4, 440
+  turnoff
+endin
+
 ;; Uncomment as needed
 
 ; schedule "example1", 0, 1
-schedule "example2", 0, 1
+; schedule "example2", 0, 1
+schedule "example3", 0, 1
 
 </CsInstruments>
 <CsScore>

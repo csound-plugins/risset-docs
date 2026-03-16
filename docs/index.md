@@ -1,5 +1,12 @@
 # Plugins
 
+## GENious
+
+GEN routines
+
+  * [lorenz](opcodes/lorenz.md): GEN routine based on the Lorenz attractor
+  * [thomas](opcodes/thomas.md): GEN routine based on the Thomas attractor
+
 ## beosc
 
 Band-enhanced oscillators implementing the sine+noise synthesis model
@@ -23,6 +30,7 @@ Miscellaneous plugins
   * [atstop](opcodes/atstop.md): Schedule an instrument at the end of the current instrument
   * [bisect](opcodes/bisect.md): Returns the fractional index of a value within a sorted array / tab
   * [crackle](opcodes/crackle.md): generates noise based on a chaotic equation
+  * [cuetrig](opcodes/cuetrig.md): Generate a trigger at given time values
   * [deref](opcodes/deref.md): Dereference a previously created reference to a variable
   * [detectsilence](opcodes/detectsilence.md): Detect when input falls below an amplitude threshold
   * [diode_ringmod](opcodes/diode_ringmod.md): A ring modulator with optional non-linearities
@@ -34,20 +42,30 @@ Miscellaneous plugins
   * [ftfind](opcodes/ftfind.md): Find an element in a table
   * [ftnew](opcodes/ftnew.md): creates a new table of a given size
   * [ftsetparams](opcodes/ftsetparams.md): Set metadata parameters of a table, as if it was loaded via GEN1
+  * [gaintovel](opcodes/gaintovel.md): Map amplitude 0-1 to velocity (0-127)
   * [initerror](opcodes/initerror.md): Throws an error message at init
   * [interp1d](opcodes/interp1d.md): Interpolate between elements of an array/table
   * [lfnoise](opcodes/lfnoise.md): low frequency, band-limited noise
   * [linenv](opcodes/linenv.md): A triggerable linear envelope with sustain segment
+  * [linexp](opcodes/linexp.md): linear to exponentail interpolation
   * [loadnpy](opcodes/loadnpy.md): Load an array (of any number of dimensions) saved as a .npy file
   * [memview](opcodes/memview.md): Create a view into a table or another array
   * [mtro](opcodes/mtro.md): an accurate version of metro
   * [nametoinstrnum](opcodes/nametoinstrnum.md): Returns the number of a named instrument
   * [panstereo](opcodes/panstereo.md): Stereo signal balancer
   * [perlin3](opcodes/perlin3.md): gradient noise sound generator
+  * [picksource](opcodes/picksource.md): Select one of multiple signals basen
   * [pread](opcodes/pread.md): Read pfield values from any active instrument instance
   * [presetinterp](opcodes/presetinterp.md): Interpolates between presets placed in a 2D plane
+  * [pvscrest](opcodes/pvscrest.md): Compute the spectral crest value of a spectral signal.
+  * [pvsentropy](opcodes/pvsentropy.md): Compute the entropy of a spectral signal.
+  * [pvsflatness](opcodes/pvsflatness.md): Compute the flatness of a spectral signal.
+  * [pvsmagsum](opcodes/pvsmagsum.md): Sum all magnitudes of the bins in a pv signal
+  * [pvsmagsumn](opcodes/pvsmagsumn.md): Sum the magnitudes of the n loudest bins
+  * [pvsrolloff](opcodes/pvsrolloff.md): Spectral rolloff point
   * [pwrite](opcodes/pwrite.md): Modify pfield values of an active instrument instance
   * [pwriten](opcodes/pwriten.md): Modify pfield values of an active instrument instance created via nstance
+  * [pyinf0](opcodes/pyinf0.md): fundamental (pitch) tracking using the probabilistic YIN method
   * [ramptrig](opcodes/ramptrig.md): A triggerable ramp between 0 and 1
   * [ref](opcodes/ref.md): Get a reference to a variable
   * [refvalid](opcodes/refvalid.md): Queries if a reference is valid
@@ -55,7 +73,9 @@ Miscellaneous plugins
   * [setslice](opcodes/setslice.md): Set a slice of an array to a given value
   * [sigmdrive](opcodes/sigmdrive.md): Analog "soft clipping" distortion by applying non-linear transfer functions.
   * [standardchaos](opcodes/standardchaos.md): Standard map chaotic generator
+  * [strmul](opcodes/strmul.md): Produce multiple copies of a string
   * [throwerror](opcodes/throwerror.md): Throws an error message at performance or init
+  * [transpose](opcodes/transpose.md): Simple delay based pitch shifter inspired on faust's transpose
   * [uniqinstance](opcodes/uniqinstance.md): Return an fractional instrument number which is not in use
   * [vowelsdb](opcodes/vowelsdb.md): A database of vowel sounds
   * [weightedsum](opcodes/weightedsum.md): Weighted sum of multiple 1D arrays, or the rows of a 2D array
@@ -85,6 +105,7 @@ jsfx support for csound
 A hashtable for csound
 
   * [dict_del](opcodes/dict_del.md): Remove a key:value pair from a hashtable
+  * [dict_delk](opcodes/dict_delk.md): Remove a key:value pair from a hashtable at perf time
   * [dict_dump](opcodes/dict_dump.md): Dumps the contents of this dict as a string
   * [dict_exists](opcodes/dict_exists.md): Returns 1 if the dict exists, 0 otherwise
   * [dict_free](opcodes/dict_free.md): Free a hashtable
@@ -97,8 +118,10 @@ A hashtable for csound
   * [dict_query](opcodes/dict_query.md): Query different properties of a dict
   * [dict_set](opcodes/dict_set.md): Set a value from a hashtable
   * [dict_size](opcodes/dict_size.md): Returns the number of key:value pairs in a dict
+  * [dict_update](opcodes/dict_update.md): Update a dict with another dict
   * [pool_at](opcodes/pool_at.md): Returns the item of a pool at a given index
   * [pool_capacity](opcodes/pool_capacity.md): Returns the capacity of a pool
+  * [pool_free](opcodes/pool_free.md): Deletes a pool, frees its memory
   * [pool_gen](opcodes/pool_gen.md): Create a pool and fill it with values
   * [pool_isfull](opcodes/pool_isfull.md): Returns 1 if the pool is full
   * [pool_new](opcodes/pool_new.md): Create an empty  pool
@@ -127,6 +150,12 @@ Cross-platform path handling and string opcodes
   * [strsplit](opcodes/strsplit.md): Split a string at a given separator
   * [sysPlatform](opcodes/sysPlatform.md): Get a string description of the current system platform
 
+## pitchtrack
+
+Fundamental pitch tracking
+
+  * [pyin](opcodes/pyin.md): Fundamental tracking implementing the pYIN algorithm
+
 ## poly
 
 Multiple (parallel or sequential) instances of an opcode
@@ -135,6 +164,13 @@ Multiple (parallel or sequential) instances of an opcode
   * [poly](opcodes/poly.md): `poly` creates and controls multiple parallel version of an opcode
   * [poly0](opcodes/poly0.md): `poly0` creates and controls multiple parallel version of an opcode with no outputs
   * [polyseq](opcodes/polyseq.md): `polyseq` creates and controls multiple **sequential** version of an opcode
+
+## poodle
+
+Faust plugins ported to csound
+
+  * [fofcyclevoc](opcodes/fofcyclevoc.md): Port of faust's "Sf Formant FOF Cycle" vocal model
+  * [zitarev](opcodes/zitarev.md): Faust port of zita rev
 
 ## python
 

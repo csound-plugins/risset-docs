@@ -8,15 +8,14 @@
     <title>Csound Plugins</title>
     <link rel="stylesheet" href="./css/theme.css" />
     <link rel="stylesheet" href="./css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
         <link href="./css/syntax-highlighting.css" rel="stylesheet" />
     
-    <script src="./js/jquery-3.6.0.min.js" defer></script>
     <!--[if lt IE 9]>
       <script src="./js/html5shiv.min.js"></script>
     <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-      <script>hljs.initHighlightingOnLoad();</script> 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -56,6 +55,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="./opcodes/crackle.html">crackle</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="./opcodes/cuetrig.html">cuetrig</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="./opcodes/defer.html">defer</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="./opcodes/deref.html">deref</a>
@@ -63,6 +64,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="./opcodes/detectsilence.html">detectsilence</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="./opcodes/dict_del.html">dict_del</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="./opcodes/dict_delk.html">dict_delk</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="./opcodes/dict_dump.html">dict_dump</a>
                   </li>
@@ -88,6 +91,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="./opcodes/dict_size.html">dict_size</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="./opcodes/dict_update.html">dict_update</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="./opcodes/diode_ringmod.html">diode_ringmod</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="./opcodes/extendarray.html">extendarray</a>
@@ -100,6 +105,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="./opcodes/findarray.html">findarray</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="./opcodes/fofcyclevoc.html">fofcyclevoc</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="./opcodes/frac2int.html">frac2int</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="./opcodes/ftfill.html">ftfill</a>
@@ -109,6 +116,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="./opcodes/ftnew.html">ftnew</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="./opcodes/ftsetparams.html">ftsetparams</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="./opcodes/gaintovel.html">gaintovel</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="./opcodes/getEnvVar.html">getEnvVar</a>
                   </li>
@@ -136,7 +145,11 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="./opcodes/linenv.html">linenv</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="./opcodes/linexp.html">linexp</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="./opcodes/loadnpy.html">loadnpy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="./opcodes/lorenz.html">Lorenz</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="./opcodes/memview.html">memview</a>
                   </li>
@@ -164,6 +177,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="./opcodes/perlin3.html">perlin3</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="./opcodes/picksource.html">picksource</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="./opcodes/poly.html">poly</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="./opcodes/poly0.html">poly0</a>
@@ -173,6 +188,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="./opcodes/pool_at.html">pool_at</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="./opcodes/pool_capacity.html">pool_capacity</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="./opcodes/pool_free.html">pool_free</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="./opcodes/pool_gen.html">pool_gen</a>
                   </li>
@@ -190,9 +207,25 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="./opcodes/presetinterp.html">presetinterp</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="./opcodes/pvscrest.html">pvscrest</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="./opcodes/pvsentropy.html">pvsentropy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="./opcodes/pvsflatness.html">pvsflatness</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="./opcodes/pvsmagsum.html">pvsmagsum</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="./opcodes/pvsmagsumn.html">pvsmagsumn</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="./opcodes/pvsrolloff.html">pvsrolloff</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="./opcodes/pwrite.html">pwrite</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="./opcodes/pwriten.html">pwriten</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="./opcodes/pyin.html">pyin</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="./opcodes/pyinf0.html">pyinf0</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="./opcodes/pyrun.html">pyrun</a>
                   </li>
@@ -203,6 +236,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="./opcodes/refvalid.html">refvalid</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="./opcodes/risset.html">risset</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="./opcodes/savenpy.html">savenpy</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="./opcodes/schmitt.html">schmitt</a>
                   </li>
@@ -222,13 +257,19 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="./opcodes/strjoin.html">strjoin</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="./opcodes/strmul.html">strmul</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="./opcodes/strsplit.html">strsplit</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="./opcodes/sysPlatform.html">sysPlatform</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="./opcodes/tabrowlin.html">tabrowlin</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="./opcodes/thomas.html">Lorenz</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="./opcodes/throwerror.html">throwerror</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="./opcodes/transpose.html">transpose</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="./opcodes/tubeharmonics.html">tubeharmonics</a>
                   </li>
@@ -264,6 +305,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="./opcodes/zerocrossing.html">zerocrossing</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="./opcodes/zitarev.html">zitarev</a>
+                  </li>
               </ul>
       </div>
     </div>
@@ -278,7 +321,7 @@
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="./index.html" class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+    <li><a href="./index.html" class="icon icon-home" aria-label="Docs"></a></li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -326,14 +369,15 @@
     
   </span>
 </div>
-    <script>var base_url = '.';</script>
-    <script src="./js/theme_extra.js" defer></script>
-    <script src="./js/theme.js" defer></script>
-      <script src="./search/main.js" defer></script>
-    <script defer>
-        window.onload = function () {
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = ".";</script>
+    <script src="./js/theme_extra.js"></script>
+    <script src="./js/theme.js"></script>
+      <script src="./search/main.js"></script>
+    <script>
+        jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);
-        };
+        });
     </script>
 
 </body>

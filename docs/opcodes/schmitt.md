@@ -65,6 +65,8 @@ nchnls = 2
 
 /* Example file for schmitt opcode
 
+	To be used inside csoundqt
+
 	aout schmitt ain, khigh, klow
 	kout schmitt kin, khigh, klow
 	
@@ -85,8 +87,8 @@ instr 1
 	ain = oscili:a(1, 0.25)*0.5+0.5
 	aout schmitt ain, khigh, klow
 	
-	chnset k(ain), "signal"
-	chnset k(aout), "out"
+	chnset ain[0], "signal"
+	chnset aout[0], "out"
 	
 endin
 
@@ -97,6 +99,10 @@ i1 0 100
 
 </CsScore>
 </CsoundSynthesizer>
+
+
+
+
 <bsbPanel>
  <label>Widgets</label>
  <objectName/>
@@ -111,7 +117,7 @@ i1 0 100
   <g>22</g>
   <b>22</b>
  </bgcolor>
- <bsbObject version="2" type="BSBController">
+ <bsbObject type="BSBController" version="2">
   <objectName>high</objectName>
   <x>122</x>
   <y>39</y>
@@ -127,7 +133,7 @@ i1 0 100
   <xMax>1.00000000</xMax>
   <yMin>0.00000000</yMin>
   <yMax>1.00000000</yMax>
-  <xValue>0.72000000</xValue>
+  <xValue>0.62800000</xValue>
   <yValue>0.00000000</yValue>
   <type>fill</type>
   <pointsize>1</pointsize>
@@ -148,7 +154,7 @@ i1 0 100
   </bgcolor>
   <bgcolormode>true</bgcolormode>
  </bsbObject>
- <bsbObject version="2" type="BSBController">
+ <bsbObject type="BSBController" version="2">
   <objectName>low</objectName>
   <x>122</x>
   <y>100</y>
@@ -164,7 +170,7 @@ i1 0 100
   <xMax>1.00000000</xMax>
   <yMin>0.00000000</yMin>
   <yMax>1.00000000</yMax>
-  <xValue>0.48800000</xValue>
+  <xValue>0.20400000</xValue>
   <yValue>0.00000000</yValue>
   <type>fill</type>
   <pointsize>1</pointsize>
@@ -185,7 +191,7 @@ i1 0 100
   </bgcolor>
   <bgcolormode>true</bgcolormode>
  </bsbObject>
- <bsbObject version="2" type="BSBController">
+ <bsbObject type="BSBController" version="2">
   <objectName>signal</objectName>
   <x>122</x>
   <y>162</y>
@@ -201,7 +207,7 @@ i1 0 100
   <xMax>1.00000000</xMax>
   <yMin>0.00000000</yMin>
   <yMax>1.00000000</yMax>
-  <xValue>0.96176335</xValue>
+  <xValue>0.02908331</xValue>
   <yValue>0.00000000</yValue>
   <type>fill</type>
   <pointsize>1</pointsize>
@@ -222,7 +228,7 @@ i1 0 100
   </bgcolor>
   <bgcolormode>true</bgcolormode>
  </bsbObject>
- <bsbObject version="2" type="BSBController">
+ <bsbObject type="BSBController" version="2">
   <objectName>out</objectName>
   <x>122</x>
   <y>224</y>
@@ -238,7 +244,7 @@ i1 0 100
   <xMax>1.00000000</xMax>
   <yMin>0.00000000</yMin>
   <yMax>1.00000000</yMax>
-  <xValue>1.00000000</xValue>
+  <xValue>0.00000000</xValue>
   <yValue>0.00000000</yValue>
   <type>fill</type>
   <pointsize>1</pointsize>
@@ -259,7 +265,7 @@ i1 0 100
   </bgcolor>
   <bgcolormode>true</bgcolormode>
  </bsbObject>
- <bsbObject version="2" type="BSBLabel">
+ <bsbObject type="BSBLabel" version="2">
   <objectName/>
   <x>30</x>
   <y>44</y>
@@ -290,7 +296,7 @@ i1 0 100
   <borderradius>1</borderradius>
   <borderwidth>0</borderwidth>
  </bsbObject>
- <bsbObject version="2" type="BSBLabel">
+ <bsbObject type="BSBLabel" version="2">
   <objectName/>
   <x>30</x>
   <y>103</y>
@@ -321,7 +327,7 @@ i1 0 100
   <borderradius>1</borderradius>
   <borderwidth>0</borderwidth>
  </bsbObject>
- <bsbObject version="2" type="BSBLabel">
+ <bsbObject type="BSBLabel" version="2">
   <objectName/>
   <x>30</x>
   <y>166</y>
@@ -352,7 +358,7 @@ i1 0 100
   <borderradius>1</borderradius>
   <borderwidth>0</borderwidth>
  </bsbObject>
- <bsbObject version="2" type="BSBLabel">
+ <bsbObject type="BSBLabel" version="2">
   <objectName/>
   <x>28</x>
   <y>228</y>

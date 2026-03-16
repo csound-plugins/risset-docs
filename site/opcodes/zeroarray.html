@@ -8,7 +8,7 @@
     <title>zeroarray - Csound Plugins</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
         <link href="../css/syntax-highlighting.css" rel="stylesheet" />
     
       <script>
@@ -18,12 +18,11 @@
         var mkdocs_page_url = null;
       </script>
     
-    <script src="../js/jquery-3.6.0.min.js" defer></script>
     <!--[if lt IE 9]>
       <script src="../js/html5shiv.min.js"></script>
     <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-      <script>hljs.initHighlightingOnLoad();</script> 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -63,6 +62,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="crackle.html">crackle</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="cuetrig.html">cuetrig</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="defer.html">defer</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="deref.html">deref</a>
@@ -70,6 +71,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="detectsilence.html">detectsilence</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="dict_del.html">dict_del</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="dict_delk.html">dict_delk</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="dict_dump.html">dict_dump</a>
                   </li>
@@ -95,6 +98,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="dict_size.html">dict_size</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="dict_update.html">dict_update</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="diode_ringmod.html">diode_ringmod</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="extendarray.html">extendarray</a>
@@ -107,6 +112,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="findarray.html">findarray</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="fofcyclevoc.html">fofcyclevoc</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="frac2int.html">frac2int</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="ftfill.html">ftfill</a>
@@ -116,6 +123,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="ftnew.html">ftnew</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="ftsetparams.html">ftsetparams</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="gaintovel.html">gaintovel</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="getEnvVar.html">getEnvVar</a>
                   </li>
@@ -143,7 +152,11 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="linenv.html">linenv</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="linexp.html">linexp</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="loadnpy.html">loadnpy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="lorenz.html">Lorenz</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="memview.html">memview</a>
                   </li>
@@ -171,6 +184,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="perlin3.html">perlin3</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="picksource.html">picksource</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="poly.html">poly</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="poly0.html">poly0</a>
@@ -180,6 +195,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="pool_at.html">pool_at</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="pool_capacity.html">pool_capacity</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="pool_free.html">pool_free</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="pool_gen.html">pool_gen</a>
                   </li>
@@ -197,9 +214,25 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="presetinterp.html">presetinterp</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="pvscrest.html">pvscrest</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="pvsentropy.html">pvsentropy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="pvsflatness.html">pvsflatness</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="pvsmagsum.html">pvsmagsum</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="pvsmagsumn.html">pvsmagsumn</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="pvsrolloff.html">pvsrolloff</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="pwrite.html">pwrite</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="pwriten.html">pwriten</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="pyin.html">pyin</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="pyinf0.html">pyinf0</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="pyrun.html">pyrun</a>
                   </li>
@@ -210,6 +243,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="refvalid.html">refvalid</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="risset.html">risset</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="savenpy.html">savenpy</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="schmitt.html">schmitt</a>
                   </li>
@@ -229,13 +264,19 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="strjoin.html">strjoin</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="strmul.html">strmul</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="strsplit.html">strsplit</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="sysPlatform.html">sysPlatform</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="tabrowlin.html">tabrowlin</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="thomas.html">Lorenz</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="throwerror.html">throwerror</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="transpose.html">transpose</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="tubeharmonics.html">tubeharmonics</a>
                   </li>
@@ -267,7 +308,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="xtracycles.html">xtracycles</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="zeroarray.html">zeroarray</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">zeroarray</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#abstract">Abstract</a>
     </li>
@@ -291,6 +332,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="zerocrossing.html">zerocrossing</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="zitarev.html">zitarev</a>
+                  </li>
               </ul>
       </div>
     </div>
@@ -305,9 +348,9 @@
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html" class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
-          <li>Opcodes &raquo;</li>
-      <li>zeroarray</li>
+    <li><a href="../index.html" class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Opcodes</li>
+      <li class="breadcrumb-item active">zeroarray</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -385,7 +428,16 @@ in the mask array is higher than 0). The mask can also be a table</p>
 <span class="kd">instr</span><span class="w"> </span><span class="nf">30</span>
 <span class="w">    </span><span class="c1">; test masked zeroying</span>
 <span class="w">    </span><span class="kt">k</span><span class="n">freqs</span><span class="p">[]</span><span class="w"> </span><span class="nb">fillarray</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">,</span><span class="w"> </span><span class="mi">500</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">700</span><span class="p">,</span><span class="w"> </span><span class="mi">800</span><span class="p">,</span><span class="w"> </span><span class="mi">900</span>
-<span class="w">    </span><span class="kt">a</span><span class="n">sigs</span><span class="p">[]</span><span class="w"> </span><span class="n">poly</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;oscili&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="kt">k</span><span class="n">freqs</span>
+<span class="w">    </span><span class="kt">a</span><span class="n">sigs</span><span class="p">[]</span><span class="w"> </span><span class="nb">init</span><span class="w"> </span><span class="mi">8</span>
+<span class="w">    </span><span class="kt">a</span><span class="n">sigs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">oscili</span><span class="p">:</span><span class="kt">a</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">)</span>
+<span class="w">    </span><span class="kt">a</span><span class="n">sigs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">oscili</span><span class="p">:</span><span class="kt">a</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="mi">300</span><span class="p">)</span>
+<span class="w">    </span><span class="kt">a</span><span class="n">sigs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">oscili</span><span class="p">:</span><span class="kt">a</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">)</span>
+<span class="w">    </span><span class="kt">a</span><span class="n">sigs</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">oscili</span><span class="p">:</span><span class="kt">a</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="mi">500</span><span class="p">)</span>
+<span class="w">    </span><span class="kt">a</span><span class="n">sigs</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">oscili</span><span class="p">:</span><span class="kt">a</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">)</span>
+<span class="w">    </span><span class="kt">a</span><span class="n">sigs</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">oscili</span><span class="p">:</span><span class="kt">a</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="mi">700</span><span class="p">)</span>
+<span class="w">    </span><span class="kt">a</span><span class="n">sigs</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">oscili</span><span class="p">:</span><span class="kt">a</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="mi">800</span><span class="p">)</span>
+<span class="w">    </span><span class="kt">a</span><span class="n">sigs</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">oscili</span><span class="p">:</span><span class="kt">a</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="mi">900</span><span class="p">)</span>
+
 <span class="w">    </span><span class="c1">; imask[] fillarray 0, 0, 1, 0, 1, 0, 0, 0</span>
 <span class="w">    </span><span class="kt">i</span><span class="n">mask</span><span class="w"> </span><span class="kt">f</span><span class="n">tfill</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span>
 <span class="w">    </span><span class="n">zeroarray</span><span class="w"> </span><span class="kt">a</span><span class="n">sigs</span><span class="p">,</span><span class="w"> </span><span class="kt">i</span><span class="n">mask</span>
@@ -446,14 +498,15 @@ in the mask array is higher than 0). The mask can also be a table</p>
     
   </span>
 </div>
-    <script>var base_url = '..';</script>
-    <script src="../js/theme_extra.js" defer></script>
-    <script src="../js/theme.js" defer></script>
-      <script src="../search/main.js" defer></script>
-    <script defer>
-        window.onload = function () {
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);
-        };
+        });
     </script>
 
 </body>

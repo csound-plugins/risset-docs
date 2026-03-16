@@ -8,7 +8,7 @@
     <title>Csound Plugins</title>
     <link rel="stylesheet" href="css/theme.css" />
     <link rel="stylesheet" href="css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
         <link href="css/syntax-highlighting.css" rel="stylesheet" />
     
       <script>
@@ -18,12 +18,11 @@
         var mkdocs_page_url = null;
       </script>
     
-    <script src="js/jquery-3.6.0.min.js" defer></script>
     <!--[if lt IE 9]>
       <script src="js/html5shiv.min.js"></script>
     <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-      <script>hljs.initHighlightingOnLoad();</script> 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -42,8 +41,10 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="index.html">Plugins</a>
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Plugins</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#genious">GENious</a>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="#beosc">beosc</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#chua">chua</a>
@@ -58,7 +59,11 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#pathtools">pathtools</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pitchtrack">pitchtrack</a>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="#poly">poly</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#poodle">poodle</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#python">python</a>
     </li>
@@ -89,6 +94,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="opcodes/crackle.html">crackle</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="opcodes/cuetrig.html">cuetrig</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="opcodes/defer.html">defer</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="opcodes/deref.html">deref</a>
@@ -96,6 +103,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="opcodes/detectsilence.html">detectsilence</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="opcodes/dict_del.html">dict_del</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="opcodes/dict_delk.html">dict_delk</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="opcodes/dict_dump.html">dict_dump</a>
                   </li>
@@ -121,6 +130,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="opcodes/dict_size.html">dict_size</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="opcodes/dict_update.html">dict_update</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="opcodes/diode_ringmod.html">diode_ringmod</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="opcodes/extendarray.html">extendarray</a>
@@ -133,6 +144,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="opcodes/findarray.html">findarray</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="opcodes/fofcyclevoc.html">fofcyclevoc</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="opcodes/frac2int.html">frac2int</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="opcodes/ftfill.html">ftfill</a>
@@ -142,6 +155,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="opcodes/ftnew.html">ftnew</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="opcodes/ftsetparams.html">ftsetparams</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="opcodes/gaintovel.html">gaintovel</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="opcodes/getEnvVar.html">getEnvVar</a>
                   </li>
@@ -169,7 +184,11 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="opcodes/linenv.html">linenv</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="opcodes/linexp.html">linexp</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="opcodes/loadnpy.html">loadnpy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="opcodes/lorenz.html">Lorenz</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="opcodes/memview.html">memview</a>
                   </li>
@@ -197,6 +216,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="opcodes/perlin3.html">perlin3</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="opcodes/picksource.html">picksource</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="opcodes/poly.html">poly</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="opcodes/poly0.html">poly0</a>
@@ -206,6 +227,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="opcodes/pool_at.html">pool_at</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="opcodes/pool_capacity.html">pool_capacity</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="opcodes/pool_free.html">pool_free</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="opcodes/pool_gen.html">pool_gen</a>
                   </li>
@@ -223,9 +246,25 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="opcodes/presetinterp.html">presetinterp</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="opcodes/pvscrest.html">pvscrest</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="opcodes/pvsentropy.html">pvsentropy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="opcodes/pvsflatness.html">pvsflatness</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="opcodes/pvsmagsum.html">pvsmagsum</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="opcodes/pvsmagsumn.html">pvsmagsumn</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="opcodes/pvsrolloff.html">pvsrolloff</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="opcodes/pwrite.html">pwrite</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="opcodes/pwriten.html">pwriten</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="opcodes/pyin.html">pyin</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="opcodes/pyinf0.html">pyinf0</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="opcodes/pyrun.html">pyrun</a>
                   </li>
@@ -236,6 +275,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="opcodes/refvalid.html">refvalid</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="opcodes/risset.html">risset</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="opcodes/savenpy.html">savenpy</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="opcodes/schmitt.html">schmitt</a>
                   </li>
@@ -255,13 +296,19 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="opcodes/strjoin.html">strjoin</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="opcodes/strmul.html">strmul</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="opcodes/strsplit.html">strsplit</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="opcodes/sysPlatform.html">sysPlatform</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="opcodes/tabrowlin.html">tabrowlin</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="opcodes/thomas.html">Lorenz</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="opcodes/throwerror.html">throwerror</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="opcodes/transpose.html">transpose</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="opcodes/tubeharmonics.html">tubeharmonics</a>
                   </li>
@@ -297,6 +344,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="opcodes/zerocrossing.html">zerocrossing</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="opcodes/zitarev.html">zitarev</a>
+                  </li>
               </ul>
       </div>
     </div>
@@ -311,8 +360,8 @@
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html" class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
-      <li>Plugins</li>
+    <li><a href="index.html" class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Plugins</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -322,6 +371,12 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="plugins">Plugins</h1>
+<h2 id="genious">GENious</h2>
+<p>GEN routines</p>
+<ul>
+<li><a href="opcodes/lorenz.html">lorenz</a>: GEN routine based on the Lorenz attractor</li>
+<li><a href="opcodes/thomas.html">thomas</a>: GEN routine based on the Thomas attractor</li>
+</ul>
 <h2 id="beosc">beosc</h2>
 <p>Band-enhanced oscillators implementing the sine+noise synthesis model</p>
 <ul>
@@ -342,6 +397,7 @@
 <li><a href="opcodes/atstop.html">atstop</a>: Schedule an instrument at the end of the current instrument</li>
 <li><a href="opcodes/bisect.html">bisect</a>: Returns the fractional index of a value within a sorted array / tab</li>
 <li><a href="opcodes/crackle.html">crackle</a>: generates noise based on a chaotic equation</li>
+<li><a href="opcodes/cuetrig.html">cuetrig</a>: Generate a trigger at given time values</li>
 <li><a href="opcodes/deref.html">deref</a>: Dereference a previously created reference to a variable</li>
 <li><a href="opcodes/detectsilence.html">detectsilence</a>: Detect when input falls below an amplitude threshold</li>
 <li><a href="opcodes/diode_ringmod.html">diode_ringmod</a>: A ring modulator with optional non-linearities</li>
@@ -353,20 +409,30 @@
 <li><a href="opcodes/ftfind.html">ftfind</a>: Find an element in a table</li>
 <li><a href="opcodes/ftnew.html">ftnew</a>: creates a new table of a given size</li>
 <li><a href="opcodes/ftsetparams.html">ftsetparams</a>: Set metadata parameters of a table, as if it was loaded via GEN1</li>
+<li><a href="opcodes/gaintovel.html">gaintovel</a>: Map amplitude 0-1 to velocity (0-127)</li>
 <li><a href="opcodes/initerror.html">initerror</a>: Throws an error message at init</li>
 <li><a href="opcodes/interp1d.html">interp1d</a>: Interpolate between elements of an array/table</li>
 <li><a href="opcodes/lfnoise.html">lfnoise</a>: low frequency, band-limited noise</li>
 <li><a href="opcodes/linenv.html">linenv</a>: A triggerable linear envelope with sustain segment</li>
+<li><a href="opcodes/linexp.html">linexp</a>: linear to exponentail interpolation</li>
 <li><a href="opcodes/loadnpy.html">loadnpy</a>: Load an array (of any number of dimensions) saved as a .npy file</li>
 <li><a href="opcodes/memview.html">memview</a>: Create a view into a table or another array</li>
 <li><a href="opcodes/mtro.html">mtro</a>: an accurate version of metro</li>
 <li><a href="opcodes/nametoinstrnum.html">nametoinstrnum</a>: Returns the number of a named instrument</li>
 <li><a href="opcodes/panstereo.html">panstereo</a>: Stereo signal balancer</li>
 <li><a href="opcodes/perlin3.html">perlin3</a>: gradient noise sound generator</li>
+<li><a href="opcodes/picksource.html">picksource</a>: Select one of multiple signals basen</li>
 <li><a href="opcodes/pread.html">pread</a>: Read pfield values from any active instrument instance</li>
 <li><a href="opcodes/presetinterp.html">presetinterp</a>: Interpolates between presets placed in a 2D plane</li>
+<li><a href="opcodes/pvscrest.html">pvscrest</a>: Compute the spectral crest value of a spectral signal.</li>
+<li><a href="opcodes/pvsentropy.html">pvsentropy</a>: Compute the entropy of a spectral signal.</li>
+<li><a href="opcodes/pvsflatness.html">pvsflatness</a>: Compute the flatness of a spectral signal.</li>
+<li><a href="opcodes/pvsmagsum.html">pvsmagsum</a>: Sum all magnitudes of the bins in a pv signal</li>
+<li><a href="opcodes/pvsmagsumn.html">pvsmagsumn</a>: Sum the magnitudes of the n loudest bins</li>
+<li><a href="opcodes/pvsrolloff.html">pvsrolloff</a>: Spectral rolloff point</li>
 <li><a href="opcodes/pwrite.html">pwrite</a>: Modify pfield values of an active instrument instance</li>
 <li><a href="opcodes/pwriten.html">pwriten</a>: Modify pfield values of an active instrument instance created via nstance</li>
+<li><a href="opcodes/pyinf0.html">pyinf0</a>: fundamental (pitch) tracking using the probabilistic YIN method</li>
 <li><a href="opcodes/ramptrig.html">ramptrig</a>: A triggerable ramp between 0 and 1</li>
 <li><a href="opcodes/ref.html">ref</a>: Get a reference to a variable</li>
 <li><a href="opcodes/refvalid.html">refvalid</a>: Queries if a reference is valid</li>
@@ -374,7 +440,9 @@
 <li><a href="opcodes/setslice.html">setslice</a>: Set a slice of an array to a given value</li>
 <li><a href="opcodes/sigmdrive.html">sigmdrive</a>: Analog "soft clipping" distortion by applying non-linear transfer functions.</li>
 <li><a href="opcodes/standardchaos.html">standardchaos</a>: Standard map chaotic generator</li>
+<li><a href="opcodes/strmul.html">strmul</a>: Produce multiple copies of a string</li>
 <li><a href="opcodes/throwerror.html">throwerror</a>: Throws an error message at performance or init</li>
+<li><a href="opcodes/transpose.html">transpose</a>: Simple delay based pitch shifter inspired on faust's transpose</li>
 <li><a href="opcodes/uniqinstance.html">uniqinstance</a>: Return an fractional instrument number which is not in use</li>
 <li><a href="opcodes/vowelsdb.html">vowelsdb</a>: A database of vowel sounds</li>
 <li><a href="opcodes/weightedsum.html">weightedsum</a>: Weighted sum of multiple 1D arrays, or the rows of a 2D array</li>
@@ -401,6 +469,7 @@
 <p>A hashtable for csound</p>
 <ul>
 <li><a href="opcodes/dict_del.html">dict_del</a>: Remove a key:value pair from a hashtable</li>
+<li><a href="opcodes/dict_delk.html">dict_delk</a>: Remove a key:value pair from a hashtable at perf time</li>
 <li><a href="opcodes/dict_dump.html">dict_dump</a>: Dumps the contents of this dict as a string</li>
 <li><a href="opcodes/dict_exists.html">dict_exists</a>: Returns 1 if the dict exists, 0 otherwise</li>
 <li><a href="opcodes/dict_free.html">dict_free</a>: Free a hashtable</li>
@@ -413,8 +482,10 @@
 <li><a href="opcodes/dict_query.html">dict_query</a>: Query different properties of a dict</li>
 <li><a href="opcodes/dict_set.html">dict_set</a>: Set a value from a hashtable</li>
 <li><a href="opcodes/dict_size.html">dict_size</a>: Returns the number of key:value pairs in a dict</li>
+<li><a href="opcodes/dict_update.html">dict_update</a>: Update a dict with another dict</li>
 <li><a href="opcodes/pool_at.html">pool_at</a>: Returns the item of a pool at a given index</li>
 <li><a href="opcodes/pool_capacity.html">pool_capacity</a>: Returns the capacity of a pool</li>
+<li><a href="opcodes/pool_free.html">pool_free</a>: Deletes a pool, frees its memory</li>
 <li><a href="opcodes/pool_gen.html">pool_gen</a>: Create a pool and fill it with values</li>
 <li><a href="opcodes/pool_isfull.html">pool_isfull</a>: Returns 1 if the pool is full</li>
 <li><a href="opcodes/pool_new.html">pool_new</a>: Create an empty  pool</li>
@@ -442,6 +513,11 @@
 <li><a href="opcodes/strsplit.html">strsplit</a>: Split a string at a given separator</li>
 <li><a href="opcodes/sysPlatform.html">sysPlatform</a>: Get a string description of the current system platform</li>
 </ul>
+<h2 id="pitchtrack">pitchtrack</h2>
+<p>Fundamental pitch tracking</p>
+<ul>
+<li><a href="opcodes/pyin.html">pyin</a>: Fundamental tracking implementing the pYIN algorithm</li>
+</ul>
 <h2 id="poly">poly</h2>
 <p>Multiple (parallel or sequential) instances of an opcode</p>
 <ul>
@@ -449,6 +525,12 @@
 <li><a href="opcodes/poly.html">poly</a>: <code>poly</code> creates and controls multiple parallel version of an opcode</li>
 <li><a href="opcodes/poly0.html">poly0</a>: <code>poly0</code> creates and controls multiple parallel version of an opcode with no outputs</li>
 <li><a href="opcodes/polyseq.html">polyseq</a>: <code>polyseq</code> creates and controls multiple <strong>sequential</strong> version of an opcode</li>
+</ul>
+<h2 id="poodle">poodle</h2>
+<p>Faust plugins ported to csound</p>
+<ul>
+<li><a href="opcodes/fofcyclevoc.html">fofcyclevoc</a>: Port of faust's "Sf Formant FOF Cycle" vocal model</li>
+<li><a href="opcodes/zitarev.html">zitarev</a>: Faust port of zita rev</li>
 </ul>
 <h2 id="python">python</h2>
 <p>Opcodes to interact with an embedded python interpreter</p>
@@ -511,20 +593,21 @@
     
   </span>
 </div>
-    <script>var base_url = '.';</script>
-    <script src="js/theme_extra.js" defer></script>
-    <script src="js/theme.js" defer></script>
-      <script src="search/main.js" defer></script>
-    <script defer>
-        window.onload = function () {
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = ".";</script>
+    <script src="js/theme_extra.js"></script>
+    <script src="js/theme.js"></script>
+      <script src="search/main.js"></script>
+    <script>
+        jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);
-        };
+        });
     </script>
 
 </body>
 </html>
 
 <!--
-MkDocs version : 1.4.3
-Build Date UTC : 2023-09-10 16:20:50.875278+00:00
+MkDocs version : 1.6.1
+Build Date UTC : 2026-03-16 12:30:35.612144+00:00
 -->
